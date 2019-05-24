@@ -1,3 +1,5 @@
+import Enums.SexType;
+
 public class Athlete {
     long id;
     String name;
