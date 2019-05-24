@@ -7,6 +7,4 @@ public class Athlete {
     float height;
     float weight;
 
-    String hola = "hola";
-
 }
