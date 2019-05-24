@@ -1,4 +1,8 @@
+
+package TADS.Heap;
+
 import Exceptions.KeyYaExiste;
+import TADS.Heap.Nodo;
 
 import java.util.Arrays;
 

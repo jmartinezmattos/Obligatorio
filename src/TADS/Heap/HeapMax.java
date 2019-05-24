@@ -1,4 +1,6 @@
 
+package TADS.Heap;
+
 import Exceptions.EmptyHeapException;
 import Exceptions.KeyYaExiste;
 
