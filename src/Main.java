@@ -1,7 +1,3 @@
-
-
-
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -43,9 +39,13 @@ public class Main {
         }
     }
 
-    public Athlete crearAtleta(String[] dato){
-        Athlete athlete;
+    public Athlete crearAtleta(String[] dato){//tomando el string de datos retorna un atleta
+        Athlete athlete = new Athlete(dato[0],dato[1],dato[2],dato[4],dato[5]);//La edad no se agrega porque varia
         return athlete;
+    }
+    public AthleteOlympicParticipation crearParticipacion(String[] dato,Athlete athlete){
+        AthleteOlympicParticipation participacion = new AthleteOlympicParticipation(dato[14],athlete,dato[3]);
+        return participacion;
     }
 
 }

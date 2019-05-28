@@ -5,12 +5,13 @@ import java.util.ArrayList;
 import static java.lang.Short.valueOf;
 
 public class Athlete {
-    long id;
-    String name;
-    SexType sex;
-    float height;
-    float weight;
-    ArrayList<AthleteOlympicParticipation> participations;
+
+    private long id;
+    private String name;
+    private SexType sex;
+    private float height;
+    private float weight;
+    private ArrayList<AthleteOlympicParticipation> participations;
 
     Team equipo;
 
