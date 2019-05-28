@@ -10,8 +10,8 @@ public class MainTest {
     public void leerArchivos() {
         Main test = new Main();
         ArrayList<String[]> arrayList = new ArrayList<>(250000);
-        test.leerArchivos(arrayList);
+        test.leerArchivos();
 
-        System.out.println(arrayList.get(1)[1]);
+        //System.out.println(arrayList.get(1)[1]);
     }
 }

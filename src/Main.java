@@ -4,25 +4,42 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import static java.lang.Integer.valueOf;
+
 public class Main {
 
     //https://es.stackoverflow.com/questions/38085/leer-fichero-formato-csv-en-java
 
-    public void leerArchivos(ArrayList arrayListLineas){
-        String csvFile = "../athlete_events.csv";
+    public void leerArchivos(){
+        String csvFile = "athlete_events.csv";
         BufferedReader br = null;
         String line = "";
         //Se define separador ","
         String cvsSplitBy = ",";
 
         String linea[] = new String[15];
-
+        String ultimoID = "0";
+        Athlete ultimoAtleta = null;
+        boolean bol=false;
         try {
+
             br = new BufferedReader(new FileReader(csvFile));
             while ((line = br.readLine()) != null) {
                 String[] datos = line.split(cvsSplitBy);
-                arrayListLineas.add(datos);
-                crearAtleta(datos);
+                if (bol) {//para saltearnos la primer linea
+
+                    //arrayListLineas.add(datos);
+                    if (ultimoID != datos[0]) {
+                        //teniendo en cuenta que los datos se descargar en forma ordenada respecto al ID
+                        //podemos asegurarnos de no repetir la creacion de un atleta al crear un atleta cuando el ID es diferente al anterior
+                        ultimoID = datos[0];
+                        ultimoAtleta = crearAtleta(datos);
+                        System.out.println(datos);
+                    }
+
+                    crearParticipacion(datos, ultimoAtleta);
+                }
+                bol = true;
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
