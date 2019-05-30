@@ -24,10 +24,9 @@ public class Main {
         try {
 
             br = new BufferedReader(new FileReader(csvFile));
+            br.readLine();
             while ((line = br.readLine()) != null) {
-                String[] datos = line.split(cvsSplitBy);
-                if (bol) {//para saltearnos la primer linea
-
+                String[] datos = line.replaceAll("\"","").split(cvsSplitBy);
                     //arrayListLineas.add(datos);
                     if (ultimoID != datos[0]) {
                         //teniendo en cuenta que los datos se descargar en forma ordenada respecto al ID
@@ -36,9 +35,8 @@ public class Main {
                         ultimoAtleta = crearAtleta(datos);
                         System.out.println(datos);
                     }
-
                     crearParticipacion(datos, ultimoAtleta);
-                }
+
                 bol = true;
             }
         } catch (FileNotFoundException e) {
@@ -64,5 +62,7 @@ public class Main {
         AthleteOlympicParticipation participacion = new AthleteOlympicParticipation(dato[14],athlete,dato[3]);
         return participacion;
     }
+
+
 
 }

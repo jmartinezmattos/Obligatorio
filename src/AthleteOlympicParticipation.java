@@ -13,7 +13,7 @@ public class AthleteOlympicParticipation {
     public AthleteOlympicParticipation(String medal, Athlete athlete,String age) {
 
         MedalType medalType = null;
-        medalType = MedalType.valueOf(medal);
+        medalType = MedalType.valueof(medal);
 
         this.medal = medalType;
         this.athlete = athlete;

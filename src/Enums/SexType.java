@@ -13,7 +13,7 @@ public enum SexType {
     }
 
 
-    public SexType valueof(String sex){
+    public static SexType valueof(String sex){
         SexType salida = null;
         switch (sex) {
             case "F":

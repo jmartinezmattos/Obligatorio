@@ -17,8 +17,11 @@ public class Athlete {
 
     public Athlete(String id, String name, String sex, String height, String weight) {
 
-        SexType sexType = null;
-        sexType=sexType.valueOf(sex);
+        SexType sexType = SexType.valueof(sex);
+
+        //if(sex.equals("M")){
+        //    sexType = SexType.MALE;
+        //}
 
         this.id = valueOf(id);
         this.name = name;

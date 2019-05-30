@@ -11,7 +11,7 @@ public enum MedalType {
         this.medal = medal;
     }
 
-    public MedalType valueof(String sex){
+    public static MedalType valueof(String sex){
         MedalType salida = null;
         switch (sex) {
             case "Bronze":
