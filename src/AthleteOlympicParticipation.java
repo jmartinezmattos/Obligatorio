@@ -12,10 +12,20 @@ public class AthleteOlympicParticipation {
 
     public AthleteOlympicParticipation(String medal, Athlete athlete,String age) {
 
-        MedalType medalType = null;
-        medalType = MedalType.valueof(medal);
 
-        this.medal = medalType;
+        if(medal.equals("NA")){
+            this.medal = MedalType.NA;
+        }
+        if(medal.equals("Gold")){
+            this.medal = MedalType.GOLD;
+        }
+        if(medal.equals("Silver")){
+            this.medal = MedalType.SILVER;
+        }
+        if(medal.equals("Bronze")){
+            this.medal = MedalType.BRONZE;
+        }
+
         this.athlete = athlete;
         this.age = valueOf(age);
     }

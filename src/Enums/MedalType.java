@@ -3,7 +3,8 @@ package Enums;
 public enum MedalType {
     BRONZE("B"),
     SILVER("S"),
-    GOLD("G");
+    GOLD("G"),
+    NA("NA");
 
     private String medal;
 
