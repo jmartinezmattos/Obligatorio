@@ -1,4 +1,13 @@
+import java.util.ArrayList;
+
 public class NationalOlympicCommittee {
-    String name;
-    String region;
+
+    private String name;
+    private String region;
+    private ArrayList<Athlete> athletes;
+
+    public NationalOlympicCommittee(String name, String region) {
+        this.name = name;
+        this.region = region;
+    }
 }
