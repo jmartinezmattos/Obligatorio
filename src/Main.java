@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 import static java.lang.Integer.valueOf;
@@ -9,6 +10,7 @@ import static java.lang.Integer.valueOf;
 public class Main {
 
     //https://es.stackoverflow.com/questions/38085/leer-fichero-formato-csv-en-java
+
 
     public void leerArchivos(){
         String csvFile = "athlete_events.csv";
@@ -25,12 +27,15 @@ public class Main {
             br = new BufferedReader(new FileReader(csvFile));
             br.readLine();
             while ((line = br.readLine()) != null) {
-                String[] datos = line.replaceAll("\"","").split(cvsSplitBy);//separa por lineas y elimina las comillas extra
+                String[] datos = line.replaceAll(", ","#").replaceAll(",-","@").replaceAll("\"","").split(cvsSplitBy);//separa por lineas y elimina las comillas extra
                 //datos[5] = datos[5].replaceAll("\\.",",");
                 //arrayListLineas.add(datos);
                     if (ultimoID != datos[0]) {
-                        //teniendo en cuenta que los datos se descargar en forma ordenada respecto al ID
+                        //teniendo en cuenta que los datos se descargar en forma ordenada respecto al ID  ,-
                         //podemos asegurarnos de no repetir la creacion de un atleta al crear un atleta cuando el ID es diferente al anterior
+                        datos[1] = datos[1].replaceAll("#",", ");//vuelve a agregarle la coma al nombre
+                        datos[1] = datos[1].replaceAll("@",",-");//vuelve a agregarle la coma al nombre
+
                         ultimoID = datos[0];
                         ultimoAtleta = crearAtleta(datos);
                     }
