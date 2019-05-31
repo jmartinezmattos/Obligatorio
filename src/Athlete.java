@@ -26,7 +26,17 @@ public class Athlete {
         this.id = valueOf(id);
         this.name = name;
         this.sex = sexType;
-        this.height = valueOf(height);
-        this.weight = valueOf(weight);
+        if(!height.equals("NA")) {
+            this.height = valueOf(height);
+        }
+        else{
+            this.height = 0;
+        }
+        if(!weight.equals("NA")) {
+            this.weight = Float.parseFloat(weight);
+        }
+        else{
+            this.weight = 0;
+        }
     }
 }

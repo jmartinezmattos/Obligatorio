@@ -27,6 +27,11 @@ public class AthleteOlympicParticipation {
         }
 
         this.athlete = athlete;
-        this.age = valueOf(age);
+        if(!age.equals("NA")) {
+            this.age = valueOf(age);
+        }
+        else{
+            this.age = 0;
+        }
     }
 }

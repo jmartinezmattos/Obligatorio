@@ -20,24 +20,23 @@ public class Main {
         String linea[] = new String[15];
         String ultimoID = "0";
         Athlete ultimoAtleta = null;
-        boolean bol=false;
         try {
 
             br = new BufferedReader(new FileReader(csvFile));
             br.readLine();
             while ((line = br.readLine()) != null) {
-                String[] datos = line.replaceAll("\"","").split(cvsSplitBy);
-                    //arrayListLineas.add(datos);
+                String[] datos = line.replaceAll("\"","").split(cvsSplitBy);//separa por lineas y elimina las comillas extra
+                //datos[5] = datos[5].replaceAll("\\.",",");
+                //arrayListLineas.add(datos);
                     if (ultimoID != datos[0]) {
                         //teniendo en cuenta que los datos se descargar en forma ordenada respecto al ID
                         //podemos asegurarnos de no repetir la creacion de un atleta al crear un atleta cuando el ID es diferente al anterior
                         ultimoID = datos[0];
                         ultimoAtleta = crearAtleta(datos);
-                        System.out.println(datos);
                     }
+                    System.out.print(datos[0]);
+                    System.out.println(datos[1]);
                     crearParticipacion(datos, ultimoAtleta);
-
-                bol = true;
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
