@@ -32,8 +32,8 @@ public class Main {
 
                 for(int i=0;i<15;i++) {
                     System.out.print(datos[i] + " ");
-                    System.out.println();
                 }
+                System.out.println();
 
                 crearParticipacion(datos, ultimoAtleta);
             }
