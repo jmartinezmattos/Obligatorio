@@ -1,12 +1,12 @@
 import Enums.SexType;
-
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 import static java.lang.Short.valueOf;
 
 public class Athlete {
 
-    private long id;
+    private BigInteger id;//los valores son mas grandes que long
     private String name;
     private SexType sex;
     private float height;
@@ -16,14 +16,9 @@ public class Athlete {
     Team equipo;
 
     public Athlete(String id, String name, String sex, String height, String weight) {
-
         SexType sexType = SexType.valueof(sex);
 
-        //if(sex.equals("M")){
-        //    sexType = SexType.MALE;
-        //}
-
-        this.id = valueOf(id);
+        this.id = new BigInteger(id);
         this.name = name;
         this.sex = sexType;
         if(!height.equals("NA")) {
