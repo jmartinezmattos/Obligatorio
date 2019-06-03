@@ -1,3 +1,5 @@
+package Entidades;
+
 import Enums.SeasonType;
 
 import java.util.ArrayList;
