@@ -5,8 +5,16 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
-public class Main {
+public class Lector {
+
+    private ArrayList<Athlete> Atletas = new ArrayList(5000);
+    private ArrayList<AthleteOlympicParticipation> Participaciones = new ArrayList(22000);
+
+    public Lector(){//este constructor se asegura de que se realize la lectura
+        leerArchivos();
+    }
 
     public void leerArchivos(){
         String csvFile = "athlete_events.csv";
@@ -31,14 +39,17 @@ public class Main {
                     datos[1] = datos[1].replaceAll("#",", ").replaceAll("@",",-");//vuelve a agregarle la coma al nombre
                     ultimoID = datos[0];
                     ultimoAtleta = crearAtleta(datos);
+                    Atletas.add(ultimoAtleta); //agrega el atleta al arraylist
                 }
 
+                /*
                 for(int i=0;i<15;i++) {
                     System.out.print(datos[i] + " ");
                 }
                 System.out.println();
+                 */
 
-                crearParticipacion(datos, ultimoAtleta);
+                Participaciones.add(crearParticipacion(datos,ultimoAtleta));
             }
         }
         catch (FileNotFoundException e) {
@@ -63,9 +74,17 @@ public class Main {
         Athlete athlete = new Athlete(dato[0],dato[1],dato[2],dato[4],dato[5]);//La edad no se agrega porque varia
         return athlete;
     }
+
     public AthleteOlympicParticipation crearParticipacion(String[] dato, Athlete athlete){
         AthleteOlympicParticipation participacion = new AthleteOlympicParticipation(dato[14],athlete,dato[3]);
         return participacion;
     }
 
+    public ArrayList<Athlete> getAtletas() {
+        return Atletas;
+    }
+
+    public ArrayList<AthleteOlympicParticipation> getParticipaciones() {
+        return Participaciones;
+    }
 }

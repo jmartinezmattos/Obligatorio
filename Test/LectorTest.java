@@ -1,10 +1,10 @@
 import org.junit.Test;
 
-public class MainTest {
+public class LectorTest {
 
     @Test
     public void leerArchivos() {
-        Main test = new Main();
+        Lector test = new Lector();
         test.leerArchivos();
 
     }
