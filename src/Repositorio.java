@@ -1,5 +1,7 @@
 public class Repositorio {
 
+    //clase encargada de contener y manejar datos
+
     Lector lector = new Lector();
 
     public void imprimirAtletasConMasMedallas(String tipoDeMedalla){

@@ -5,10 +5,17 @@ public class Menu {
     private static Repositorio repo = new Repositorio();
 
     public static void main(String args[]){
-        Scanner entero = new Scanner(System.in);
-        printHeader();
-        int opcion = entero.nextInt();
-        evaluarOperacion(opcion);
+        String continuar = "n";
+        do{
+            Scanner entero = new Scanner(System.in);
+            Scanner letra = new Scanner(System.in);
+            printHeader();
+            int opcion = entero.nextInt();
+            evaluarOperacion(opcion);
+            System.out.println("Desea realizar otra operacion? y/n");
+            continuar = letra.nextLine();
+        }
+        while(continuar.equals("y"));
     }
 
     private static void printHeader(){
@@ -36,7 +43,7 @@ public class Menu {
                 System.out.println("Bronze (b)");
                 lectura = sc.nextLine();
                 repo.imprimirAtletasConMasMedallas(lectura);
-
+                break;
             case 2:
                 System.out.println("Ingrese una opcion: ");
                 System.out.println("Oro (o)");
@@ -44,16 +51,20 @@ public class Menu {
                 System.out.println("Bronze (b)");
                 lectura = sc.nextLine();
                 repo.imprimirRegionesConMasMedallas(lectura);
+                break;
             case 3:
                 repo.imprimirMayorParticipacionFemenina();
+                break;
             case 4:
                 System.out.println("Seleccione el sexo f (femenino) o m (masculino)");
                 lectura = sc.nextLine();
                 repo.imprimirCiertoSexo(lectura);
+                break;
             case 5:
                 System.out.println("Ingrese el rango de anios separado por un guion ej: 1990-2005");
                 lectura = sc.nextLine();
                 repo.imprimirEquiposEfectivosRango(lectura);
+                break;
         }
     }
 }
