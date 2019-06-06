@@ -14,7 +14,28 @@ public class Team {
         this.Atletas.add(athlete);
     }
 
-    public int getCantidadAtletas(){
+    public int getCantidadAtletas() {
         return this.Atletas.size();
+    }
+
+    public Team(String name, ArrayList atletas) {
+        this.name = name;
+        Atletas = atletas;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList getAtletas() {
+        return Atletas;
+    }
+
+    public void setAtletas(ArrayList atletas) {
+        Atletas = atletas;
     }
 }

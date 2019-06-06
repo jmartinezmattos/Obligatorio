@@ -10,8 +10,10 @@ public class AthleteOlympicParticipation {
     private MedalType medal;
     private Athlete athlete;
     private int age;
-    //Event event;
-    //OlympicGame olympicGame;
+    private Event event;
+    private OlympicGame olympicGame;
+    private NationalOlympicCommittee nationalCommitee;
+
 
     public AthleteOlympicParticipation(String medal, Athlete athlete,String age) {
 
