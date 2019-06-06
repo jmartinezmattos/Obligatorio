@@ -1,3 +1,4 @@
+package TADS.BinaryTree;
 import java.util.ArrayList;
 
 public class BinaryTreeImpl<T extends Comparable<T> > implements
@@ -101,9 +102,8 @@ public class BinaryTreeImpl<T extends Comparable<T> > implements
 
             } else { 
 
-                if (amount > 1) { 
+                if (amount > 1) {
 
-                    amount-1;
 
                 } else {
 
@@ -235,7 +235,8 @@ public class BinaryTreeImpl<T extends Comparable<T> > implements
     }
 
 
-       public OtherType getValue() {
+       public T getValue() {
+
         return value;
     }
 

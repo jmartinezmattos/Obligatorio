@@ -1,3 +1,5 @@
+package TADS.Queue.SimpleQueue;
+
 public class NodoQueue<T> {
 
   protected   NodoQueue<T> siguiente=null;

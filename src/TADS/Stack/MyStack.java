@@ -1,7 +1,8 @@
+package TADS.Stack;
 public interface MyStack <T>{
-    void pop () throws EmptyStackException ;
-    T top() throws EmptyStackException ;
-    void push(Nodo<T> element) throws EmptyStackException ;
+    void pop () throws  EmptyStack;
+    T top() throws EmptyStack;
+    void push(Nodo<T> element) throws  EmptyStack;
     boolean isEmpty ();
-    void makeEmpty() throws EmptyStackException;
+    void makeEmpty() throws  EmptyStack;
 }

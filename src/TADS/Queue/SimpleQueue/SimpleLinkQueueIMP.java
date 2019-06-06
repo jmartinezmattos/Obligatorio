@@ -1,3 +1,4 @@
+package TADS.Queue.SimpleQueue;
 public class SimpleLinkQueueIMP<T> implements MyQueue<T> {
 
     private NodoQueue<T> primero=null;

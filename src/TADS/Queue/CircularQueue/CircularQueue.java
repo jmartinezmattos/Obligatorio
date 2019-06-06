@@ -1,3 +1,7 @@
+package TADS.Queue.CircularQueue;
+import TADS.Queue.CircularQueue.EmptyQueueException;
+import TADS.Queue.CircularQueue.QueueFullException;
+import TADS.Queue.SimpleQueue.MyQueue;
 import java.util.Arrays;
 
 public class CircularQueue <T> implements MyQueue<T> {
@@ -16,7 +20,7 @@ public class CircularQueue <T> implements MyQueue<T> {
         //ultimo = -1;
     }
 
-    public T getFirst() throws EmptyQueueException{
+    public T getFirst() throws EmptyQueueException {
         return circularElem[primero];
     }
 
