@@ -12,10 +12,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/Obligatorio/TADS/Heap/HeapMax.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Obligatorio/TADS/Heap/HeapMin.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Obligatorio/TADS/Heap/Nodo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Athlete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TADS/BinaryTree/InvalidValue.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TADS/CircularLinkedList/CircularLinkedList.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TADS/CircularLinkedList/ExceptionListaVacia.class" beforeDir="false" />
@@ -364,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559674416408</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit">
+      <created>1559939961806</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1559939961806</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -501,7 +504,8 @@
     <MESSAGE value="Main ahora se llama Lector, agregadas clases Menu y Repositorio, cambios en la clase Lector (Main)" />
     <MESSAGE value="Modificadas las clases Menu y Repositorio" />
     <MESSAGE value="Realizado un menu mas sofisticado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Realizado un menu mas sofisticado" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/TADS/Hash/Hash.java" />
