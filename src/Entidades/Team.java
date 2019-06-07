@@ -14,17 +14,25 @@ public class Team {
         this.Atletas.add(athlete);
     }
 
-    public int getCantidadAtletas() {
+    public int getCantidadAtletas(){
         return this.Atletas.size();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean equals(Team team){
+        boolean result = false;
+        if(team.getName().equals(this.name)){
+            result = true;
+        }
+        return result;
     }
 
     public Team(String name, ArrayList atletas) {
         this.name = name;
         Atletas = atletas;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setName(String name) {

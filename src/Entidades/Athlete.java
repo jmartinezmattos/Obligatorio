@@ -20,7 +20,7 @@ public class Athlete {
 
     private Team equipo;
 
-    public Athlete(String id, String name, String sex, String height, String weight) {
+    public Athlete(String id, String name, String sex, String height, String weight, String team,String NOC) {
         SexType sexType = SexType.valueof(sex);
 
         this.id = new BigInteger(id);
@@ -38,6 +38,7 @@ public class Athlete {
         else{
             this.weight = 0;
         }
+
     }
 
     public BigInteger getId() {

@@ -13,7 +13,7 @@ public class Lector {
     private ArrayList<AthleteOlympicParticipation> Participaciones = new ArrayList(22000);
 
     public Lector(){//este constructor se asegura de que se realize la lectura
-        leerArchivos();
+         //leerArchivos();
     }
 
     public void leerArchivos(){
@@ -42,13 +42,6 @@ public class Lector {
                     Atletas.add(ultimoAtleta); //agrega el atleta al arraylist
                 }
 
-                /*
-                for(int i=0;i<15;i++) {
-                    System.out.print(datos[i] + " ");
-                }
-                System.out.println();
-                 */
-
                 Participaciones.add(crearParticipacion(datos,ultimoAtleta));
             }
         }
@@ -71,7 +64,7 @@ public class Lector {
     }
 
     public Athlete crearAtleta(String[] dato){//tomando el string de datos retorna un atleta
-        Athlete athlete = new Athlete(dato[0],dato[1],dato[2],dato[4],dato[5]);//La edad no se agrega porque varia
+        Athlete athlete = new Athlete(dato[0],dato[1],dato[2],dato[4],dato[5],dato[6],dato[7]);//La edad no se agrega porque varia
         return athlete;
     }
 
