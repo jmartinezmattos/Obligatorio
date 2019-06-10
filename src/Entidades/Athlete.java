@@ -13,12 +13,16 @@ public class Athlete  {
     private SexType sex;
     private float height;
     private float weight;
-    private ArrayList<Entidades.AthleteOlympicParticipation> medallas;
+    private ArrayList<AthleteOlympicParticipation> medallas;
     private int medallasOro;
     private int medallasPlata;
     private int medallasBronze;
-    private int medallasTotales=medallasBronze+medallasOro+medallasPlata;
+    private int medallasTotales;
     //private Team equipo;
+
+    public int medallasTotales(){
+        return medallasBronze + medallasPlata + medallasOro;
+    }
 
     public Athlete(String id, String name, String sex, String height, String weight, String team,String NOC) {
         SexType sexType = SexType.valueof(sex);
@@ -65,36 +69,12 @@ public class Athlete  {
         this.sex = sex;
     }
 
-    public float getHeight() {
-        return height;
-    }
-
-    public void setHeight(float height) {
-        this.height = height;
-    }
-
-    public float getWeight() {
-        return weight;
-    }
-
-    public void setWeight(float weight) {
-        this.weight = weight;
-    }
-
     public int getMedallasOro() {
         return medallasOro;
     }
 
-    public void setMedallasOro(int medallasOro) {
-        this.medallasOro = medallasOro;
-    }
-
     public int getMedallasPlata() {
         return medallasPlata;
-    }
-
-    public void setMedallasPlata(int medallasPlata) {
-        this.medallasPlata = medallasPlata;
     }
 
     public int getMedallasBronze() {
