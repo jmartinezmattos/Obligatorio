@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import static java.lang.Short.valueOf;
 
-public class Athlete {
+public class Athlete  {
 
     private BigInteger id;//los valores son mas grandes que long
     private String name;
@@ -17,7 +17,7 @@ public class Athlete {
     private int medallasOro;
     private int medallasPlata;
     private int medallasBronze;
-
+    private int medallasTotales=medallasBronze+medallasOro+medallasPlata;
     private Team equipo;
 
     public Athlete(String id, String name, String sex, String height, String weight, String team,String NOC) {
@@ -120,4 +120,17 @@ public class Athlete {
     public void setEquipo(Team equipo) {
         this.equipo = equipo;
     }
+
+    public int getMedallasTotales() {
+        return medallasTotales;
+    }
+
+    public void setMedallasTotales(int medallasTotales) {
+        this.medallasTotales = medallasTotales;
+    }
+
+
+
+
+
 }
