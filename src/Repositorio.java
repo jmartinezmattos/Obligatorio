@@ -1,3 +1,4 @@
+import Entidades.Athlete;
 import TADS.LinkedList.src.*;
 
 
