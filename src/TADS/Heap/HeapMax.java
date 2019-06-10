@@ -18,15 +18,9 @@ public class HeapMax<K extends Comparable<K>,D> {
         else this.array = new Nodo[1];
     }
 
-    public void agregar(K key,D dato)throws KeyYaExiste {
+    public void agregar(K key,D dato) {
 
         Nodo<K,D> nodo = new Nodo(key,dato);
-
-        for(int i=0;i<cantidadDatos;i++){
-            if(array[i].getKey() == key){
-                throw new KeyYaExiste();
-            }
-        }
 
         if(array.length < this.cantidadDatos+1){// +1 pa que no de null pointer en comparacion de hijos
             Nodo<K,D>[] array2 = Arrays.copyOf(this.array, this.array.length*2);
@@ -104,12 +98,22 @@ public class HeapMax<K extends Comparable<K>,D> {
 
     private Nodo getLeftChildFromIndex(int indice){ //hijos en 2k+1 y 2k+2
             int childIndex = (2 * indice + 1);
-            return array[childIndex];
+            if(childIndex < array.length) {
+                return array[childIndex];
+            }
+            else{
+                return null;
+            }
     }
     private Nodo getRightChildFromIndex(int indice){
         if(indice < cantidadDatos){
             int childIndex = (2 * indice + 2);
-            return array[childIndex];
+            if(childIndex < cantidadDatos) {
+                return array[childIndex];
+            }
+            else {
+                return null;
+            }
         }
         else{
             return null;
@@ -144,9 +148,8 @@ public class HeapMax<K extends Comparable<K>,D> {
         array[indice] = nodo;//agrega el dato en el indice final
         K key = nodo.getKey();
 
-
         if (indice > 0) {
-            while (getParentFromIndex(indice).getKey().compareTo(key) < 0) {//
+            while (getParentFromIndex(indice).getKey().compareTo(key) < 0) {//si la key es mayor lo sube
                 siftUp(indice);
                 indice = (indice - 1) / 2;
             }
