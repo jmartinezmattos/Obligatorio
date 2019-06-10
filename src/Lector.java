@@ -1,5 +1,6 @@
 import Entidades.Athlete;
 import Entidades.AthleteOlympicParticipation;
+import TADS.Heap.HeapMax;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -9,8 +10,9 @@ import java.util.ArrayList;
 
 public class Lector {
 
-    private ArrayList<Athlete> Atletas = new ArrayList(5000);
-    private ArrayList<AthleteOlympicParticipation> Participaciones = new ArrayList(22000);
+    public ArrayList<Athlete> Atletas = new ArrayList(5000);
+    public ArrayList<AthleteOlympicParticipation> Participaciones = new ArrayList(22000);
+
 
     public Lector(){//este constructor se asegura de que se realize la lectura
          //leerArchivos();

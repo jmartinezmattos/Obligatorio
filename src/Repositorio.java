@@ -1,4 +1,5 @@
 import Entidades.Athlete;
+import TADS.Heap.HeapMax;
 import TADS.LinkedList.src.*;
 
 
@@ -8,9 +9,10 @@ public class Repositorio {
     //clase encargada de contener y manejar datos
 
     private Lector lector = new Lector();
-    LinkedList<Athlete> MedallasOro;
-    LinkedList<Athlete> MedallasPlata;
-    LinkedList<Athlete> MedallasBronce;
+
+    private HeapMax<Integer,Athlete> MedallasOro;
+    private HeapMax<Integer,Athlete> MedallasBronce;
+    private HeapMax<Integer,Athlete> MedallasPlata;
 
     public Repositorio(){
         lector.leerArchivos();
@@ -18,13 +20,12 @@ public class Repositorio {
 
     public void imprimirAtletasConMasMedallas(String tipoDeMedalla){
 
-
         //falta implementar el quicksort para que ordene por cantidad de medallas ya que el heap no nos sirve para
         //las medallas porque las keys se repiten ya sea por el valor del id del atleta o por cant de medallas, lo
         //colocamos en una linkedlist y lo ordenamos sobre la marcha segun lo que nos pidan
         if(tipoDeMedalla.equals("Oro")){
             for(int i=0;i<10;i++) {
-                Athlete aux=MedallasOro.get(i);
+                Athlete aux = MedallasOro.obtenerYEliminar();
                 System.out.println("Nombre: "+aux.getName());
                 System.out.println("Sexo: "+aux.getSex());
                 System.out.println("Cantidad De Medallas: "+aux.getMedallasOro());
@@ -35,7 +36,7 @@ public class Repositorio {
 
         if(tipoDeMedalla.equals("Plata")){
             for(int i=0;i<10;i++) {
-                Athlete aux=MedallasPlata.get(i);
+                Athlete aux = MedallasPlata.obtenerYEliminar();
                 System.out.println("Nombre: "+aux.getName());
                 System.out.println("Sexo: "+aux.getSex());
                 System.out.println("Cantidad De Medallas: "+aux.getMedallasPlata());
@@ -46,7 +47,7 @@ public class Repositorio {
 
         if(tipoDeMedalla.equals("Bronce")){
             for(int i=0;i<10;i++) {
-                Athlete aux=MedallasBronce.get(i);
+                Athlete aux = MedallasBronce.obtenerYEliminar();
                 System.out.println("Nombre: "+aux.getName());
                 System.out.println("Sexo: "+aux.getSex());
                 System.out.println("Cantidad De Medallas: "+aux.getMedallasBronze());
@@ -75,5 +76,22 @@ public class Repositorio {
 
     private void generarHeapRegiones(){
 
+    }
+
+    private void generarHeapOro(){
+        for(int i=0;i<lector.Atletas.size();i++){
+            MedallasOro.agregar(lector.Atletas.get(i).getMedallasOro(),lector.Atletas.get(i));
+        }
+    }
+    private void generarHeapPlata(){
+        for(int i=0;i<lector.Atletas.size();i++){
+            MedallasPlata.agregar(lector.Atletas.get(i).getMedallasPlata(),lector.Atletas.get(i));
+        }
+    }
+
+    private void generarHeapBronze(){
+        for(int i=0;i<lector.Atletas.size();i++){
+            MedallasBronce.agregar(lector.Atletas.get(i).getMedallasBronze(),lector.Atletas.get(i));
+        }
     }
 }
