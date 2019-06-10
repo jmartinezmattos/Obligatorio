@@ -1,5 +1,3 @@
-package Entidades;
-
 import Enums.SexType;
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -13,12 +11,12 @@ public class Athlete  {
     private SexType sex;
     private float height;
     private float weight;
-    private ArrayList<AthleteOlympicParticipation> medallas;
+    private ArrayList<Entidades.AthleteOlympicParticipation> medallas;
     private int medallasOro;
     private int medallasPlata;
     private int medallasBronze;
     private int medallasTotales=medallasBronze+medallasOro+medallasPlata;
-    private Team equipo;
+    //private Team equipo;
 
     public Athlete(String id, String name, String sex, String height, String weight, String team,String NOC) {
         SexType sexType = SexType.valueof(sex);
@@ -81,14 +79,6 @@ public class Athlete  {
         this.weight = weight;
     }
 
-    public ArrayList<AthleteOlympicParticipation> getMedallas() {
-        return medallas;
-    }
-
-    public void setMedallas(ArrayList<AthleteOlympicParticipation> medallas) {
-        this.medallas = medallas;
-    }
-
     public int getMedallasOro() {
         return medallasOro;
     }
@@ -111,14 +101,6 @@ public class Athlete  {
 
     public void setMedallasBronze(int medallasBronze) {
         this.medallasBronze = medallasBronze;
-    }
-
-    public Team getEquipo() {
-        return equipo;
-    }
-
-    public void setEquipo(Team equipo) {
-        this.equipo = equipo;
     }
 
     public int getMedallasTotales() {

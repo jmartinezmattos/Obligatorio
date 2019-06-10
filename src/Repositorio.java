@@ -1,6 +1,5 @@
-import Enums.MedalType;
 import TADS.LinkedList.src.*;
-import Entidades.Athlete;
+
 
 public class Repositorio {
 
@@ -21,7 +20,7 @@ public class Repositorio {
 
         //falta implementar el quicksort para que ordene por cantidad de medallas ya que el heap no nos sirve para
         //las medallas porque las keys se repiten ya sea por el valor del id del atleta o por cant de medallas, lo
-        //colocamos en un arraylist y lo ordenamos sobre la marcha segun lo que nos pidan
+        //colocamos en una linkedlist y lo ordenamos sobre la marcha segun lo que nos pidan
         if(tipoDeMedalla.equals("Oro")){
             for(int i=0;i<10;i++) {
                 Athlete aux=MedallasOro.get(i);

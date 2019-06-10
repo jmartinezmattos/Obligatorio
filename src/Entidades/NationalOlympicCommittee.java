@@ -1,7 +1,5 @@
 package Entidades;
 
-import Entidades.Athlete;
-
 import java.util.ArrayList;
 
 public class NationalOlympicCommittee {

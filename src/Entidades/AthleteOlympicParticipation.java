@@ -1,6 +1,5 @@
 package Entidades;
 
-import Entidades.Athlete;
 import Enums.MedalType;
 
 import static java.lang.Integer.valueOf;
