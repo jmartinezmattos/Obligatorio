@@ -20,6 +20,7 @@ public class Menu {
 
     private static void printHeader(){
         System.out.println("Bienvendido al gestor oficial de estadisticas de las olimpiadas");
+        System.out.println("¿Desea precargar estructuras? y/n");
         System.out.println();
         System.out.println("Seleccione la operacion que desea realizar");
         System.out.println("1: Top 10 atletas con mayor cantidad de medallas");
@@ -33,16 +34,18 @@ public class Menu {
     private static void evaluarOperacion(int opcion){
 
         Scanner sc = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
+        int num;
         String lectura;
 
         switch (opcion){
             case 1:
                 System.out.println("Ingrese una opcion: ");
-                System.out.println("Oro (o)");
-                System.out.println("Plata (p)");
-                System.out.println("Bronze (b)");
-                lectura = sc.nextLine();
-                repo.imprimirAtletasConMasMedallas(lectura);
+                System.out.println("1: Oro");
+                System.out.println("2: Plata");
+                System.out.println("3: Bronze");
+                num = sc2.nextInt();
+                repo.imprimirAtletasConMasMedallas(num);
                 break;
             case 2:
                 System.out.println("Ingrese una opcion: ");

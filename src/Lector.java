@@ -45,6 +45,18 @@ public class Lector {
                 }
 
                 Participaciones.add(crearParticipacion(datos,ultimoAtleta));
+
+                if(datos[15].equals("Oro")){
+                    ultimoAtleta.agregarMedallaOro();
+                }
+
+                if(datos[15].equals("Silver")){
+                    ultimoAtleta.agregarMedallaPlata();
+                }
+
+                if(datos[15].equals("Bronze")){
+                    ultimoAtleta.agregarMedallaBronce();
+                }
             }
         }
         catch (FileNotFoundException e) {

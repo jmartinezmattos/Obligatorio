@@ -10,20 +10,20 @@ public class Repositorio {
 
     private Lector lector = new Lector();
 
-    private HeapMax<Integer,Athlete> MedallasOro;
-    private HeapMax<Integer,Athlete> MedallasBronce;
-    private HeapMax<Integer,Athlete> MedallasPlata;
+    private HeapMax<Integer,Athlete> MedallasOro = null;
+    private HeapMax<Integer,Athlete> MedallasBronce = null;
+    private HeapMax<Integer,Athlete> MedallasPlata = null;
 
     public Repositorio(){
         lector.leerArchivos();
     }
 
-    public void imprimirAtletasConMasMedallas(String tipoDeMedalla){
+    public void imprimirAtletasConMasMedallas(int num){
 
-        //falta implementar el quicksort para que ordene por cantidad de medallas ya que el heap no nos sirve para
-        //las medallas porque las keys se repiten ya sea por el valor del id del atleta o por cant de medallas, lo
-        //colocamos en una linkedlist y lo ordenamos sobre la marcha segun lo que nos pidan
-        if(tipoDeMedalla.equals("Oro")){
+        if(num == 1){
+            if(MedallasOro == null){
+                generarHeapOro();
+            }
             for(int i=0;i<10;i++) {
                 Athlete aux = MedallasOro.obtenerYEliminar();
                 System.out.println("Nombre: "+aux.getName());
@@ -34,7 +34,10 @@ public class Repositorio {
             }
         }
 
-        if(tipoDeMedalla.equals("Plata")){
+        if(num == 2){
+            if(MedallasPlata == null){
+                generarHeapPlata();
+            }
             for(int i=0;i<10;i++) {
                 Athlete aux = MedallasPlata.obtenerYEliminar();
                 System.out.println("Nombre: "+aux.getName());
@@ -45,7 +48,10 @@ public class Repositorio {
             }
         }
 
-        if(tipoDeMedalla.equals("Bronce")){
+        if(num == 3){
+            if(MedallasBronce == null){
+                generarHeapBronce();
+            }
             for(int i=0;i<10;i++) {
                 Athlete aux = MedallasBronce.obtenerYEliminar();
                 System.out.println("Nombre: "+aux.getName());
@@ -54,6 +60,10 @@ public class Repositorio {
                 System.out.println("Año Maximo: ");
                 System.out.println("Año Minimo: ");
             }
+        }
+
+        if(num < 1 || num >3){
+            System.out.println("Opcion no valida");
         }
 
     }
@@ -72,6 +82,9 @@ public class Repositorio {
 
     private void generarEstructuras(){
         //genera arboles ordenados para cada consulta
+        generarHeapPlata();
+        generarHeapOro();
+        generarHeapBronce();
     }
 
     private void generarHeapRegiones(){
@@ -89,7 +102,7 @@ public class Repositorio {
         }
     }
 
-    private void generarHeapBronze(){
+    private void generarHeapBronce(){
         for(int i=0;i<lector.Atletas.size();i++){
             MedallasBronce.agregar(lector.Atletas.get(i).getMedallasBronze(),lector.Atletas.get(i));
         }
