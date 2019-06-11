@@ -89,7 +89,7 @@ public class Repositorio {
 
     public void imprimirEquiposEfectivosRango(String rango){}
 
-    private void generarEstructuras(){
+    public void generarEstructuras(){
         //genera arboles ordenados para cada consulta
         generarHeapPlata();
         generarHeapOro();

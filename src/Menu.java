@@ -7,10 +7,18 @@ public class Menu {
     public static void main(String args[]){
 
         String continuar = "n";
+
+        Scanner entero = new Scanner(System.in);
+        Scanner letra = new Scanner(System.in);
+        String carga;
+        printHeader();
+        carga = letra.nextLine();
+        if(carga.equals("y")){
+            repo.generarEstructuras();
+        }
+
         do{
-            Scanner entero = new Scanner(System.in);
-            Scanner letra = new Scanner(System.in);
-            printHeader();
+            printHeader2();
             int opcion = entero.nextInt();
             evaluarOperacion(opcion);
             System.out.println("Desea realizar otra operacion? y/n");
@@ -21,15 +29,19 @@ public class Menu {
 
     private static void printHeader(){
         System.out.println("Bienvendido al gestor oficial de estadisticas de las olimpiadas");
+        System.out.println("");
         System.out.println("¿Desea precargar estructuras? y/n");
-        System.out.println();
+        System.out.println("");
+
+    }
+
+    private static void printHeader2(){
         System.out.println("Seleccione la operacion que desea realizar");
         System.out.println("1: Top 10 atletas con mayor cantidad de medallas");
         System.out.println("2: Top 10 regiones con mayor cantidad de medallas");
         System.out.println("3: Top 10 ediciones de juegos olimpicos con mayor participacion de atletas femeninos");
         System.out.println("4: 5 competiciones donde se presentan la mayor cantidad de atletas de cierto sexo");
         System.out.println("5: 10 equipos mas efectivos entre un rango de anios");
-
     }
 
     private static void evaluarOperacion(int opcion){
