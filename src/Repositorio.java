@@ -24,11 +24,13 @@ public class Repositorio {
     public void imprimirAtletasConMasMedallas(int num){
 
         if(num == 1){
+            Athlete[] obtenidos = new Athlete[10];
             if(!medallasOroExiste){
                 generarHeapOro();
             }
             for(int i=0;i<10;i++) {
                 Athlete aux = MedallasOro.obtenerYEliminar();
+                obtenidos[i] = aux;
                 System.out.println("#"+(i+1));
                 System.out.println("Nombre: "+aux.getName());
                 System.out.println("Sexo: "+aux.getSex());
@@ -37,14 +39,19 @@ public class Repositorio {
                 System.out.println("Año Minimo: ");
                 System.out.println("");
             }
+            for(int i=0;i<10;i++){
+                MedallasOro.agregar(obtenidos[i].getMedallasOro(),obtenidos[i]);//vuelve a agregar los atletas al heap para uso posterior
+            }
         }
 
         if(num == 2){
+            Athlete[] obtenidos = new Athlete[10];
             if(!medallasPlataExiste){
                 generarHeapPlata();
             }
             for(int i=0;i<10;i++) {
                 Athlete aux = MedallasPlata.obtenerYEliminar();
+                obtenidos[i] = aux;
                 System.out.println("#"+(i+1));
                 System.out.println("Nombre: "+aux.getName());
                 System.out.println("Sexo: "+aux.getSex());
@@ -53,14 +60,19 @@ public class Repositorio {
                 System.out.println("Año Minimo: ");
                 System.out.println("");
             }
+            for(int i=0;i<10;i++){
+                MedallasOro.agregar(obtenidos[i].getMedallasPlata(),obtenidos[i]);//vuelve a agregar los atletas al heap para uso posterior
+            }
         }
 
         if(num == 3){
+            Athlete[] obtenidos = new Athlete[10];
             if(!medallasBronceExiste){
                 generarHeapBronce();
             }
             for(int i=0;i<10;i++) {
                 Athlete aux = MedallasBronce.obtenerYEliminar();
+                obtenidos[i] = aux;
                 System.out.println("#"+(i+1));
                 System.out.println("Nombre: "+aux.getName());
                 System.out.println("Sexo: "+aux.getSex());
@@ -68,6 +80,9 @@ public class Repositorio {
                 System.out.println("Año Maximo: ");
                 System.out.println("Año Minimo: ");
                 System.out.println("");
+            }
+            for(int i=0;i<10;i++){
+                MedallasOro.agregar(obtenidos[i].getMedallasBronze(),obtenidos[i]);//vuelve a agregar los atletas al heap para uso posterior
             }
         }
 

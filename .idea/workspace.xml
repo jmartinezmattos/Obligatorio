@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc71e00d-16ae-4472-b5b3-700348c13b3f" name="Default Changelist" comment="Agregamos Quicksort y modificamos clase atletas y repositorio">
-      <change afterPath="$PROJECT_DIR$/Test/RepositorioTest.java" afterDir="false" />
+    <list default="true" id="cc71e00d-16ae-4472-b5b3-700348c13b3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TADS/Heap/HeapMaxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TADS/Heap/HeapMaxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Obligatorio/TADS/Heap/HeapMax.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Obligatorio/TADS/Heap/HeapMax.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Athlete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/Heap/HeapMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/Heap/HeapMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/LinkedList/Test/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/LinkedList/Test/LinkedListTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+            <state relative-caret-position="391">
+              <caret line="84" column="68" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
               <folding>
                 <element signature="method#imprimirRegionesConMasMedallas#0;class#Repositorio#0" />
                 <element signature="method#imprimirMayorParticipacionFemenina#0;class#Repositorio#0" />
@@ -43,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TADS/Heap/HeapMax.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-160">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="-7">
+              <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
               <folding>
                 <element signature="e#2345#2346#0" expanded="true" />
                 <element signature="e#2386#2387#0" expanded="true" />
@@ -56,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
+            <state relative-caret-position="418">
               <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
@@ -65,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entidades/Athlete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="578">
+              <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <element signature="e#1260#1261#0" expanded="true" />
                 <element signature="e#1294#1295#0" expanded="true" />
@@ -87,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="187">
+              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -442,7 +432,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560197368827</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Top 10 atletas">
+      <created>1560218533270</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560218533270</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Commit">
+      <created>1560219222925</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560219222925</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -482,6 +486,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18337408" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -498,7 +503,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.06771654" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.06718925" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32352942" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.328594" />
@@ -600,10 +605,11 @@
     <MESSAGE value="agregamos la carpeta TADS" />
     <MESSAGE value="Main ahora se llama Lector, agregadas clases Menu y Repositorio, cambios en la clase Lector (Main)" />
     <MESSAGE value="Realizado un menu mas sofisticado" />
-    <MESSAGE value="Commit" />
     <MESSAGE value="Modificadas las clases Menu y Repositorio" />
     <MESSAGE value="Agregamos Quicksort y modificamos clase atletas y repositorio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregamos Quicksort y modificamos clase atletas y repositorio" />
+    <MESSAGE value="Top 10 atletas" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -736,14 +742,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TADS/Heap/HeapMax.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="-7">
+          <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
           <folding>
             <element signature="e#2345#2346#0" expanded="true" />
             <element signature="e#2386#2387#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entidades/Athlete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="e#1260#1261#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
@@ -754,35 +785,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entidades/Athlete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1294#1295#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+        <state relative-caret-position="391">
+          <caret line="84" column="68" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
           <folding>
             <element signature="method#imprimirRegionesConMasMedallas#0;class#Repositorio#0" />
             <element signature="method#imprimirMayorParticipacionFemenina#0;class#Repositorio#0" />
