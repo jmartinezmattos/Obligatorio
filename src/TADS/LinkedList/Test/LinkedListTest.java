@@ -1,8 +1,7 @@
 package TADS.LinkedList.Test;
 
 import TADS.LinkedList.src.LinkedList;
-import org.testng.annotations.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 public class LinkedListTest {
 

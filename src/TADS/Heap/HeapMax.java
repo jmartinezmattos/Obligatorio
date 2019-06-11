@@ -36,8 +36,12 @@ public class HeapMax<K extends Comparable<K>,D> {
     public D obtenerYEliminar(){
 
         Nodo<K,D> returnNode = array[0];
+        if(cantidadDatos == 0){
+            return null;
+        }
+        array[0] = array[cantidadDatos - 1]; //el ultimo nodo pasa a ser el primero
 
-        array[0] = array[cantidadDatos -1]; //el ultimo nodo pasa a ser el primero
+
         boolean complete = false;
         int i=0; //usado para el indice, empieza con 0
 

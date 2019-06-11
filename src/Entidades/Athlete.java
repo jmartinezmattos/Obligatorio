@@ -14,10 +14,10 @@ public class Athlete  {
     private float height;
     private float weight;
     private ArrayList<AthleteOlympicParticipation> medallas;
-    private int medallasOro;
-    private int medallasPlata;
-    private int medallasBronce;
-    private int medallasTotales;
+    private int medallasOro = 0;
+    private int medallasPlata = 0;
+    private int medallasBronce = 0;
+    private int medallasTotales = 0;
     //private Team equipo;
 
     public Athlete(String id, String name, String sex, String height, String weight, String team,String NOC) {
@@ -63,14 +63,17 @@ public class Athlete  {
 
     public void agregarMedallaOro(){
         this.medallasOro++;
+        this.medallasTotales++;
     }
 
     public void agregarMedallaPlata(){
         this.medallasPlata++;
+        this.medallasTotales++;
     }
 
     public void agregarMedallaBronce(){
         this.medallasBronce++;
+        this.medallasTotales++;
     }
 
 

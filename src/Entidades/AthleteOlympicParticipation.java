@@ -22,12 +22,15 @@ public class AthleteOlympicParticipation {
         }
         if(medal.equals("Gold")){
             this.medal = MedalType.GOLD;
+            athlete.agregarMedallaOro();
         }
         if(medal.equals("Silver")){
             this.medal = MedalType.SILVER;
+            athlete.agregarMedallaPlata();
         }
         if(medal.equals("Bronze")){
             this.medal = MedalType.BRONZE;
+            athlete.agregarMedallaBronce();
         }
 
         this.athlete = athlete;

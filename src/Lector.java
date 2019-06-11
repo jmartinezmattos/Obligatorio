@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Lector {
 
-    public ArrayList<Athlete> Atletas = new ArrayList(5000);
+    public ArrayList<Athlete> Atletas = new ArrayList(14000);
     public ArrayList<AthleteOlympicParticipation> Participaciones = new ArrayList(22000);
 
 
@@ -46,17 +46,6 @@ public class Lector {
 
                 Participaciones.add(crearParticipacion(datos,ultimoAtleta));
 
-                if(datos[15].equals("Oro")){
-                    ultimoAtleta.agregarMedallaOro();
-                }
-
-                if(datos[15].equals("Silver")){
-                    ultimoAtleta.agregarMedallaPlata();
-                }
-
-                if(datos[15].equals("Bronze")){
-                    ultimoAtleta.agregarMedallaBronce();
-                }
             }
         }
         catch (FileNotFoundException e) {
