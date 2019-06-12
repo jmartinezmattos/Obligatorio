@@ -22,6 +22,8 @@ public class Repositorio {
     private boolean medallasPlataExiste = false;
     private boolean medallasBronceExiste = false;
 
+
+
     public Repositorio() {
         lector.leerArchivos();
     }

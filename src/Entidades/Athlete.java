@@ -14,7 +14,6 @@ public class Athlete  {
     private float height;
     private float weight;
     private ArrayList<AthleteOlympicParticipation> medallas;
-    private ArrayList<Integer> años;
     private int medallasOro = 0;
     private int medallasPlata = 0;
     private int medallasBronce = 0;
