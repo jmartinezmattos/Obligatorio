@@ -69,6 +69,7 @@ public class Lector {
     public Athlete crearAtleta(String[] dato){//tomando el string de datos retorna un atleta
         Athlete athlete = new Athlete(dato[0],dato[1],dato[2],dato[4],dato[5],dato[6],dato[7]);//La edad no se agrega porque varia
         return athlete;
+
     }
 
     public AthleteOlympicParticipation crearParticipacion(String[] dato, Athlete athlete){
