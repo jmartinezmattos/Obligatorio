@@ -41,4 +41,13 @@ public class AthleteOlympicParticipation {
             this.age = 0;
         }
     }
+
+    public MedalType getMedal() {
+        return medal;
+    }
+
+    public OlympicGame getOlympicGame() {
+        return olympicGame;
+    }
+
 }

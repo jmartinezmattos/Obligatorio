@@ -13,12 +13,14 @@ public class Athlete  {
     private SexType sex;
     private float height;
     private float weight;
+    private NationalOlympicCommittee noc;
     private ArrayList<AthleteOlympicParticipation> medallas;
     private int medallasOro = 0;
     private int medallasPlata = 0;
     private int medallasBronce = 0;
     private int medallasTotales = 0;
     //private Team equipo;
+
 
     public Athlete(String id, String name, String sex, String height, String weight, String team,String NOC) {
         SexType sexType = SexType.valueof(sex);
@@ -38,6 +40,7 @@ public class Athlete  {
         else{
             this.weight = 0;
         }
+        //this.noc.setName(NOC);
 
     }
 
@@ -76,8 +79,19 @@ public class Athlete  {
         this.medallasTotales++;
     }
 
+    public ArrayList<AthleteOlympicParticipation> getMedallas() {
+        return medallas;
+    }
 
+    public void setMedallas(ArrayList<AthleteOlympicParticipation> medallas) {
+        this.medallas = medallas;
+    }
 
+    public NationalOlympicCommittee getNoc() {
+        return noc;
+    }
 
-
+    public void setNoc(NationalOlympicCommittee noc) {
+        this.noc = noc;
+    }
 }

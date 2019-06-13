@@ -1,9 +1,6 @@
 import Entidades.Athlete;
-import Entidades.NationalOlympicCommittee;
 import TADS.Heap.HeapMax;
 import TADS.LinkedList.src.*;
-
-import java.util.ArrayList;
 
 
 public class Repositorio {
@@ -11,10 +8,12 @@ public class Repositorio {
     //clase encargada de contener y manejar datos
 
     private Lector lector = new Lector();
-
-    private HeapMax<Integer,Athlete> MedallasOro = new HeapMax<>(14000);
-    private HeapMax<Integer,Athlete> MedallasBronce = new HeapMax<>(14000);
-    private HeapMax<Integer,Athlete> MedallasPlata = new HeapMax<>(14000);
+    private QuickSort sorter= new QuickSort();
+    private HeapMax<Integer, Athlete> MedallasOro = new HeapMax<>(14000);
+    private HeapMax<Integer, Athlete> MedallasBronce = new HeapMax<>(14000);
+    private HeapMax<Integer, Athlete> MedallasPlata = new HeapMax<>(14000);
+    private HashImpl<String,Integer>regiones;
+    private Athlete[] obtenidos = new Athlete[10];
 
     private boolean medallasOroExiste = false;
     private boolean medallasPlataExiste = false;
@@ -153,3 +152,25 @@ public class Repositorio {
         return nationalOlympicCommittees;
     }
 }
+
+    public int obtenerAñoMaximo(){
+      int maximo=0;
+      int max=0;
+      ArrayList<AthleteOlympicParticipation>medal;
+        for(int i = 0; i < 10; i++){
+            Athlete at=obtenidos[i];
+            for(int j = 0; j <at.getMedallas().size() ; j++){
+                medal=at.getMedallas();
+                if(medal.get(j).getMedal().equals(MedalType.GOLD)) {
+                    max = medal.get(j).getOlympicGame().getYear();
+                }
+                if(medal.get(j).getMedal().equals(MedalType.SILVER)) {
+                    max = medal.get(j).getOlympicGame().getYear();
+                }
+                if(medal.get(j).getMedal().equals(MedalType.BRONZE)) {
+                    max = medal.get(j).getOlympicGame().getYear();
+                }
+                if(max>maximo){
+                    maximo=max;
+                }
+            }

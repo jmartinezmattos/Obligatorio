@@ -1,60 +1,39 @@
 package TADS.QuickSort;
 
+import java.util.ArrayList;
+
 public class QuickSort {
-
-    private int array[];
-    private int length;
-
-    public void sort(int[] inputArr) {
-
-        if (inputArr == null || inputArr.length == 0) {
-            return;
-        }
-        this.array = inputArr;
-        length = inputArr.length;
-        quickSort(0, length - 1);
+    public static void sort(ArrayList objects)
+    {
+        quickSort(objects, 0, objects.size() -1);
     }
 
-    private void quickSort(int lowerIndex, int higherIndex) {
-
-        int i = lowerIndex;
-        int j = higherIndex;
-        int pivot = array[lowerIndex+(higherIndex-lowerIndex)/2];
-        while (i <= j) {
-
-            while (array[i] < pivot) {
-                i++;
-            }
-            while (array[j] > pivot) {
-                j--;
-            }
-            if (i <= j) {
-                exchangeNumbers(i, j);
-                i++;
-                j--;
-            }
-        }
-
-        if (lowerIndex < j)
-            quickSort(lowerIndex, j);
-        if (i < higherIndex)
-            quickSort(i, higherIndex);
-    }
-
-    private void exchangeNumbers(int i, int j) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-//Prueba
-    public static void main(String a[]){
-
-        QuickSort sorter = new QuickSort();
-        int[] input = {24,2,45,20,56,75,2,56,99,53,12};
-        sorter.sort(input);
-        for(int i:input){
-            System.out.print(i);
-            System.out.print(" ");
+    public static void quickSort(ArrayList elements, int from, int to)
+    {
+        if (from < to)
+        {
+            int p = partition(elements, from, to);
+            quickSort(elements, from, p);
+            quickSort(elements, p+1, to);
         }
     }
-}
+
+    public static int partition(ArrayList elements, int from, int to)
+    {
+        Comparable pivot = (Comparable)elements.get(from);
+        int i = from -1;
+        int j = to +1;
+
+        while (i < j)
+        {
+            i++; while (((Comparable)(elements.get(i))).compareTo(pivot) < 0) i++;
+            j--; while (((Comparable)(elements.get(i))).compareTo(pivot) > 0) j--;
+            if (i < j)
+            {
+                Comparable temp = (Comparable)elements.get(i);
+                elements.set(i, (Comparable)elements.get(j));
+                elements.set(j, temp);
+            }
+        }
+        return j;
+    }}
