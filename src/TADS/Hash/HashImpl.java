@@ -1,11 +1,14 @@
 package TADS.Hash;
+import Entidades.Athlete;
+import TADS.LinkedList.src.LinkedList;
+
 import java.util.Arrays;
-import java.util.LinkedList;
+
 import java.util.Objects;
 
 public class HashImpl<K,V> implements Hash<K,V> {
 
-    private LinkedList<HashNode>[] myHash;
+    private LinkedList<K,V>[] myHash;
     private int size;
     private HashNode<K,V> nodoAgregar;
 
@@ -14,7 +17,7 @@ public class HashImpl<K,V> implements Hash<K,V> {
 
         myHash = new LinkedList[size];
         for (int i = 0; i < size; i++) {
-            myHash[i] = new LinkedList<HashNode>();
+            myHash[i] = new LinkedList<K,V>();
         }
 
     }
@@ -26,7 +29,6 @@ public class HashImpl<K,V> implements Hash<K,V> {
         this.colision(key, nodoAgregar);
 
     }
-
 
     public V find(K key) {
 
@@ -95,7 +97,7 @@ public class HashImpl<K,V> implements Hash<K,V> {
         }
         if (nodoAux== null) {
 
-            myHash[position].add(nodoAgregar);
+            myHash[position].add(nodoAgregar.getKey(),nodoAgregar.getValue());
 
 
         }

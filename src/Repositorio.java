@@ -7,6 +7,7 @@ import TADS.Heap.HeapMax;
 import TADS.LinkedList.src.*;
 import TADS.QuickSort.QuickSort;
 
+
 import java.util.ArrayList;
 
 
@@ -19,7 +20,6 @@ public class Repositorio {
     private HeapMax<Integer, Athlete> MedallasOro = new HeapMax<>(14000);
     private HeapMax<Integer, Athlete> MedallasBronce = new HeapMax<>(14000);
     private HeapMax<Integer, Athlete> MedallasPlata = new HeapMax<>(14000);
-    private HashImpl<String, Integer> regiones;
     private Athlete[] obtenidos = new Athlete[10];
 
     private boolean medallasOroExiste = false;
@@ -102,6 +102,15 @@ public class Repositorio {
     }
 
     public void imprimirRegionesConMasMedallas(String tipoDeMedalla) {
+        if (tipoDeMedalla.equals("o")) {
+            lector.getNationalOlympicCommittees().find(tipoDeMedalla).getCantMedallasOro();
+        }
+        if (tipoDeMedalla.equals("p")) {
+            lector.getNationalOlympicCommittees().find(tipoDeMedalla).getCantMedllasPlata();
+        }
+        if (tipoDeMedalla.equals("b")) {
+            lector.getNationalOlympicCommittees().find(tipoDeMedalla).getCantMedallasBronce();
+        }
 
     }
 
@@ -191,5 +200,7 @@ public class Repositorio {
         }
         return maximo;
     }
+
+
 }
 

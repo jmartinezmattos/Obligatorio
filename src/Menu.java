@@ -58,6 +58,7 @@ public class Menu {
                 System.out.println("2: Plata");
                 System.out.println("3: Bronze");
                 num = sc2.nextInt();
+                System.out.println("La cantidad de medallas obtenidas de la region seleccionada es: ");
                 repo.imprimirAtletasConMasMedallas(num);
                 break;
             case 2:

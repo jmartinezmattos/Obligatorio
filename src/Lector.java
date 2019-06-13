@@ -104,11 +104,28 @@ public class Lector {
 
     }
 
+    public void agregarAtletasAlCommite(){
+        for(int i=0;i<Atletas.size();i++){
+         NationalOlympicCommittee aux=  nationalOlympicCommittees.find(Atletas.get(i).getNoc().getName());
+         aux.setCantMedallasOro(aux.getCantMedallasOro()+Atletas.get(i).getMedallasOro());
+         aux.setCantMedllasPlata(aux.getCantMedllasPlata()+Atletas.get(i).getMedallasPlata());
+         aux.setCantMedallasBronce(aux.getCantMedallasBronce()+Atletas.get(i).getMedallasBronze());
+        }
+    }
+
     public ArrayList<Athlete> getAtletas() {
         return Atletas;
     }
 
     public ArrayList<AthleteOlympicParticipation> getParticipaciones() {
         return Participaciones;
+    }
+
+    public HashImpl<String, NationalOlympicCommittee> getNationalOlympicCommittees() {
+        return nationalOlympicCommittees;
+    }
+
+    public void setNationalOlympicCommittees(HashImpl<String, NationalOlympicCommittee> nationalOlympicCommittees) {
+        this.nationalOlympicCommittees = nationalOlympicCommittees;
     }
 }

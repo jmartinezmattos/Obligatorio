@@ -1,8 +1,8 @@
 package TADS.LinkedList.src;
 
-public interface List<L> {
+public interface List<K,V> {
 
-    public void add(L value);
+    void add(K key, V value);
 
     public void remove (int position);
 

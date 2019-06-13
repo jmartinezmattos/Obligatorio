@@ -1,23 +1,41 @@
 package TADS.LinkedList.src;
 
-public class LinkedList<T> implements List<T> {
+import TADS.Hash.Hash;
+import TADS.Hash.HashNode;
 
-    private Nodo<T> first = null;
-    private Nodo<T> last;
+public class LinkedList<K,V> implements List<K,V> {
+
+    private HashNode<K,V> first = null;
+    private HashNode<K,V> last;
     private int size=0;
 
-    @Override
-    public void add(T value) {
+    public HashNode<K, V> getFirst() {
+        return first;
+    }
 
-        Nodo<T> nuevo = new Nodo<>(value);
+    public void setFirst(HashNode<K, V> first) {
+        this.first = first;
+    }
+
+    public HashNode<K, V> getLast() {
+        return last;
+    }
+
+    public void setLast(HashNode<K, V> last) {
+        this.last = last;
+    }
+
+    public void add(K key, V value) {
+
+        HashNode<K,V> nuevo = new HashNode<K,V>(key,value);
 
         if(size == 0){
-           this.first = nuevo;
-           this.last = this.first;
+            this.first = nuevo;
+            this.last = this.first;
         }
         else{
-            nuevo.setPrevious(this.last);
-            this.last.setNext(nuevo);
+            nuevo.setNodoAnterior(this.last);
+            this.last.setNodoSiguiente(nuevo);
             this.last = nuevo;
         }
         size++;
@@ -32,30 +50,30 @@ public class LinkedList<T> implements List<T> {
                 throw new NullPointerException();
             }
 
-            Nodo<T> auxPrev;
-            Nodo<T> auxNext;
-            Nodo<T> auxDel = this.first;
+            HashNode<K,V> auxPrev;
+            HashNode<K,V> auxNext;
+            HashNode<K,V> auxDel = this.first;
 
             if(position == 0){
-                auxNext = this.first.getNext();
+                auxNext = this.first.getNodoSiguiente();
                 this.first = auxNext;
             }
             else if(position == (size-1)){
-                auxPrev = this.last.getPrevious();
-                auxPrev.setNext(null);
+                auxPrev = this.last.getNodoAnterior();
+                auxPrev.setNodoSiguiente(null);
                 this.last = auxPrev;
             }
             else{
 
                 for(int i=0; i < position; i++){
-                    auxDel = auxDel.getNext();
+                    auxDel = auxDel.getNodoSiguiente();
                 }
 
-                auxNext = auxDel.getNext();
-                auxPrev = auxDel.getPrevious();
+                auxNext = auxDel.getNodoSiguiente();
+                auxPrev = auxDel.getNodoAnterior();
 
-                auxPrev.setNext(auxNext);
-                auxNext.setPrevious(auxPrev);
+                auxPrev.setNodoSiguiente(auxNext);
+                auxNext.setNodoAnterior(auxPrev);
             }
 
             size--;
@@ -66,10 +84,10 @@ public class LinkedList<T> implements List<T> {
     }
 
     @Override
-    public T get(int position) {
+    public V get(int position) {
 
-        Nodo<T> buscado = this.first;
-        T value = null;
+        HashNode<K,V> buscado = this.first;
+        V value = null;
 
         try {
 
@@ -78,7 +96,7 @@ public class LinkedList<T> implements List<T> {
             }
 
             for (int i=0; i < position; i++) {
-                buscado = buscado.getNext();
+                buscado = buscado.getNodoSiguiente();
             }
             value = buscado.getValue();
         }
@@ -88,11 +106,11 @@ public class LinkedList<T> implements List<T> {
         return value;
     }
 
-    public void addFirst(T value){
-        Nodo<T> nuevo = new Nodo<>(value);
+    public void addFirst(K key, V value){
+        HashNode<K,V> nuevo = new HashNode<K,V>(key,value);
 
         if(size>0) {
-            nuevo.setNext(this.first);
+            nuevo.setNodoSiguiente(this.first);
         }
 
         this.first = nuevo;
@@ -100,8 +118,8 @@ public class LinkedList<T> implements List<T> {
         size++;
     } //le falta para doublelink
 
-    public void addLast(T value){
-        add(value);
+    public void addLast(K key, V value){
+        add(key,value);
     }
 
 }
