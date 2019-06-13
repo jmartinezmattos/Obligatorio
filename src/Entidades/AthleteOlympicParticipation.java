@@ -42,6 +42,10 @@ public class AthleteOlympicParticipation {
         }
     }
 
+    public MedalType getMedal() {
+        return medal;
+    }
+
     public OlympicGame getOlympicGame() {
         return olympicGame;
     }

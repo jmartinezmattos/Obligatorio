@@ -1,9 +1,10 @@
 import Entidades.Athlete;
 import Entidades.AthleteOlympicParticipation;
+import Enums.MedalType;
+import TADS.Hash.HashImpl;
 import TADS.Heap.HeapMax;
 import TADS.LinkedList.src.*;
 import TADS.QuickSort.QuickSort;
-
 import java.util.ArrayList;
 
 
@@ -16,6 +17,7 @@ public class Repositorio {
     private HeapMax<Integer, Athlete> MedallasOro = new HeapMax<>(14000);
     private HeapMax<Integer, Athlete> MedallasBronce = new HeapMax<>(14000);
     private HeapMax<Integer, Athlete> MedallasPlata = new HeapMax<>(14000);
+    private HashImpl<String,Integer>regiones;
     private Athlete[] obtenidos = new Athlete[10];
 
     private boolean medallasOroExiste = false;
@@ -153,10 +155,20 @@ public class Repositorio {
     public int obtenerAñoMaximo(){
       int maximo=0;
       int max=0;
+      ArrayList<AthleteOlympicParticipation>medal;
         for(int i = 0; i < 10; i++){
             Athlete at=obtenidos[i];
             for(int j = 0; j <at.getMedallas().size() ; j++){
-               max=at.getMedallas().get(j).getOlympicGame().getYear();
+                medal=at.getMedallas();
+                if(medal.get(j).getMedal().equals(MedalType.GOLD)) {
+                    max = medal.get(j).getOlympicGame().getYear();
+                }
+                if(medal.get(j).getMedal().equals(MedalType.SILVER)) {
+                    max = medal.get(j).getOlympicGame().getYear();
+                }
+                if(medal.get(j).getMedal().equals(MedalType.BRONZE)) {
+                    max = medal.get(j).getOlympicGame().getYear();
+                }
                 if(max>maximo){
                     maximo=max;
                 }
@@ -167,15 +179,25 @@ public class Repositorio {
         return maximo;
     }
 
-    public int obtenerAñoMinimo(){
-        int minimo=0;
-        int min=0;
-        for(int i = 0; i < 10; i++){
-            Athlete at=obtenidos[i];
-            for(int j = 0; j <at.getMedallas().size() ; j++){
-                min=at.getMedallas().get(j).getOlympicGame().getYear();
-                if(min>minimo){
-                    minimo=min;
+    public int obtenerAñoMinimo() {
+        int minimo = 0;
+        int min = 0;
+        ArrayList<AthleteOlympicParticipation> medal;
+        for (int i = 0; i < 10; i++) {
+            Athlete at = obtenidos[i];
+            for (int j = 0; j < at.getMedallas().size(); j++) {
+                medal = at.getMedallas();
+                if (medal.get(j).getMedal().equals(MedalType.GOLD)) {
+                    min = medal.get(j).getOlympicGame().getYear();
+                }
+                if (medal.get(j).getMedal().equals(MedalType.SILVER)) {
+                    min = medal.get(j).getOlympicGame().getYear();
+                }
+                if (medal.get(j).getMedal().equals(MedalType.BRONZE)) {
+                    min = medal.get(j).getOlympicGame().getYear();
+                }
+                if (min < minimo) {
+                    minimo = min;
                 }
             }
 
@@ -183,5 +205,13 @@ public class Repositorio {
 
         return minimo;
     }
+
+    private void generarHashRegiones() {
+
+        for (int i = 0; i < lector.Atletas.size(); i++) {
+            regiones.put(lector.Atletas.get(i).getNoc().getName(), lector.Atletas.get(i).getNoc().getCantMedallasOro());
+        }
+    }
+
 
 }

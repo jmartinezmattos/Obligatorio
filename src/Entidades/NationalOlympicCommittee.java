@@ -7,6 +7,9 @@ public class NationalOlympicCommittee {
     private String name;
     private String region;
     private ArrayList<Athlete> athletes;
+    private int cantMedallasOro;
+    private int cantMedllasPlata;
+    private int cantMedallasBronce;
 
     public NationalOlympicCommittee(String name, String region) {
         this.name = name;
@@ -35,5 +38,29 @@ public class NationalOlympicCommittee {
 
     public void setAthletes(ArrayList<Athlete> athletes) {
         this.athletes = athletes;
+    }
+
+    public int getCantMedallasOro() {
+        return cantMedallasOro;
+    }
+
+    public void setCantMedallasOro(int cantMedallasOro) {
+        this.cantMedallasOro = cantMedallasOro;
+    }
+
+    public int getCantMedllasPlata() {
+        return cantMedllasPlata;
+    }
+
+    public void setCantMedllasPlata(int cantMedllasPlata) {
+        this.cantMedllasPlata = cantMedllasPlata;
+    }
+
+    public int getCantMedallasBronce() {
+        return cantMedallasBronce;
+    }
+
+    public void setCantMedallasBronce(int cantMedallasBronce) {
+        this.cantMedallasBronce = cantMedallasBronce;
     }
 }
