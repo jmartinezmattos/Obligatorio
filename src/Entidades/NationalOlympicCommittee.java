@@ -5,12 +5,16 @@ import java.util.ArrayList;
 public class NationalOlympicCommittee {
 
     private String name;
-    private String region;
+    private String NOC;
+    private String notes = null;
     private ArrayList<Athlete> athletes;
+    private String medallasTotales;
 
-    public NationalOlympicCommittee(String name, String region) {
+
+    public NationalOlympicCommittee(String NOC, String region, String notes) {
         this.name = name;
-        this.region = region;
+        this.NOC = NOC;
+        this.notes = notes;
     }
 
     public String getName() {
@@ -22,11 +26,11 @@ public class NationalOlympicCommittee {
     }
 
     public String getRegion() {
-        return region;
+        return NOC;
     }
 
     public void setRegion(String region) {
-        this.region = region;
+        this.NOC = region;
     }
 
     public ArrayList<Athlete> getAthletes() {

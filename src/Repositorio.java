@@ -1,6 +1,9 @@
 import Entidades.Athlete;
+import Entidades.NationalOlympicCommittee;
 import TADS.Heap.HeapMax;
 import TADS.LinkedList.src.*;
+
+import java.util.ArrayList;
 
 
 public class Repositorio {
@@ -139,5 +142,14 @@ public class Repositorio {
             }
         }
         medallasBronceExiste = true;
+    }
+
+    public ArrayList<NationalOlympicCommittee> nationalOlympicCommittees(){
+        //genera un arraylist con los commites olimpicos
+        ArrayList<NationalOlympicCommittee> nationalOlympicCommittees = new ArrayList<>(231);
+
+
+
+        return nationalOlympicCommittees;
     }
 }
