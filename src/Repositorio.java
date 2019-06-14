@@ -68,8 +68,8 @@ public class Repositorio {
                 System.out.println("Nombre: " + aux.getName());
                 System.out.println("Sexo: " + aux.getSex());
                 System.out.println("Cantidad De Medallas: " + aux.getMedallasOro());
-                System.out.println("Año Maximo: ");
-                System.out.println("Año Minimo: ");
+                System.out.println("Año Maximo: " +aux.getMaxYear());
+                System.out.println("Año Minimo: " +aux.getMinYear());
                 System.out.println("");
             }
             for (int i = 0; i < 10; i++) {

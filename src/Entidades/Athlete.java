@@ -19,6 +19,8 @@ public class Athlete  {
     private int medallasPlata = 0;
     private int medallasBronce = 0;
     private String team;
+    private int minYear = 0;//anio maximo y minimo
+    private int maxYear = 0;
     //private Team equipo;
 
 
@@ -47,6 +49,12 @@ public class Athlete  {
 
     public void addParticipacion(AthleteOlympicParticipation participation){
         medallas.add(participation);
+        if(participation.getYear()>this.maxYear){
+            this.maxYear = participation.getYear();
+        }
+        if(this.minYear==0||participation.getYear()<this.minYear){
+            this.minYear = participation.getYear();
+        }
     }
 
     public String getName() {
@@ -94,5 +102,13 @@ public class Athlete  {
 
     public String getTeam() {
         return team;
+    }
+
+    public int getMinYear() {
+        return minYear;
+    }
+
+    public int getMaxYear() {
+        return maxYear;
     }
 }
