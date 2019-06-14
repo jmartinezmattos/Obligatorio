@@ -55,29 +55,39 @@ public class Team {
         int medallas = 0;
         int atletaEnRango = 0;
         boolean atletaContado = false;
+
         if(inicio<=fin){
+
             for(int i=0;i<Atletas.size();i++) {
                 Athlete athlete = Atletas.get(i);
                 for(int b=0;b<athlete.medallas.size();b++){
-                    if(inicio<athlete.medallas.get(b).getAge() && athlete.medallas.get(b).getAge()<fin){
-                            if(!atletaContado){
+
+                    if(inicio<athlete.medallas.get(b).getYear() && athlete.medallas.get(b).getYear()<fin){
+                        if(!atletaContado){
                                 atletaEnRango++;
                                 atletaContado = true;
-                            }
-                        if(!athlete.medallas.get(b).getMedal().equals("NA")){
+                        }
+                        if(!athlete.getMedallas().get(b).getMedal().equals("NA")){
                             medallas++;
                         }
                     }
                 }
                 atletaContado = false;
             }
+
         }
+
         int[] result = {atletaEnRango,medallas};
         return result;
     }
 
     public int efectividadRango(int inicio, int fin){
         int[] datos = efectivivadRangoDetalle(inicio, fin);
-        return (datos[0]/datos[1]);
+        if(datos[1] == 0) {
+            return 0;
+        }
+        else{
+            return (datos[0] / datos[1]);
+        }
     }
 }

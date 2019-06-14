@@ -183,6 +183,7 @@ public class Repositorio {
             System.out.println("Equipo: "+equipo.getName());
             System.out.println("Cantidad de competidores: " +datos[0]);
             System.out.println("Cantidad de Medallas: " +datos[1]);
+            System.out.println("");
         }
     }
 
@@ -322,7 +323,7 @@ public class Repositorio {
             if(!equipos.contains(teamName)){
                 //si el equipo todavia no existe
                 arrayListEquipos.add(teamName);
-                Team newTeam = new Team(teamName);
+                Team newTeam = new Team(teamName.replaceAll("-2","").replaceAll("-1",""));
                 newTeam.addAtleta(athlete);
                 equipos.put(teamName,newTeam);
             }

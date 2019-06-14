@@ -23,9 +23,9 @@ class RepositorioTest {
 
     }
 
-    @org.junit.Test
+    @Test
     public void imprimirEquiposEfectivosRango() {
         Repositorio repo = new Repositorio();
-        repo.imprimirEquiposEfectivosRango(1990,1920);
+        repo.imprimirEquiposEfectivosRango(1900,2020);
     }
 }

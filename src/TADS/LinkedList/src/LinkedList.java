@@ -83,7 +83,8 @@ public class LinkedList<T> implements List<T> {
             value = buscado.getValue();
         }
         catch (NullPointerException e){
-            System.out.println("Indice invalido (indx max=" +(size-1) +")");
+            return null;
+            //System.out.println("Indice invalido (indx max=" +(size-1) +")");
         }
         return value;
     }

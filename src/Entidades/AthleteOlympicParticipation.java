@@ -7,16 +7,18 @@ import static java.lang.Integer.valueOf;
 
 public class AthleteOlympicParticipation {
 
-    private MedalType medal;
+    private MedalType medal = MedalType.NA;
     private Athlete athlete;
     private int age;
+    private  int year;
     private Event event;
     private OlympicGame olympicGame;
     private NationalOlympicCommittee nationalCommitee;
 
 
-    public AthleteOlympicParticipation(String medal, Athlete athlete,String age) {
+    public AthleteOlympicParticipation(String medal, Athlete athlete,String age,String year) {
 
+        this.year = valueOf(year);
 
         if(medal.equals("NA")){
             this.medal = MedalType.NA;
@@ -58,4 +60,7 @@ public class AthleteOlympicParticipation {
         return olympicGame;
     }
 
+    public int getYear() {
+        return year;
+    }
 }

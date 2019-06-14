@@ -45,6 +45,10 @@ public class Athlete  {
 
     }
 
+    public void addParticipacion(AthleteOlympicParticipation participation){
+        medallas.add(participation);
+    }
+
     public String getName() {
         return name;
     }
@@ -82,10 +86,6 @@ public class Athlete  {
 
     public ArrayList<AthleteOlympicParticipation> getMedallas() {
         return medallas;
-    }
-
-    public void setMedallas(ArrayList<AthleteOlympicParticipation> medallas) {
-        this.medallas = medallas;
     }
 
     public String getNOC() {
