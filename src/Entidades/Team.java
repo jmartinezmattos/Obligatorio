@@ -1,7 +1,5 @@
 package Entidades;
 
-import Entidades.Athlete;
-
 import java.util.ArrayList;
 
 public class Team {
@@ -38,18 +36,6 @@ public class Team {
 
     public Team(String name){
         this.name = name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public ArrayList getAtletas() {
-        return Atletas;
-    }
-
-    public void setAtletas(ArrayList atletas) {
-        Atletas = atletas;
     }
 
     public int[] efectivivadRangoDetalle(int inicio, int fin){
