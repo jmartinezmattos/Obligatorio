@@ -22,9 +22,19 @@ public class Repositorio {
     private HeapMax<Integer, Athlete> MedallasPlata = new HeapMax<>(14000);
     private Athlete[] obtenidos = new Athlete[10];
 
+    private HeapMax<Integer,NationalOlympicCommittee> MedallasOroNOC = new HeapMax<>(500);
+    private HeapMax<Integer,NationalOlympicCommittee> MedallasPlataNOC = new HeapMax<>(500);
+    private HeapMax<Integer,NationalOlympicCommittee> MedallasBronceNOC = new HeapMax<>(500);
+
     private boolean medallasOroExiste = false;
     private boolean medallasPlataExiste = false;
     private boolean medallasBronceExiste = false;
+
+    private boolean medallasOroRegionesExiste = false;
+    private boolean medallasPlataRegionesExiste = false;
+    private boolean medallasBronceRegionesExiste = false;
+
+    private boolean hashRegionesExiste = false;
 
     public Repositorio() {
         lector.leerArchivos();
@@ -101,16 +111,52 @@ public class Repositorio {
 
     }
 
-    public void imprimirRegionesConMasMedallas(String tipoDeMedalla) {
-        if (tipoDeMedalla.equals("o")) {
-            lector.getNationalOlympicCommittees().find(tipoDeMedalla).getCantMedallasOro();
+    public void imprimirRegionesConMasMedallas(int opcion) {
+        generarHeapMedallasRegiones(opcion);
+        NationalOlympicCommittee[] temp = new NationalOlympicCommittee[10];
+
+        if(opcion == 1){
+            System.out.println("Paises con mas medallas de Oro: ");
+            System.out.println("");
+            for(int i=0;i<10;i++) {
+               temp[i] = MedallasOroNOC.obtenerYEliminar();
+               System.out.println("Nombre de la region: " +temp[i].getName());
+               System.out.println("Cantidad de medallas: " +temp[i].getCantMedallasOro());
+               System.out.println("");
+            }
+            for(int i = 0;i<10;i++){
+                MedallasOroNOC.agregar(temp[i].getCantMedallasOro(),temp[i]);
+            }
         }
-        if (tipoDeMedalla.equals("p")) {
-            lector.getNationalOlympicCommittees().find(tipoDeMedalla).getCantMedllasPlata();
+
+        if(opcion == 2){
+            System.out.println("Paises con mas medallas de Plata: ");
+            System.out.println("");
+            for(int i=0;i<10;i++) {
+               temp[i] = MedallasPlataNOC.obtenerYEliminar();
+               System.out.println("Nombre de la region: " +temp[i].getName());
+               System.out.println("Cantidad de medallas: " +temp[i].getCantMedllasPlata());
+               System.out.println("");
+            }
+            for(int i = 0;i<10;i++){
+                MedallasPlataNOC.agregar(temp[i].getCantMedllasPlata(),temp[i]);
+            }
         }
-        if (tipoDeMedalla.equals("b")) {
-            lector.getNationalOlympicCommittees().find(tipoDeMedalla).getCantMedallasBronce();
+
+        if(opcion == 3){
+            System.out.println("Paises con mas medallas de Bronce: ");
+            System.out.println("");
+            for(int i=0;i<10;i++) {
+               temp[i] = MedallasBronceNOC.obtenerYEliminar();
+               System.out.println("Nombre de la region: " +temp[i].getName());
+               System.out.println("Cantidad de medallas: " +temp[i].getCantMedallasBronce());
+               System.out.println("");
+            }
+            for(int i = 0;i<10;i++){
+                MedallasOroNOC.agregar(temp[i].getCantMedallasBronce(),temp[i]);
+            }
         }
+
 
     }
 
@@ -129,10 +175,62 @@ public class Repositorio {
         generarHeapPlata();
         generarHeapOro();
         generarHeapBronce();
+        generarHashRegiones();//falta heaps regiones
     }
 
-    private void generarHeapRegiones() {
+    public int MedallasONOC(String noc){
+        return lector.nationalOlympicCommittees.find(noc).getCantMedallasOro();
+    }
 
+    private void generarHashRegiones() {
+
+        if(!hashRegionesExiste){
+            for (int i = 0; i < lector.Atletas.size(); i++) {
+                Athlete atleta = lector.Atletas.get(i);
+                String NOC = atleta.getNOC();
+                if (NOC.equals("SGP")) {
+                    NOC = "SIN";//por archivo mal escrito en el documento
+                }
+                NationalOlympicCommittee committee = lector.nationalOlympicCommittees.find(NOC);
+                committee.addAthlete(atleta);
+            }
+            hashRegionesExiste = true;
+        }
+    }
+
+    private void generarHeapMedallasRegiones(int opcion){
+        generarHashRegiones();
+        if(opcion == 1){
+            if(!medallasOroRegionesExiste){
+                for (int i = 0; i < lector.arrayComittees.size(); i++) {
+                    String NOC = lector.arrayComittees.get(i);
+                    NationalOlympicCommittee committee = lector.nationalOlympicCommittees.find(NOC);
+                    this.MedallasOroNOC.agregar(committee.getCantMedallasOro(), committee);
+                }
+                medallasOroRegionesExiste = true;
+            }
+        }
+
+        if(opcion == 2){
+            if(!medallasPlataRegionesExiste){
+                for (int i = 0; i < lector.arrayComittees.size(); i++) {
+                    String NOC = lector.arrayComittees.get(i);
+                    NationalOlympicCommittee committee = lector.nationalOlympicCommittees.find(NOC);
+                    this.MedallasPlataNOC.agregar(committee.getCantMedllasPlata(), committee);
+                }
+                medallasPlataRegionesExiste = true;
+            }
+        }
+        if(opcion == 3) {
+            if (!medallasBronceRegionesExiste) {
+                for (int i = 0; i < lector.arrayComittees.size(); i++) {
+                    String NOC = lector.arrayComittees.get(i);
+                    NationalOlympicCommittee committee = lector.nationalOlympicCommittees.find(NOC);
+                    this.MedallasBronceNOC.agregar(committee.getCantMedallasOro(), committee);
+                }
+                medallasBronceRegionesExiste = true;
+            }
+        }
     }
 
     private void generarHeapOro() {

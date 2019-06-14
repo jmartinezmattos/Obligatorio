@@ -1,6 +1,5 @@
 package TADS.Hash;
 import TADS.LinkedList.src.LinkedList;
-import TADS.LinkedList.src.LinkedListKV;
 
 public class HashImpl<K,V> implements Hash<K,V> {
 
@@ -36,6 +35,7 @@ public class HashImpl<K,V> implements Hash<K,V> {
         }
         int i = 0;
         boolean terminado = false;
+
         HashNode<K,V> nodoNext=myHash[b].get(i);
 
         do {
@@ -47,15 +47,6 @@ public class HashImpl<K,V> implements Hash<K,V> {
                 nodoNext=myHash[b].get(i);
             }
         }while(!terminado);
-
-        /*
-        while(nodoNext.getKey()!=key){
-            nodoNext=nodoNext.getNodoSiguiente();
-        }
-        if(nodoNext.getKey()==key){
-            valueFind=nodoNext.getValue();
-        }
-        */
 
         return valueFind;
     }
@@ -102,27 +93,6 @@ public class HashImpl<K,V> implements Hash<K,V> {
         if(position>size){
             position = position%size;
         }
-
-        //HashNode<K,V> nodoAux = myHash[position].get(0);
-
         myHash[position].add(nodoAgregar);
-
-        /*
-        if (nodoAux != null) {
-            HashNode<K, V> nodoActual = nodoAux.getNodoSiguiente();
-            while (nodoActual != null && nodoActual.hasNext) {
-                nodoActual = nodoActual.getNodoSiguiente();
-            }
-            nodoActual.setNodoSiguiente(nodoAgregar);
-        }
-        if (nodoAux== null) {
-            //si esta vacio
-            myHash[position].add(nodoAgregar.getKey(),nodoAgregar.getValue());
-        }
-        */
-
-
-
-
     }
 }

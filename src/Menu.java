@@ -63,11 +63,16 @@ public class Menu {
                 break;
             case 2:
                 System.out.println("Ingrese una opcion: ");
-                System.out.println("Oro (o)");
-                System.out.println("Plata (p)");
-                System.out.println("Bronze (b)");
-                lectura = sc.nextLine();
-                repo.imprimirRegionesConMasMedallas(lectura);
+                System.out.println("1: Oro");
+                System.out.println("2: Plata");
+                System.out.println("3: Bronze");
+                num = sc2.nextInt();
+                if(num<1 || num>3) {
+                    System.out.println("Opcion no valida");
+                }
+                else{
+                    repo.imprimirRegionesConMasMedallas(num);
+                }
                 break;
             case 3:
                 repo.imprimirMayorParticipacionFemenina();

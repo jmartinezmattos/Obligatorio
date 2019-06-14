@@ -1,47 +1,38 @@
 package Entidades;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class NationalOlympicCommittee {
 
     private String name;
     private String NOC;
     private String notes = null;
-    private ArrayList<Athlete> athletes;
-    private String medallasTotales;
+    private LinkedList<Athlete> athletes = new LinkedList<>();
     private int cantMedallasOro;
-    private int cantMedllasPlata;
+    private int cantMedallasPlata;
     private int cantMedallasBronce;
 
 
     public NationalOlympicCommittee(String NOC, String region, String notes) {
-        this.name = name;
+        this.name = region;
         this.NOC = NOC;
         this.notes = notes;
+    }
+
+    public void addAthlete(Athlete athlete){
+        this.athletes.add(athlete);
+        this.cantMedallasOro = cantMedallasOro + athlete.getMedallasOro();
+        this.cantMedallasPlata = cantMedallasPlata + athlete.getMedallasPlata();
+        this.cantMedallasBronce = cantMedallasBronce + athlete.getMedallasBronze();
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getRegion() {
+    public String getNOC() {
         return NOC;
-    }
-
-    public void setRegion(String region) {
-        this.NOC = region;
-    }
-
-    public ArrayList<Athlete> getAthletes() {
-        return athletes;
-    }
-
-    public void setAthletes(ArrayList<Athlete> athletes) {
-        this.athletes = athletes;
     }
 
     public int getCantMedallasOro() {
@@ -53,11 +44,11 @@ public class NationalOlympicCommittee {
     }
 
     public int getCantMedllasPlata() {
-        return cantMedllasPlata;
+        return cantMedallasPlata;
     }
 
     public void setCantMedllasPlata(int cantMedllasPlata) {
-        this.cantMedllasPlata = cantMedllasPlata;
+        this.cantMedallasPlata = cantMedllasPlata;
     }
 
     public int getCantMedallasBronce() {

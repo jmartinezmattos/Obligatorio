@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc71e00d-16ae-4472-b5b3-700348c13b3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedListKV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TADS/LinkedList/src/ListKV.java" afterDir="false" />
+    <list default="true" id="cc71e00d-16ae-4472-b5b3-700348c13b3f" name="Default Changelist" comment="Solucionados problemas con hash">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/LectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/LectorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Obligatorio/TADS/Hash/HashImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Obligatorio/TADS/Hash/HashNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Obligatorio/TADS/Hash/HashNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/RepositorioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/RepositorioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Athlete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/NationalOlympicCommittee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/NationalOlympicCommittee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TADS/Hash/HashImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/Hash/HashImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/Hash/HashNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/Hash/HashNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/LinkedList/Test/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/LinkedList/Test/LinkedListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/LinkedList/src/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/LinkedList/src/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/LinkedList/src/ListaCircular.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,29 +30,76 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/LectorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="425">
+              <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
+              <folding>
+                <element signature="e#4630#4631#0" expanded="true" />
+                <element signature="e#4742#4743#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="105" column="10" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
+            <state relative-caret-position="475">
+              <caret line="228" column="42" selection-start-line="228" selection-start-column="42" selection-end-line="228" selection-end-column="42" />
+              <folding>
+                <element signature="method#imprimirAtletasConMasMedallas#0;class#Repositorio#0" />
+                <element signature="method#generarEstructuras#0;class#Repositorio#0" />
+                <element signature="e#6871#6872#0" expanded="true" />
+                <element signature="e#6957#6958#0" expanded="true" />
+                <element signature="method#generarHashRegiones#0;class#Repositorio#0" />
+                <element signature="method#generarHeapOro#0;class#Repositorio#0" />
+                <element signature="method#generarHeapPlata#0;class#Repositorio#0" />
+                <element signature="method#generarHeapBronce#0;class#Repositorio#0" />
+                <element signature="method#nationalOlympicCommittees#0;class#Repositorio#0" />
+                <element signature="method#obtenerAñoMaximo#0;class#Repositorio#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Menu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/RepositorioTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entidades/Athlete.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="58" column="22" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2018#2019#0" expanded="true" />
+                <element signature="e#2058#2059#0" expanded="true" />
+                <element signature="e#2070#2071#0" expanded="true" />
+                <element signature="e#2096#2097#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -63,22 +107,65 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1020">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="163">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/Nodo.java">
+        <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="306">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
               <folding>
-                <element signature="e#245#246#0" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#538#539#0" expanded="true" />
+                <element signature="e#574#575#0" expanded="true" />
+                <element signature="e#806#807#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#950#951#0" expanded="true" />
+                <element signature="e#987#988#0" expanded="true" />
+                <element signature="e#1021#1022#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entidades/NationalOlympicCommittee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="83" lean-forward="true" selection-start-line="26" selection-start-column="83" selection-end-line="26" selection-end-column="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#890#891#0" expanded="true" />
+                <element signature="e#917#918#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#898#899#0" expanded="true" />
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#995#996#0" expanded="true" />
+                <element signature="e#1049#1050#0" expanded="true" />
+                <element signature="e#1089#1090#0" expanded="true" />
+                <element signature="e#1129#1130#0" expanded="true" />
+                <element signature="e#1190#1191#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
+                <element signature="e#1289#1290#0" expanded="true" />
+                <element signature="e#1330#1331#0" expanded="true" />
+                <element signature="e#1395#1396#0" expanded="true" />
+                <element signature="e#1455#1456#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/athlete_events.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="232">
+              <caret line="579" column="54" selection-start-line="579" selection-start-column="54" selection-end-line="579" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -98,6 +185,11 @@
       <find>dele</find>
       <find>obtener</find>
       <find>Raymond</find>
+      <find>MAS</find>
+      <find>SGP</find>
+      <find>&quot;SIN&quot;</find>
+      <find>&quot;SGP&quot;</find>
+      <find>Singapore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,7 +207,6 @@
         <option value="$PROJECT_DIR$/src/TADS/Hash/ElementoNoExiste.java" />
         <option value="$PROJECT_DIR$/src/TADS/BinaryTree/InvalidValue.java" />
         <option value="$PROJECT_DIR$/src/Entidades/City.java" />
-        <option value="$PROJECT_DIR$/src/Entidades/NationalOlympicCommittee.java" />
         <option value="$PROJECT_DIR$/src/Entidades/Medalla.java" />
         <option value="$PROJECT_DIR$/src/Entidades/Sport.java" />
         <option value="$PROJECT_DIR$/src/Entidades/OlympicGame.java" />
@@ -128,13 +219,8 @@
         <option value="$PROJECT_DIR$/src/Entidades/Entidades/Athlete.java" />
         <option value="$PROJECT_DIR$/Test/TADS/Heap/HeapMaxTest.java" />
         <option value="$PROJECT_DIR$/src/TADS/Heap/HeapMax.java" />
-        <option value="$PROJECT_DIR$/Test/RepositorioTest.java" />
         <option value="$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java" />
-        <option value="$PROJECT_DIR$/src/Menu.java" />
         <option value="$PROJECT_DIR$/src/TADS/QuickSort/QuickSort.java" />
-        <option value="$PROJECT_DIR$/src/Lector.java" />
-        <option value="$PROJECT_DIR$/src/Entidades/Athlete.java" />
-        <option value="$PROJECT_DIR$/src/Repositorio.java" />
         <option value="$PROJECT_DIR$/src/TADS/LinkedList/src/ListaCircular.java" />
         <option value="$PROJECT_DIR$/src/TADS/LinkedList/Test/LinkedListTest.java" />
         <option value="$PROJECT_DIR$/src/TADS/Hash/HashNode.java" />
@@ -142,7 +228,14 @@
         <option value="$PROJECT_DIR$/src/TADS/LinkedList/src/List.java" />
         <option value="$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedList.java" />
         <option value="$PROJECT_DIR$/Test/LectorTest.java" />
+        <option value="$PROJECT_DIR$/src/Entidades/Athlete.java" />
         <option value="$PROJECT_DIR$/src/TADS/Hash/HashImpl.java" />
+        <option value="$PROJECT_DIR$/noc_regions.csv" />
+        <option value="$PROJECT_DIR$/Test/RepositorioTest.java" />
+        <option value="$PROJECT_DIR$/src/Lector.java" />
+        <option value="$PROJECT_DIR$/src/Entidades/NationalOlympicCommittee.java" />
+        <option value="$PROJECT_DIR$/src/Menu.java" />
+        <option value="$PROJECT_DIR$/src/Repositorio.java" />
       </list>
     </option>
   </component>
@@ -190,36 +283,6 @@
             <path>
               <item name="Obligatorio" type="b2602c69:ProjectViewProjectNode" />
               <item name="Obligatorio" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TADS" type="462c0819:PsiDirectoryNode" />
-              <item name="Hash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Obligatorio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Obligatorio" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TADS" type="462c0819:PsiDirectoryNode" />
-              <item name="LinkedList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Obligatorio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Obligatorio" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TADS" type="462c0819:PsiDirectoryNode" />
-              <item name="LinkedList" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Obligatorio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Obligatorio" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TADS" type="462c0819:PsiDirectoryNode" />
-              <item name="LinkedList" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Obligatorio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Obligatorio" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -243,7 +306,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/Entidades" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -279,7 +343,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LectorTest.leerArchivos">
+  <component name="RunManager" selected="Application.Menu">
     <configuration default="true" type="Applet">
       <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -302,17 +366,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeapMaxTest.agregar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LectorTest.leerArchivos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Obligatorio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TADS.Heap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TADS.Heap" />
-      <option name="MAIN_CLASS_NAME" value="TADS.Heap.HeapMaxTest" />
-      <option name="METHOD_NAME" value="agregar" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LectorTest" />
+      <option name="METHOD_NAME" value="leerArchivos" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -320,11 +378,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LectorTest.leerArchivos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepositorioTest.generarEstructuras" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Obligatorio" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LectorTest" />
-      <option name="METHOD_NAME" value="leerArchivos" />
+      <option name="MAIN_CLASS_NAME" value="RepositorioTest" />
+      <option name="METHOD_NAME" value="generarEstructuras" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepositorioTest.generarEstructuras2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Obligatorio" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RepositorioTest" />
+      <option name="METHOD_NAME" value="generarEstructuras2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -373,16 +443,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Menu" />
-      <item itemvalue="JUnit.HeapMaxTest.agregar" />
       <item itemvalue="JUnit.LectorTest.leerArchivos" />
       <item itemvalue="JUnit.RepositorioTest.generarHeapPlata" />
+      <item itemvalue="JUnit.RepositorioTest.generarEstructuras" />
+      <item itemvalue="JUnit.RepositorioTest.generarEstructuras2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LectorTest.leerArchivos" />
         <item itemvalue="Application.Menu" />
+        <item itemvalue="JUnit.RepositorioTest.generarEstructuras" />
+        <item itemvalue="JUnit.RepositorioTest.generarEstructuras2" />
+        <item itemvalue="JUnit.LectorTest.leerArchivos" />
         <item itemvalue="JUnit.RepositorioTest.generarHeapPlata" />
-        <item itemvalue="JUnit.HeapMaxTest.agregar" />
       </list>
     </recent_temporary>
   </component>
@@ -483,39 +555,46 @@
       <option name="project" value="LOCAL" />
       <updated>1560456595578</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Solucionados problemas con hash">
+      <created>1560474111018</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560474111018</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 49m 30s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras2 - 2019.06.13 at 23h 02m 59s.xml">
+      <configuration name="RepositorioTest.generarEstructuras2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 49m 34s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras2 - 2019.06.13 at 23h 03m 37s.xml">
+      <configuration name="RepositorioTest.generarEstructuras2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 50m 38s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras2 - 2019.06.13 at 23h 05m 12s.xml">
+      <configuration name="RepositorioTest.generarEstructuras2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 53m 50s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras2 - 2019.06.13 at 23h 05m 19s.xml">
+      <configuration name="RepositorioTest.generarEstructuras2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 54m 06s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras2 - 2019.06.13 at 23h 05m 38s.xml">
+      <configuration name="RepositorioTest.generarEstructuras2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 54m 59s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras2 - 2019.06.13 at 23h 06m 54s.xml">
+      <configuration name="RepositorioTest.generarEstructuras2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 55m 03s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras2 - 2019.06.13 at 23h 06m 59s.xml">
+      <configuration name="RepositorioTest.generarEstructuras2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 55m 12s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras - 2019.06.13 at 23h 07m 45s.xml">
+      <configuration name="RepositorioTest.generarEstructuras" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 56m 12s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras - 2019.06.13 at 23h 09m 06s.xml">
+      <configuration name="RepositorioTest.generarEstructuras" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LectorTest_leerArchivos - 2019.06.13 at 21h 58m 32s.xml">
-      <configuration name="LectorTest.leerArchivos" configurationId="JUnit" />
+    <history-entry file="RepositorioTest_generarEstructuras - 2019.06.13 at 23h 29m 04s.xml">
+      <configuration name="RepositorioTest.generarEstructuras" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -532,7 +611,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19315404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -543,8 +621,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.26091826" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3975364" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.26091826" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3975364" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3281075" />
@@ -658,7 +736,8 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="&#10;Año Maximo y minimo" />
     <MESSAGE value="Problema con el Hash" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problema con el Hash" />
+    <MESSAGE value="Solucionados problemas con hash" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solucionados problemas con hash" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -670,16 +749,16 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Test/RepositorioTest.java</url>
-          <line>9</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Test/LectorTest.java</url>
           <line>6</line>
           <properties />
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
@@ -688,19 +767,14 @@
             <option name="EMULATED" value="true" />
           </properties>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedList.java</url>
-          <line>68</line>
-          <properties class="TADS.LinkedList.src.LinkedList" method="get">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="myHash[b]" language="JAVA" />
+        <watch expression="myHash[b].last" />
+        <watch expression="myHash[b].last" language="JAVA" />
+        <watch expression="myHash[b].last" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -714,7 +788,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/TADS/BinaryTree/BinaryTreeImpl.java" />
     <entry file="file://$USER_HOME$/IdeaProjects/TAD LinkedList/src/LinkedList.java" />
     <entry file="file://$PROJECT_DIR$/src/TADS/Queue/CircularQueue/EmptyQueueException.java" />
     <entry file="file://$PROJECT_DIR$/src/TADS/BinaryTree/BinaryTree.java">
@@ -755,13 +828,6 @@
           <folding>
             <element signature="e#246#247#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/RepositorioTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -834,13 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/athlete_events.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="51">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/ListaCircular.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -855,20 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/noc_regions.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3377">
-          <caret selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/Test/LinkedListTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -879,13 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2261">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedListKV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -893,34 +931,6 @@
           <folding>
             <element signature="e#268#269#0" expanded="true" />
             <element signature="e#296#297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entidades/NationalOlympicCommittee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#704#705#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1007,6 +1017,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/LectorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/Nodo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1019,59 +1050,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.5.0-RC1/junit-platform-commons-1.5.0-RC1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="171">
+          <caret line="355" selection-start-line="355" selection-end-line="355" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/LectorTest.java">
+    <entry file="file://$PROJECT_DIR$/noc_regions.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="201">
+          <caret line="179" column="13" selection-start-line="179" selection-start-column="4" selection-end-line="179" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entidades/Athlete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-254">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+    <entry file="file://$PROJECT_DIR$/athlete_events.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="232">
+          <caret line="579" column="54" selection-start-line="579" selection-start-column="54" selection-end-line="579" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="105" column="10" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
+        <state relative-caret-position="-102">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entidades/Athlete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="58" column="22" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="e#2070#2071#0" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entidades/NationalOlympicCommittee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="83" lean-forward="true" selection-start-line="26" selection-start-column="83" selection-end-line="26" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1049#1050#0" expanded="true" />
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1395#1396#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/RepositorioTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
+          <folding>
+            <element signature="e#4630#4631#0" expanded="true" />
+            <element signature="e#4742#4743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="228" column="42" selection-start-line="228" selection-start-column="42" selection-end-line="228" selection-end-column="42" />
+          <folding>
+            <element signature="method#imprimirAtletasConMasMedallas#0;class#Repositorio#0" />
+            <element signature="method#generarEstructuras#0;class#Repositorio#0" />
+            <element signature="e#6871#6872#0" expanded="true" />
+            <element signature="e#6957#6958#0" expanded="true" />
+            <element signature="method#generarHashRegiones#0;class#Repositorio#0" />
+            <element signature="method#generarHeapOro#0;class#Repositorio#0" />
+            <element signature="method#generarHeapPlata#0;class#Repositorio#0" />
+            <element signature="method#generarHeapBronce#0;class#Repositorio#0" />
+            <element signature="method#nationalOlympicCommittees#0;class#Repositorio#0" />
+            <element signature="method#obtenerAñoMaximo#0;class#Repositorio#0" />
           </folding>
         </state>
       </provider>

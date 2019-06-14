@@ -9,4 +9,17 @@ class RepositorioTest {
     Repositorio repo = new Repositorio();
     repo.generarHeapPlata();
     }
+
+    @Test
+    public void generarEstructuras() {
+        Repositorio repo = new Repositorio();
+        repo.generarEstructuras();
+        System.out.println(repo.MedallasONOC("URU"));
+    }
+
+    @Test
+    public void generarEstructuras2() {
+        Repositorio repo = new Repositorio();
+
+    }
 }

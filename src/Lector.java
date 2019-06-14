@@ -15,6 +15,7 @@ public class Lector {
     public ArrayList<Athlete> Atletas = new ArrayList(14000);
     public ArrayList<AthleteOlympicParticipation> Participaciones = new ArrayList(22000);
     public HashImpl<String,NationalOlympicCommittee> nationalOlympicCommittees = new HashImpl<>(250);
+    public ArrayList<String> arrayComittees = new ArrayList<>(250);
 
 
     public Lector(){//este constructor se asegura de que se realize la lectura
@@ -59,6 +60,7 @@ public class Lector {
                 String[] datos2 = line2.replaceAll(", ","#").split(csvSplitBy);//separa por lineas y elimina las comillas extra
 
                 nationalOlympicCommittees.put(datos2[0],crearComittee(datos2));
+                arrayComittees.add(datos2[0]);
 
             }
 
@@ -103,7 +105,7 @@ public class Lector {
         }
 
     }
-
+    /*
     public void agregarAtletasAlCommite(){
         for(int i=0;i<Atletas.size();i++){
          NationalOlympicCommittee aux=  nationalOlympicCommittees.find(Atletas.get(i).getNoc().getName());
@@ -112,6 +114,7 @@ public class Lector {
          aux.setCantMedallasBronce(aux.getCantMedallasBronce()+Atletas.get(i).getMedallasBronze());
         }
     }
+     */
 
     public ArrayList<Athlete> getAtletas() {
         return Atletas;
