@@ -26,6 +26,6 @@ class RepositorioTest {
     @Test
     public void imprimirEquiposEfectivosRango() {
         Repositorio repo = new Repositorio();
-        repo.imprimirEquiposEfectivosRango(1900,2020);
+        repo.imprimirEquiposEfectivosRango(2000,2001);
     }
 }

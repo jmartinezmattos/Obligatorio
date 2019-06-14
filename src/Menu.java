@@ -78,9 +78,11 @@ public class Menu {
                 repo.imprimirMayorParticipacionFemenina();
                 break;
             case 4:
-                System.out.println("Seleccione el sexo f (femenino) o m (masculino)");
-                lectura = sc.nextLine();
-                repo.imprimirCiertoSexo(lectura);
+                System.out.println("Seleccione el sexo: ");
+                System.out.println("1: Femenino");
+                System.out.println("2: Masculino");
+                opcion = sc2.nextInt();
+                repo.imprimirCiertoSexo(opcion);
                 break;
             case 5:
                 System.out.println("Ingrese el rango de anios separado por un guion ej: 1990-2005");

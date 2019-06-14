@@ -11,14 +11,18 @@ public class AthleteOlympicParticipation {
     private Athlete athlete;
     private int age;
     private  int year;
-    private Event event;
-    private OlympicGame olympicGame;
+    private String event;
+    private String olympicGame;
     private NationalOlympicCommittee nationalCommitee;
+    private String sport;
 
 
-    public AthleteOlympicParticipation(String medal, Athlete athlete,String age,String year) {
+    public AthleteOlympicParticipation(String medal, Athlete athlete,String age,String year, String sport,String olympicGame) {
 
         this.year = valueOf(year);
+        this.olympicGame = olympicGame;
+
+        this.sport = sport;
 
         if(medal.equals("NA")){
             this.medal = MedalType.NA;
@@ -56,11 +60,27 @@ public class AthleteOlympicParticipation {
         return medal;
     }
 
-    public OlympicGame getOlympicGame() {
+    public String getOlympicGame() {
         return olympicGame;
     }
 
     public int getYear() {
         return year;
+    }
+
+    public String getEvent() {
+        return event;
+    }
+
+    public String getSport() {
+        return sport;
+    }
+
+    public void setAthlete(Athlete athlete) {
+        this.athlete = athlete;
+    }
+
+    public Athlete getAthlete() {
+        return athlete;
     }
 }

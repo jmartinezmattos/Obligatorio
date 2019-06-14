@@ -50,6 +50,7 @@ public class Lector {
                     Atletas.add(ultimoAtleta); //agrega el atleta al arraylist
                 }
                 AthleteOlympicParticipation participation = crearParticipacion(datos,ultimoAtleta);
+                participation.setAthlete(ultimoAtleta);
                 Participaciones.add(participation);
                 ultimoAtleta.addParticipacion(participation);
 
@@ -91,7 +92,7 @@ public class Lector {
     }
 
     public AthleteOlympicParticipation crearParticipacion(String[] dato, Athlete athlete){
-        AthleteOlympicParticipation participacion = new AthleteOlympicParticipation(dato[14],athlete,dato[3],dato[9]);
+        AthleteOlympicParticipation participacion = new AthleteOlympicParticipation(dato[14],athlete,dato[3],dato[9],dato[12],dato[8]);
         return participacion;
     }
 
