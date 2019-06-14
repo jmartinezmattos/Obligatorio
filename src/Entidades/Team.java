@@ -53,28 +53,28 @@ public class Team {
     }
 
     public int[] efectivivadRangoDetalle(int inicio, int fin){
-
+    //devuelve un array que contiene la cantidad de medallas y la cantidad de ateletas en un cierto rango de anios
         int medallas = 0;
         int atletaEnRango = 0;
         boolean atletaContado = false;
 
-        if(inicio<=fin){
+        if(inicio<=fin){//se fija que la fecha sea valida
 
-            for(int i=0;i<Atletas.size();i++) {
+            for(int i=0;i<Atletas.size();i++) {//recorre todos los atletas del equipo
                 Athlete athlete = Atletas.get(i);
-                for(int b=0;b<athlete.medallas.size();b++){
+                for(int b=0;b<athlete.medallas.size();b++){//recorre todas las participaciones del atleta (pueden o no tener medalla)
 
                     if(inicio<athlete.medallas.get(b).getYear() && athlete.medallas.get(b).getYear()<fin){
-                        if(!atletaContado){
+                        if(!atletaContado){//si el atleta no esta contado se agrega un atleta
                                 atletaEnRango++;
                                 atletaContado = true;
                         }
-                        if(!athlete.getMedallas().get(b).getMedal().equals("NA")){
+                        if(!athlete.getMedallas().get(b).getMedal().equals("NA")){//si la medalla no es igual a NA se suma una medalla
                             medallas++;
                         }
                     }
                 }
-                atletaContado = false;
+                atletaContado = false;//cuando se sale del atleta pasa a false
             }
 
         }
@@ -84,6 +84,7 @@ public class Team {
     }
 
     public int efectividadRango(int inicio, int fin){
+        //devuelve la efectividad
         int[] datos = efectivivadRangoDetalle(inicio, fin);
         if(datos[0] == 0) {
             return 0;

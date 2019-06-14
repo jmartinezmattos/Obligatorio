@@ -366,32 +366,34 @@ public class Repositorio {
      */
 
     private void generarEquipos(){
-        for(int i=0;i<lector.Atletas.size();i++){
+
+        for(int i=0;i<lector.Atletas.size();i++){//recorre todos los atletas
             Athlete athlete = lector.Atletas.get(i);
-            String teamName = athlete.getTeam();
+            String teamName = athlete.getTeam();//se fija a que equipo pertenece el atleta
             if(!equipos.contains(teamName)){
                 //si el equipo todavia no existe
-                arrayListEquipos.add(teamName);
-                Team newTeam = new Team(teamName.replaceAll("-2","").replaceAll("-1",""));
-                newTeam.addAtleta(athlete);
-                equipos.put(teamName,newTeam);
+                arrayListEquipos.add(teamName);//se genera arraylist para recorrer el Hash
+                Team newTeam = new Team(teamName);//genera un nuevo equipo
+                newTeam.addAtleta(athlete);//le agrega el atleta al equipo
+                equipos.put(teamName,newTeam);//agrega el equipo al Hash utilizando su nombre como Key
             }
             else{
                 //si el equipo ya existe
-                equipos.find(teamName).addAtleta(athlete);
+                equipos.find(teamName).addAtleta(athlete);//agrega el atleta al equipo
             }
         }
-        equiposGenerados = true;
+        equiposGenerados = true;//boolean utilizado para indicar que ya se genero el Hash
     }
 
     private void generarHeapEquiposRangoEfectivo(int inicio, int fin){
         if(!equiposGenerados){
+            //si todavia no se genero el Hash lo genera
             generarEquipos();
         }
-        for(int i=0;i<arrayListEquipos.size();i++){
-            String name = arrayListEquipos.get(i);
-            Team teamTemp = equipos.find(name);
-            HeapEquiposRangoEfectivo.agregar(teamTemp.efectividadRango(inicio,fin),teamTemp);
+        for(int i=0;i<arrayListEquipos.size();i++){//recorre todos los equipos en el Hash utilizando el arraylist para obtener las keys
+            String name = arrayListEquipos.get(i);//obtiene el nombre del equipo (la key para el hash) del arraylist
+            Team teamTemp = equipos.find(name);//obtiene el equipo del hash
+            HeapEquiposRangoEfectivo.agregar(teamTemp.efectividadRango(inicio,fin),teamTemp);//agrega el el equipo al heap utilizando su efectividad como key
         }
     }
 
