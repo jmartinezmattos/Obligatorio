@@ -24,7 +24,7 @@ public class Event {
         if(athlete.getSex().equals(SexType.FEMALE)){
             atletasFemeninos++;
         }
-        if(athlete.getSex().equals(SexType.FEMALE)){
+        if(athlete.getSex().equals(SexType.MALE)){
             atletasMasculinos++;
         }
     }

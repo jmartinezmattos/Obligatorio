@@ -188,10 +188,12 @@ public class Repositorio {
             for(int i=0;i<5;i++){
                 Event evento = competicionesFemenino.obtenerYEliminar();
                 eventos[i] = evento;
+                System.out.println("#" +(i+1));
                 System.out.println("Nombre de la competicion: " +evento.getName());
                 System.out.println("Deporte: " +evento.getSport());
                 System.out.println("Sexo: Femenino");
                 System.out.println("Cantidad: " +evento.getAtletasFemeninos());
+                System.out.println("");
             }
             for(int i=0;i<5;i++){
                 competicionesFemenino.agregar(eventos[i].getAtletasFemeninos(),eventos[i]);
@@ -199,6 +201,23 @@ public class Repositorio {
         }
         if(opcion == 2){
             //masculino
+            if(!heapCompeticionesMascGenerado){
+                generarHeapCompeticionesMasculino();
+            }
+            Event[] eventos = new Event[10];
+            for(int i=0;i<5;i++){
+                Event evento = competicionesMasculino.obtenerYEliminar();
+                eventos[i] = evento;
+                System.out.println("#" +(i+1));
+                System.out.println("Nombre de la competicion: " +evento.getName());
+                System.out.println("Deporte: " +evento.getSport());
+                System.out.println("Sexo: Masculino");
+                System.out.println("Cantidad: " +evento.getAtletasMasculinos());
+                System.out.println("");
+            }
+            for(int i=0;i<5;i++){
+                competicionesMasculino.agregar(eventos[i].getAtletasFemeninos(),eventos[i]);
+            }
         }
     }
 

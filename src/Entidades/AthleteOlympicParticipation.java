@@ -17,10 +17,11 @@ public class AthleteOlympicParticipation {
     private String sport;
 
 
-    public AthleteOlympicParticipation(String medal, Athlete athlete,String age,String year, String sport,String olympicGame) {
+    public AthleteOlympicParticipation(String medal, Athlete athlete,String age,String year, String sport,String olympicGame, String event) {
 
         this.year = valueOf(year);
         this.olympicGame = olympicGame;
+        this.event = event;
 
         this.sport = sport;
 
