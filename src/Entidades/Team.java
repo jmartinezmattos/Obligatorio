@@ -9,8 +9,10 @@ public class Team {
     private String name;
     private ArrayList<Athlete> Atletas = new ArrayList<>(100);
 
+
+
     public void addAtleta(Athlete athlete){
-        this.Atletas.add(athlete);
+        this.Atletas.add(athlete);;
     }
 
     public int getCantidadAtletas(){
@@ -83,11 +85,13 @@ public class Team {
 
     public int efectividadRango(int inicio, int fin){
         int[] datos = efectivivadRangoDetalle(inicio, fin);
-        if(datos[1] == 0) {
+        if(datos[0] == 0) {
             return 0;
         }
         else{
-            return (datos[0] / datos[1]);
+            return (datos[1] / datos[0]);
         }
     }
+
+
 }

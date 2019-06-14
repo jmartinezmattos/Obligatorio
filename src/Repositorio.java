@@ -177,12 +177,13 @@ public class Repositorio {
 
     public void imprimirEquiposEfectivosRango(int inicio, int fin) {
         generarHeapEquiposRangoEfectivo(inicio,fin);
-        for(int i=0;i<10;i++){
+        for(int i=0;i<HeapEquiposRangoEfectivo.getSize();i++){
             Team equipo = HeapEquiposRangoEfectivo.obtenerYEliminar();
             int[] datos = equipo.efectivivadRangoDetalle(inicio, fin);
             System.out.println("Equipo: "+equipo.getName());
             System.out.println("Cantidad de competidores: " +datos[0]);
             System.out.println("Cantidad de Medallas: " +datos[1]);
+            System.out.println("Cantidad de atletas totales: " +equipo.getCantidadAtletas());
             System.out.println("");
         }
     }
