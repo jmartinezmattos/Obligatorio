@@ -4,7 +4,8 @@ public class HashNode<K,V> {
     private K key;
     private V value;
     private HashNode<K,V> nodoAnterior;
-    private HashNode<K,V> nodoSiguiente;
+    private HashNode<K,V> nodoSiguiente = null;
+    boolean hasNext = false;
 
     public HashNode(K key, V value){
         this.key=key;
@@ -23,8 +24,13 @@ public class HashNode<K,V> {
         return nodoSiguiente;
     }
 
+    public  boolean hasNext(){
+        return hasNext;
+    }
+
     public void setNodoSiguiente(HashNode<K, V> nodoSiguiente) {
         this.nodoSiguiente = nodoSiguiente;
+        this.hasNext = true;
     }
 
     public K getKey() {

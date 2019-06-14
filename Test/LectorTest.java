@@ -6,7 +6,7 @@ public class LectorTest {
     public void leerArchivos() {
         Lector test = new Lector();
         test.leerArchivos();
-        System.out.println(test.nationalOlympicCommittees);
+        System.out.println(test.nationalOlympicCommittees.find("URU").getRegion());
 
     }
 }

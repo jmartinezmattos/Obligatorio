@@ -1,14 +1,10 @@
 package TADS.Hash;
-import Entidades.Athlete;
 import TADS.LinkedList.src.LinkedList;
-
-import java.util.Arrays;
-
-import java.util.Objects;
+import TADS.LinkedList.src.LinkedListKV;
 
 public class HashImpl<K,V> implements Hash<K,V> {
 
-    private LinkedList<K,V>[] myHash;
+    private LinkedList<HashNode>[] myHash;
     private int size;
     private HashNode<K,V> nodoAgregar;
 
@@ -17,8 +13,9 @@ public class HashImpl<K,V> implements Hash<K,V> {
 
         myHash = new LinkedList[size];
         for (int i = 0; i < size; i++) {
-            myHash[i] = new LinkedList<K,V>();
+            myHash[i] = new LinkedList<HashNode>();
         }
+        this.size = size;
 
     }
 
@@ -34,13 +31,32 @@ public class HashImpl<K,V> implements Hash<K,V> {
 
         V valueFind=null;
         int b=key.hashCode();
-        HashNode<K,V> nodoNext=myHash[b].getFirst();
+        if(b>size){
+            b = b%size;
+        }
+        int i = 0;
+        boolean terminado = false;
+        HashNode<K,V> nodoNext=myHash[b].get(i);
+
+        do {
+            if (nodoNext.getKey().equals(key)) {
+                valueFind = nodoNext.getValue();
+                terminado = true;
+            }else{
+                i++;
+                nodoNext=myHash[b].get(i);
+            }
+        }while(!terminado);
+
+        /*
         while(nodoNext.getKey()!=key){
             nodoNext=nodoNext.getNodoSiguiente();
         }
         if(nodoNext.getKey()==key){
             valueFind=nodoNext.getValue();
         }
+        */
+
         return valueFind;
     }
 
@@ -49,7 +65,9 @@ public class HashImpl<K,V> implements Hash<K,V> {
         boolean encontrado=false;
         V valueFind=null;
         int b=key.hashCode();
-        HashNode<K,V> nodoNext=myHash[b].getFirst();
+
+        HashNode<K,V> nodoNext= myHash[b].get(0);
+
         while(nodoNext.getKey()!=key){
             nodoNext=nodoNext.getNodoSiguiente();
         }
@@ -66,7 +84,7 @@ public class HashImpl<K,V> implements Hash<K,V> {
         }
         V valueRemove = null;
         int b = key.hashCode();
-        HashNode<K, V> nodoNext = myHash[b].getFirst();
+        HashNode<K, V> nodoNext = myHash[b].get(0);
         while (nodoNext.getKey() != key) {
             nodoNext = nodoNext.getNodoSiguiente();
         }
@@ -81,26 +99,28 @@ public class HashImpl<K,V> implements Hash<K,V> {
     public void colision(K key , HashNode<K,V> nodoAgregar) {
 
         int position = key.hashCode();
+        if(position>size){
+            position = position%size;
+        }
 
-        HashNode<K,V> nodoAux=myHash[position].getFirst();
-        HashNode<K, V> nodoActual = nodoAux.getNodoSiguiente();
+        //HashNode<K,V> nodoAux = myHash[position].get(0);
 
+        myHash[position].add(nodoAgregar);
+
+        /*
         if (nodoAux != null) {
-
-            while (nodoActual.getNodoSiguiente() != null) {
-
+            HashNode<K, V> nodoActual = nodoAux.getNodoSiguiente();
+            while (nodoActual != null && nodoActual.hasNext) {
                 nodoActual = nodoActual.getNodoSiguiente();
-
             }
-
             nodoActual.setNodoSiguiente(nodoAgregar);
         }
         if (nodoAux== null) {
-
+            //si esta vacio
             myHash[position].add(nodoAgregar.getKey(),nodoAgregar.getValue());
-
-
         }
+        */
+
 
 
 

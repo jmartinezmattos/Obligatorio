@@ -1,23 +1,23 @@
 package TADS.LinkedList.Test;
 
-import TADS.LinkedList.src.LinkedList;
+import TADS.LinkedList.src.LinkedListKV;
 import org.junit.jupiter.api.Test;
 
 public class LinkedListTest {
 
-    public void print(LinkedList lista, int index){
+    public void print(LinkedListKV lista, int index){
         System.out.println(lista.get(index));
     }
 
     @Test
     public void add() {
 
-        LinkedList lista = new LinkedList();
+        LinkedListKV lista = new LinkedListKV();
 
-        lista.add(86);
-        lista.add(2);
-        lista.add("Joselito vaca");
-        lista.add(4);
+        lista.add(86,86);
+        lista.add(2,2);
+        lista.add("Joselito vaca",1);
+        lista.add(4,5);
 
         System.out.println(lista.get(0));
         System.out.println(lista.get(1));
@@ -32,14 +32,14 @@ public class LinkedListTest {
     @Test
     public void remove() {
 
-        LinkedList lista = new LinkedList();
-
+        LinkedListKV lista = new LinkedListKV();
+/*
         lista.add(0);
         lista.add(1);
         lista.add(2);
         lista.add(3);
         lista.add(4);
-
+*/
         print(lista,0);
         print(lista,1);
         print(lista,2);

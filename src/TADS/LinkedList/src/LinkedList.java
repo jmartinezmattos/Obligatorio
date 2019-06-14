@@ -1,41 +1,23 @@
 package TADS.LinkedList.src;
 
-import TADS.Hash.Hash;
-import TADS.Hash.HashNode;
+public class LinkedList<T> implements List<T> {
 
-public class LinkedList<K,V> implements List<K,V> {
-
-    private HashNode<K,V> first = null;
-    private HashNode<K,V> last;
+    private Nodo<T> first = null;
+    private Nodo<T> last;
     private int size=0;
 
-    public HashNode<K, V> getFirst() {
-        return first;
-    }
+    @Override
+    public void add(T value) {
 
-    public void setFirst(HashNode<K, V> first) {
-        this.first = first;
-    }
-
-    public HashNode<K, V> getLast() {
-        return last;
-    }
-
-    public void setLast(HashNode<K, V> last) {
-        this.last = last;
-    }
-
-    public void add(K key, V value) {
-
-        HashNode<K,V> nuevo = new HashNode<K,V>(key,value);
+        Nodo<T> nuevo = new Nodo<>(value);
 
         if(size == 0){
-            this.first = nuevo;
-            this.last = this.first;
+           this.first = nuevo;
+           this.last = this.first;
         }
         else{
-            nuevo.setNodoAnterior(this.last);
-            this.last.setNodoSiguiente(nuevo);
+            nuevo.setPrevious(this.last);
+            this.last.setNext(nuevo);
             this.last = nuevo;
         }
         size++;
@@ -50,30 +32,30 @@ public class LinkedList<K,V> implements List<K,V> {
                 throw new NullPointerException();
             }
 
-            HashNode<K,V> auxPrev;
-            HashNode<K,V> auxNext;
-            HashNode<K,V> auxDel = this.first;
+            Nodo<T> auxPrev;
+            Nodo<T> auxNext;
+            Nodo<T> auxDel = this.first;
 
             if(position == 0){
-                auxNext = this.first.getNodoSiguiente();
+                auxNext = this.first.getNext();
                 this.first = auxNext;
             }
             else if(position == (size-1)){
-                auxPrev = this.last.getNodoAnterior();
-                auxPrev.setNodoSiguiente(null);
+                auxPrev = this.last.getPrevious();
+                auxPrev.setNext(null);
                 this.last = auxPrev;
             }
             else{
 
                 for(int i=0; i < position; i++){
-                    auxDel = auxDel.getNodoSiguiente();
+                    auxDel = auxDel.getNext();
                 }
 
-                auxNext = auxDel.getNodoSiguiente();
-                auxPrev = auxDel.getNodoAnterior();
+                auxNext = auxDel.getNext();
+                auxPrev = auxDel.getPrevious();
 
-                auxPrev.setNodoSiguiente(auxNext);
-                auxNext.setNodoAnterior(auxPrev);
+                auxPrev.setNext(auxNext);
+                auxNext.setPrevious(auxPrev);
             }
 
             size--;
@@ -84,10 +66,10 @@ public class LinkedList<K,V> implements List<K,V> {
     }
 
     @Override
-    public V get(int position) {
+    public T get(int position) {
 
-        HashNode<K,V> buscado = this.first;
-        V value = null;
+        Nodo<T> buscado = this.first;
+        T value = null;
 
         try {
 
@@ -96,7 +78,7 @@ public class LinkedList<K,V> implements List<K,V> {
             }
 
             for (int i=0; i < position; i++) {
-                buscado = buscado.getNodoSiguiente();
+                buscado = buscado.getNext();
             }
             value = buscado.getValue();
         }
@@ -106,11 +88,11 @@ public class LinkedList<K,V> implements List<K,V> {
         return value;
     }
 
-    public void addFirst(K key, V value){
-        HashNode<K,V> nuevo = new HashNode<K,V>(key,value);
+    public void addFirst(T value){
+        Nodo<T> nuevo = new Nodo<>(value);
 
         if(size>0) {
-            nuevo.setNodoSiguiente(this.first);
+            nuevo.setNext(this.first);
         }
 
         this.first = nuevo;
@@ -118,8 +100,8 @@ public class LinkedList<K,V> implements List<K,V> {
         size++;
     } //le falta para doublelink
 
-    public void addLast(K key, V value){
-        add(key,value);
+    public void addLast(T value){
+        add(value);
     }
 
 }
