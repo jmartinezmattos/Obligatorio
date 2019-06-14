@@ -11,11 +11,11 @@ public class Menu {
         Scanner entero = new Scanner(System.in);
         Scanner letra = new Scanner(System.in);
         String carga;
-        printHeader();
-        carga = letra.nextLine();
-        if(carga.equals("y")){
-            repo.generarEstructuras();
-        }
+        //printHeader();
+       // carga = letra.nextLine();
+       // if(carga.equals("y")){
+       //     repo.generarEstructuras();
+       // }
 
         do{
             printHeader2();
@@ -85,7 +85,8 @@ public class Menu {
             case 5:
                 System.out.println("Ingrese el rango de anios separado por un guion ej: 1990-2005");
                 lectura = sc.nextLine();
-                repo.imprimirEquiposEfectivosRango(lectura);
+                String[] datos = lectura.split("-");
+                repo.imprimirEquiposEfectivosRango(Integer.valueOf(datos[0]),Integer.valueOf(datos[1]));
                 break;
         }
     }

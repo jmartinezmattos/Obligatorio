@@ -14,16 +14,17 @@ public class Athlete  {
     private float height;
     private float weight;
     private String NOC;
-    private ArrayList<AthleteOlympicParticipation> medallas;
+    protected ArrayList<AthleteOlympicParticipation> medallas = new ArrayList<>(10);
     private int medallasOro = 0;
     private int medallasPlata = 0;
     private int medallasBronce = 0;
-    private int medallasTotales = 0;
+    private String team;
     //private Team equipo;
 
 
     public Athlete(String id, String name, String sex, String height, String weight, String team,String NOC) {
         SexType sexType = SexType.valueof(sex);
+        this.team = team;
         this.NOC = NOC;
         this.id = new BigInteger(id);
         this.name = name;
@@ -66,17 +67,17 @@ public class Athlete  {
 
     public void agregarMedallaOro(){
         this.medallasOro++;
-        this.medallasTotales++;
+
     }
 
     public void agregarMedallaPlata(){
         this.medallasPlata++;
-        this.medallasTotales++;
+
     }
 
     public void agregarMedallaBronce(){
         this.medallasBronce++;
-        this.medallasTotales++;
+
     }
 
     public ArrayList<AthleteOlympicParticipation> getMedallas() {
@@ -91,4 +92,7 @@ public class Athlete  {
         return NOC;
     }
 
+    public String getTeam() {
+        return team;
+    }
 }

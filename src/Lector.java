@@ -15,7 +15,7 @@ public class Lector {
     public ArrayList<Athlete> Atletas = new ArrayList(14000);
     public ArrayList<AthleteOlympicParticipation> Participaciones = new ArrayList(22000);
     public HashImpl<String,NationalOlympicCommittee> nationalOlympicCommittees = new HashImpl<>(250);
-    public ArrayList<String> arrayComittees = new ArrayList<>(250);
+    public ArrayList<String> arrayComittees = new ArrayList<>(500);
 
 
     public Lector(){//este constructor se asegura de que se realize la lectura

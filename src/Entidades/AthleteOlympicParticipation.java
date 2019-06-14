@@ -2,6 +2,7 @@ package Entidades;
 
 import Enums.MedalType;
 
+import static java.lang.Integer.parseInt;
 import static java.lang.Integer.valueOf;
 
 public class AthleteOlympicParticipation {
@@ -40,6 +41,13 @@ public class AthleteOlympicParticipation {
         else{
             this.age = 0;
         }
+        if(!age.equals("NA")){
+            this.age = parseInt(age);
+        }
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public MedalType getMedal() {

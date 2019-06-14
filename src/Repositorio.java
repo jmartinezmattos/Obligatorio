@@ -1,11 +1,13 @@
 import Entidades.Athlete;
 import Entidades.AthleteOlympicParticipation;
 import Entidades.NationalOlympicCommittee;
+import Entidades.Team;
 import Enums.MedalType;
 import TADS.Hash.HashImpl;
 import TADS.Heap.HeapMax;
 import TADS.LinkedList.src.*;
 import TADS.QuickSort.QuickSort;
+import javafx.scene.control.TabPane;
 
 
 import java.util.ArrayList;
@@ -26,6 +28,10 @@ public class Repositorio {
     private HeapMax<Integer,NationalOlympicCommittee> MedallasPlataNOC = new HeapMax<>(500);
     private HeapMax<Integer,NationalOlympicCommittee> MedallasBronceNOC = new HeapMax<>(500);
 
+    private HashImpl<String,Team> equipos = new HashImpl<>(500);
+    private ArrayList<String> arrayListEquipos = new ArrayList<>(250);
+    private HeapMax<Integer,Team> HeapEquiposRangoEfectivo = new HeapMax<>(300);
+
     private boolean medallasOroExiste = false;
     private boolean medallasPlataExiste = false;
     private boolean medallasBronceExiste = false;
@@ -35,6 +41,8 @@ public class Repositorio {
     private boolean medallasBronceRegionesExiste = false;
 
     private boolean hashRegionesExiste = false;
+
+    private boolean equiposGenerados = false;
 
     public Repositorio() {
         lector.leerArchivos();
@@ -167,7 +175,15 @@ public class Repositorio {
     public void imprimirCiertoSexo(String sexo) {
     }
 
-    public void imprimirEquiposEfectivosRango(String rango) {
+    public void imprimirEquiposEfectivosRango(int inicio, int fin) {
+        generarHeapEquiposRangoEfectivo(inicio,fin);
+        for(int i=0;i<10;i++){
+            Team equipo = HeapEquiposRangoEfectivo.obtenerYEliminar();
+            int[] datos = equipo.efectivivadRangoDetalle(inicio, fin);
+            System.out.println("Equipo: "+equipo.getName());
+            System.out.println("Cantidad de competidores: " +datos[0]);
+            System.out.println("Cantidad de Medallas: " +datos[1]);
+        }
     }
 
     public void generarEstructuras() {
@@ -297,6 +313,36 @@ public class Repositorio {
             }
         }
         return maximo;
+    }
+
+    private void generarEquipos(){
+        for(int i=0;i<lector.Atletas.size();i++){
+            Athlete athlete = lector.Atletas.get(i);
+            String teamName = athlete.getTeam();
+            if(!equipos.contains(teamName)){
+                //si el equipo todavia no existe
+                arrayListEquipos.add(teamName);
+                Team newTeam = new Team(teamName);
+                newTeam.addAtleta(athlete);
+                equipos.put(teamName,newTeam);
+            }
+            else{
+                //si el equipo ya existe
+                equipos.find(teamName).addAtleta(athlete);
+            }
+        }
+        equiposGenerados = true;
+    }
+
+    private void generarHeapEquiposRangoEfectivo(int inicio, int fin){
+        if(!equiposGenerados){
+            generarEquipos();
+        }
+        for(int i=0;i<arrayListEquipos.size();i++){
+            String name = arrayListEquipos.get(i);
+            Team teamTemp = equipos.find(name);
+            HeapEquiposRangoEfectivo.agregar(teamTemp.efectividadRango(inicio,fin),teamTemp);
+        }
     }
 
 
