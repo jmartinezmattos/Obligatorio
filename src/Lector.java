@@ -107,16 +107,4 @@ public class Lector {
 
     }
 
-    public ArrayList<Athlete> getAtletas() {
-        return Atletas;
-    }
-
-    public ArrayList<AthleteOlympicParticipation> getParticipaciones() {
-        return Participaciones;
-    }
-
-    public HashImpl<String, NationalOlympicCommittee> getNationalOlympicCommittees() {
-        return nationalOlympicCommittees;
-    }
-
 }
