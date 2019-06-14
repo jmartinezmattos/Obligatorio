@@ -83,14 +83,16 @@ public class Team {
         return result;
     }
 
-    public int efectividadRango(int inicio, int fin){
+    public float efectividadRango(int inicio, int fin){
         //devuelve la efectividad
         int[] datos = efectivivadRangoDetalle(inicio, fin);
+        float medallas = datos[1];
+        float atletas = datos[0];
         if(datos[0] == 0) {
             return 0;
         }
         else{
-            return (datos[1] / datos[0]);
+            return (medallas / atletas);
         }
     }
 

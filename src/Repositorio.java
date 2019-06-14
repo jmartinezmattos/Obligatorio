@@ -15,11 +15,9 @@ public class Repositorio {
     //clase encargada de contener y manejar datos
 
     private Lector lector = new Lector();
-    private QuickSort sorter = new QuickSort();
     private HeapMax<Integer, Athlete> MedallasOro = new HeapMax<>(14000);
     private HeapMax<Integer, Athlete> MedallasBronce = new HeapMax<>(14000);
     private HeapMax<Integer, Athlete> MedallasPlata = new HeapMax<>(14000);
-    private Athlete[] obtenidos = new Athlete[10];
 
     private HeapMax<Integer,NationalOlympicCommittee> MedallasOroNOC = new HeapMax<>(500);
     private HeapMax<Integer,NationalOlympicCommittee> MedallasPlataNOC = new HeapMax<>(500);
@@ -27,7 +25,7 @@ public class Repositorio {
 
     private HashImpl<String,Team> equipos = new HashImpl<>(500);
     private ArrayList<String> arrayListEquipos = new ArrayList<>(250);
-    private HeapMax<Integer,Team> HeapEquiposRangoEfectivo = new HeapMax<>(300);
+    private HeapMax<Float,Team> HeapEquiposRangoEfectivo = new HeapMax<>(300);
 
     private HashImpl<String, Event> competiciones = new HashImpl<>(5000);
     private ArrayList<String> arrayListCompeticiones = new ArrayList<>(5000);
@@ -223,13 +221,15 @@ public class Repositorio {
 
     public void imprimirEquiposEfectivosRango(int inicio, int fin) {
         generarHeapEquiposRangoEfectivo(inicio,fin);
-        for(int i=0;i<HeapEquiposRangoEfectivo.getSize();i++){
+        for(int i=0;i<10;i++){
             Team equipo = HeapEquiposRangoEfectivo.obtenerYEliminar();
             int[] datos = equipo.efectivivadRangoDetalle(inicio, fin);
+            System.out.println("#" + (i + 1));
             System.out.println("Equipo: "+equipo.getName());
             System.out.println("Cantidad de competidores: " +datos[0]);
             System.out.println("Cantidad de Medallas: " +datos[1]);
             System.out.println("Cantidad de atletas totales: " +equipo.getCantidadAtletas());
+            System.out.println("Ratio medalla/competidor " +equipo.efectividadRango(inicio,fin));
             System.out.println("");
         }
     }
@@ -323,47 +323,6 @@ public class Repositorio {
         }
         medallasBronceExiste = true;
     }
-
-    public ArrayList<NationalOlympicCommittee> nationalOlympicCommittees() {
-        //genera un arraylist con los commites olimpicos
-        ArrayList<NationalOlympicCommittee> nationalOlympicCommittees = new ArrayList<>(231);
-
-
-        return nationalOlympicCommittees;
-    }
-
-    /*
-    public int obtenerAñoMaximo() {
-        int maximo = 0;
-        int max = 0;
-        ArrayList<AthleteOlympicParticipation> medal;
-
-        for (int i = 0; i < 10; i++) {
-            Athlete at = obtenidos[i];
-            for (int j = 0; j < at.getMedallas().size(); j++) {
-                medal = at.getMedallas();
-
-                if (medal.get(j).getMedal().equals(MedalType.GOLD)) {
-                    max = medal.get(j).getOlympicGame().getYear();
-                }
-
-                if (medal.get(j).getMedal().equals(MedalType.SILVER)) {
-                    max = medal.get(j).getOlympicGame().getYear();
-                }
-
-                if (medal.get(j).getMedal().equals(MedalType.BRONZE)) {
-                    max = medal.get(j).getOlympicGame().getYear();
-                }
-
-                if (max > maximo) {
-                    maximo = max;
-                }
-            }
-        }
-        return maximo;
-    }
-
-     */
 
     private void generarEquipos(){
 
