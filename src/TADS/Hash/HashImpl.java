@@ -56,13 +56,16 @@ public class HashImpl<K,V> implements Hash<K,V> {
         boolean encontrado=false;
         V valueFind=null;
         int b=key.hashCode();
+        if(b>size){
+            b = b%size;
+        }
 
         HashNode<K,V> nodoNext= myHash[b].get(0);
 
-        while(nodoNext.getKey()!=key){
+        while(nodoNext != null && nodoNext.getKey()!=key){
             nodoNext=nodoNext.getNodoSiguiente();
         }
-        if(nodoNext.getKey()==key){
+        if(nodoNext != null && nodoNext.getKey()==key){
             encontrado=true;
         }
         return encontrado;

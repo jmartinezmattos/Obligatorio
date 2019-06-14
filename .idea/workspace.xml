@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc71e00d-16ae-4472-b5b3-700348c13b3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/RepositorioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/RepositorioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Athlete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TADS/Hash/HashImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/Hash/HashImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+            <state relative-caret-position="204">
+              <caret line="92" column="56" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
               <folding>
                 <element signature="e#4600#4601#0" expanded="true" />
                 <element signature="e#4630#4631#0" expanded="true" />
@@ -44,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="170">
+              <caret line="321" column="24" selection-start-line="321" selection-start-column="24" selection-end-line="321" selection-end-column="24" />
               <folding>
                 <element signature="method#imprimirAtletasConMasMedallas#0;class#Repositorio#0" />
                 <element signature="method#imprimirRegionesConMasMedallas#0;class#Repositorio#0" />
@@ -95,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1020">
@@ -104,6 +98,15 @@
                 <element signature="method#printHeader#0;class#Menu#0" />
                 <element signature="method#printHeader2#0;class#Menu#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -124,11 +127,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
               <folding>
-                <element signature="e#1079#1080#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
+                <element signature="e#1226#1227#0" expanded="true" />
+                <element signature="e#1289#1290#0" expanded="true" />
+                <element signature="e#1366#1367#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/TADS/LinkedList/src/List.java" />
         <option value="$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedList.java" />
         <option value="$PROJECT_DIR$/Test/LectorTest.java" />
-        <option value="$PROJECT_DIR$/src/TADS/Hash/HashImpl.java" />
         <option value="$PROJECT_DIR$/noc_regions.csv" />
         <option value="$PROJECT_DIR$/src/Entidades/NationalOlympicCommittee.java" />
         <option value="$PROJECT_DIR$/src/Entidades/Athlete.java" />
@@ -198,8 +201,9 @@
         <option value="$PROJECT_DIR$/src/Entidades/Team.java" />
         <option value="$PROJECT_DIR$/src/Repositorio.java" />
         <option value="$PROJECT_DIR$/Test/RepositorioTest.java" />
-        <option value="$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java" />
         <option value="$PROJECT_DIR$/src/Menu.java" />
+        <option value="$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java" />
+        <option value="$PROJECT_DIR$/src/TADS/Hash/HashImpl.java" />
       </list>
     </option>
   </component>
@@ -533,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560481066418</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Haciendo la consulta 5, hay que arreglar el contains en HASH">
+      <created>1560489109551</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560489109551</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -584,7 +595,7 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19559902" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19559902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -593,7 +604,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.26091826" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.26091826" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3975364" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -710,7 +721,8 @@
     <MESSAGE value="Problema con el Hash" />
     <MESSAGE value="Solucionados problemas con hash" />
     <MESSAGE value="Consulta top 10 regiones funcionando" />
-    <option name="LAST_COMMIT_MESSAGE" value="Consulta top 10 regiones funcionando" />
+    <MESSAGE value="Haciendo la consulta 5, hay que arreglar el contains en HASH" />
+    <option name="LAST_COMMIT_MESSAGE" value="Haciendo la consulta 5, hay que arreglar el contains en HASH" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1003,13 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TADS/LinkedList/src/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -1045,36 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding>
-            <element signature="method#imprimirAtletasConMasMedallas#0;class#Repositorio#0" />
-            <element signature="method#imprimirRegionesConMasMedallas#0;class#Repositorio#0" />
-            <element signature="method#generarEstructuras#0;class#Repositorio#0" />
-            <element signature="e#7564#7565#0" expanded="true" />
-            <element signature="e#7650#7651#0" expanded="true" />
-            <element signature="method#generarHashRegiones#0;class#Repositorio#0" />
-            <element signature="method#generarHeapMedallasRegiones#0;class#Repositorio#0" />
-            <element signature="method#generarHeapPlata#0;class#Repositorio#0" />
-            <element signature="method#generarHeapBronce#0;class#Repositorio#0" />
-            <element signature="method#nationalOlympicCommittees#0;class#Repositorio#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <element signature="e#1079#1080#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/athlete_events.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="-51">
@@ -1100,19 +1075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
-          <folding>
-            <element signature="e#4600#4601#0" expanded="true" />
-            <element signature="e#4630#4631#0" expanded="true" />
-            <element signature="e#4704#4705#0" expanded="true" />
-            <element signature="e#4742#4743#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entidades/Team.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -1134,6 +1096,57 @@
             <element signature="method#printHeader#0;class#Menu#0" />
             <element signature="method#printHeader2#0;class#Menu#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="92" column="56" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
+          <folding>
+            <element signature="e#4600#4601#0" expanded="true" />
+            <element signature="e#4630#4631#0" expanded="true" />
+            <element signature="e#4704#4705#0" expanded="true" />
+            <element signature="e#4742#4743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="321" column="24" selection-start-line="321" selection-start-column="24" selection-end-line="321" selection-end-column="24" />
+          <folding>
+            <element signature="method#imprimirAtletasConMasMedallas#0;class#Repositorio#0" />
+            <element signature="method#imprimirRegionesConMasMedallas#0;class#Repositorio#0" />
+            <element signature="method#generarEstructuras#0;class#Repositorio#0" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7650#7651#0" expanded="true" />
+            <element signature="method#generarHashRegiones#0;class#Repositorio#0" />
+            <element signature="method#generarHeapMedallasRegiones#0;class#Repositorio#0" />
+            <element signature="method#generarHeapPlata#0;class#Repositorio#0" />
+            <element signature="method#generarHeapBronce#0;class#Repositorio#0" />
+            <element signature="method#nationalOlympicCommittees#0;class#Repositorio#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
         </state>
       </provider>
     </entry>
