@@ -13,8 +13,10 @@ public class AthleteOlympicParticipation {
     private  int year;
     private String event;
     private String olympicGame;
+    private OlympicGame oGames;
     private NationalOlympicCommittee nationalCommitee;
     private String sport;
+
 
 
     public AthleteOlympicParticipation(String medal, Athlete athlete,String age,String year, String sport,String olympicGame, String event) {
@@ -83,5 +85,13 @@ public class AthleteOlympicParticipation {
 
     public Athlete getAthlete() {
         return athlete;
+    }
+
+    public OlympicGame getoGames() {
+        return oGames;
+    }
+
+    public void setoGames(OlympicGame oGames) {
+        this.oGames = oGames;
     }
 }

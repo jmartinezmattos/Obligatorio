@@ -1,6 +1,8 @@
 import Entidades.Athlete;
 import Entidades.AthleteOlympicParticipation;
 import Entidades.NationalOlympicCommittee;
+import Entidades.OlympicGame;
+import Enums.SexType;
 import TADS.Hash.HashImpl;
 import TADS.Heap.HeapMax;
 
@@ -16,7 +18,7 @@ public class Lector {
     public ArrayList<AthleteOlympicParticipation> Participaciones = new ArrayList(22000);
     public HashImpl<String,NationalOlympicCommittee> nationalOlympicCommittees = new HashImpl<>(250);
     public ArrayList<String> arrayComittees = new ArrayList<>(500);
-
+    public ArrayList<OlympicGame>olympicGames=new ArrayList<>(14000);
 
     public Lector(){
     }
@@ -47,6 +49,7 @@ public class Lector {
                     ultimoID = datos[0];
                     ultimoAtleta = crearAtleta(datos);
                     Atletas.add(ultimoAtleta); //agrega el atleta al arraylist
+
                 }
                 AthleteOlympicParticipation participation = crearParticipacion(datos,ultimoAtleta);
                 participation.setAthlete(ultimoAtleta);

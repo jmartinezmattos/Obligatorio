@@ -13,6 +13,7 @@ public class OlympicGame {
     private ArrayList participantesFemeninos;
     private City city;
     private LinkedList<Event> event;
+    private int CantAtletasFemeninos=participantesFemeninos.size();
 
     public OlympicGame(String name, int year, SeasonType season, ArrayList participacionesMasculinos, ArrayList participantesFemeninos, City city, LinkedList<Event> event) {
         this.name = name;
@@ -76,7 +77,17 @@ public class OlympicGame {
         return event;
     }
 
+    public int getCantAtletasFemeninos() {
+        return CantAtletasFemeninos;
+    }
+
+    public void setCantAtletasFemeninos(int cantAtletasFemeninos) {
+        CantAtletasFemeninos = cantAtletasFemeninos;
+    }
+
     public void setEvent(LinkedList<Event> event) {
         this.event = event;
     }
+
+
 }

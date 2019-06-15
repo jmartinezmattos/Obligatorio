@@ -2,8 +2,10 @@ import Entidades.*;
 import Enums.MedalType;
 import TADS.Hash.HashImpl;
 import TADS.Heap.HeapMax;
+import TADS.Heap.Nodo;
 import TADS.LinkedList.src.*;
 import TADS.QuickSort.QuickSort;
+import com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator;
 import javafx.scene.control.TabPane;
 
 
@@ -26,6 +28,8 @@ public class Repositorio {
     private HashImpl<String,Team> equipos = new HashImpl<>(500);
     private ArrayList<String> arrayListEquipos = new ArrayList<>(250);
     private HeapMax<Float,Team> HeapEquiposRangoEfectivo = new HeapMax<>(300);
+
+    private HeapMax<String,Integer> HeapAtletasFemeninos =new HeapMax<>(5000);
 
     private HashImpl<String, Event> competiciones = new HashImpl<>(5000);
     private ArrayList<String> arrayListCompeticiones = new ArrayList<>(5000);
@@ -174,6 +178,12 @@ public class Repositorio {
 
     public void imprimirMayorParticipacionFemenina() {
 
+        HeapAtletasFemeninos.obtenerYEliminar();
+        System.out.println("Nombre de la competicion: ");
+        System.out.println("Deporte: " );
+        System.out.println("Sexo: Femenino");
+        System.out.println("Cantidad: " );
+        System.out.println("");
     }
 
     public void imprimirCiertoSexo(int opcion) {
@@ -400,7 +410,15 @@ public class Repositorio {
         heapCompeticionesMascGenerado = true;
 
     }
+    //Cargamos el heap
+    public void generarHeapAtletasFemeninos(String olympicGame,int cantAtletas){
+        for(int i=0;i<lector.Participaciones.size();i++) {
+            HeapAtletasFemeninos.agregar(lector.Participaciones.get(i).getoGames().getName(),lector.Participaciones.get(i).getoGames().getCantAtletasFemeninos());
+            }
+        }
 
 
-}
+    }
+
+
 
