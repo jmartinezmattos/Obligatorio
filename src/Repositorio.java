@@ -29,7 +29,7 @@ public class Repositorio {
     private ArrayList<String> arrayListEquipos = new ArrayList<>(250);
     private HeapMax<Float,Team> HeapEquiposRangoEfectivo = new HeapMax<>(300);
 
-    private HeapMax<Integer,OlympicGame> HeapAtletasFemeninos =new HeapMax<>(5000);
+    private HeapMax<Integer,OlympicGame> HeapAtletasFemeninos =new HeapMax<>(14000);
 
     private HashImpl<String, Event> competiciones = new HashImpl<>(5000);
     private ArrayList<String> arrayListCompeticiones = new ArrayList<>(5000);
@@ -186,8 +186,7 @@ public class Repositorio {
             resultantes[i]=aux;
             System.out.println("#" +(i+1));
             System.out.println("Nombre de la competicion: "+ aux.getName());
-            System.out.println("Deporte: "+ aux.getEvent().get(i).getSport());
-            System.out.println("Sexo: Femenino");
+            System.out.println("Año: "+aux.getYear());
             System.out.println("Cantidad: "+ aux.getCantAtletasFemeninos());
             System.out.println("");
         }
