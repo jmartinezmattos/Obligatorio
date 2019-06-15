@@ -44,4 +44,6 @@ public class Event {
     public int getAtletasMasculinos() {
         return atletasMasculinos;
     }
+
+
 }

@@ -182,11 +182,13 @@ public class Repositorio {
         }
         OlympicGame[] resultantes = new OlympicGame[10];
         for (int i = 0; i < 10; i++) {
-            resultantes[i]=HeapAtletasFemeninos.obtenerYEliminar();
-            System.out.println("Nombre de la competicion: " );
-            System.out.println("Deporte: ");
+            OlympicGame aux=HeapAtletasFemeninos.obtenerYEliminar();
+            resultantes[i]=aux;
+            System.out.println("#" +(i+1));
+            System.out.println("Nombre de la competicion: "+ aux.getName());
+            System.out.println("Deporte: "+ aux.getEvent().get(i).getSport());
             System.out.println("Sexo: Femenino");
-            System.out.println("Cantidad: ");
+            System.out.println("Cantidad: "+ aux.getCantAtletasFemeninos());
             System.out.println("");
         }
     }
