@@ -29,7 +29,7 @@ public class Repositorio {
     private ArrayList<String> arrayListEquipos = new ArrayList<>(250);
     private HeapMax<Float,Team> HeapEquiposRangoEfectivo = new HeapMax<>(300);
 
-    private HeapMax<String,Integer> HeapAtletasFemeninos =new HeapMax<>(5000);
+    private HeapMax<Integer,OlympicGame> HeapAtletasFemeninos =new HeapMax<>(5000);
 
     private HashImpl<String, Event> competiciones = new HashImpl<>(5000);
     private ArrayList<String> arrayListCompeticiones = new ArrayList<>(5000);
@@ -177,15 +177,19 @@ public class Repositorio {
     }
 
     public void imprimirMayorParticipacionFemenina() {
-
-        HeapAtletasFemeninos.obtenerYEliminar();
-        System.out.println("Nombre de la competicion: ");
-        System.out.println("Deporte: " );
-        System.out.println("Sexo: Femenino");
-        System.out.println("Cantidad: " );
-        System.out.println("");
+        if (HeapAtletasFemeninos != null) {
+            generarHeapAtletasFemeninos();
+        }
+        OlympicGame[] resultantes = new OlympicGame[10];
+        for (int i = 0; i < 10; i++) {
+            resultantes[i]=HeapAtletasFemeninos.obtenerYEliminar();
+            System.out.println("Nombre de la competicion: " );
+            System.out.println("Deporte: ");
+            System.out.println("Sexo: Femenino");
+            System.out.println("Cantidad: ");
+            System.out.println("");
+        }
     }
-
     public void imprimirCiertoSexo(int opcion) {
         if(opcion == 1){
             //femenino
@@ -411,9 +415,9 @@ public class Repositorio {
 
     }
     //Cargamos el heap
-    public void generarHeapAtletasFemeninos(String olympicGame,int cantAtletas){
+    public void generarHeapAtletasFemeninos(){
         for(int i=0;i<lector.Participaciones.size();i++) {
-            HeapAtletasFemeninos.agregar(lector.Participaciones.get(i).getoGames().getName(),lector.Participaciones.get(i).getoGames().getCantAtletasFemeninos());
+            HeapAtletasFemeninos.agregar(lector.Participaciones.get(i).getoGames().getCantAtletasFemeninos(),lector.Participaciones.get(i).getoGames());
             }
         }
 
