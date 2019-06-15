@@ -29,7 +29,7 @@ public class Repositorio {
     private ArrayList<String> arrayListEquipos = new ArrayList<>(250);
     private HeapMax<Float,Team> HeapEquiposRangoEfectivo = new HeapMax<>(300);
 
-    private HeapMax<Integer,OlympicGame> HeapAtletasFemeninos =new HeapMax<>(14000);
+    private HeapMax<Integer,OlympicGame> HeapAtletasFemeninos =new HeapMax<>(22000);
 
     private HashImpl<String, Event> competiciones = new HashImpl<>(5000);
     private ArrayList<String> arrayListCompeticiones = new ArrayList<>(5000);
@@ -177,7 +177,7 @@ public class Repositorio {
     }
 
     public void imprimirMayorParticipacionFemenina() {
-        if (HeapAtletasFemeninos != null) {
+        if (HeapAtletasFemeninos == null) {
             generarHeapAtletasFemeninos();
         }
         OlympicGame[] resultantes = new OlympicGame[10];
