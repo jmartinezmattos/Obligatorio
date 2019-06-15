@@ -1,5 +1,6 @@
 import Entidades.*;
 import Enums.MedalType;
+import Enums.SexType;
 import TADS.Hash.HashImpl;
 import TADS.Heap.HeapMax;
 import TADS.Heap.Nodo;
@@ -35,6 +36,9 @@ public class Repositorio {
     private ArrayList<String> arrayListCompeticiones = new ArrayList<>(5000);
     private HeapMax<Integer,Event> competicionesFemenino = new HeapMax<>(5000);
     private HeapMax<Integer,Event> competicionesMasculino = new HeapMax<>(5000);
+
+    private HashImpl<String, OlympicGame> olimpiadasFemeninas = new HashImpl<>(5000);
+    private ArrayList<String> arrayListOlimpiadasFemeninas = new ArrayList<>(5000);
 
     private boolean medallasOroExiste = false;
     private boolean medallasPlataExiste = false;
@@ -414,6 +418,30 @@ public class Repositorio {
         }
         heapCompeticionesMascGenerado = true;
 
+    }
+
+    private void generarHashOlimpiadasFemeninas(){
+
+        for(int i=0;i<lector.Atletas.size();i++){//recorre todos los atletas
+            Athlete atleta = lector.Atletas.get(i);
+            if(atleta.equals(SexType.FEMALE)){//se fija si es femenino
+               for(int j=0;j<atleta.getParticipaciones().size();j++){//recorre todas las participaciones
+                   AthleteOlympicParticipation participation = atleta.getParticipaciones().get(j);
+                   String nombreOlimpiada = participation.getOlympicGame();
+                   if(!olimpiadasFemeninas.contains(nombreOlimpiada)){//si la olimpiada no esta en el hash
+
+                       OlympicGame olimpiada = new OlympicGame()//genera juego olimpico con los datos necesarios
+                       //hay que sumarle uno al contador de atletas femeninos de la olimpiada
+                       arrayListOlimpiadasFemeninas.add(nombreOlimpiada);//arraylis utilizado para luego recorrer el hash
+                       olimpiadasFemeninas.put(nombreOlimpiada,olimpiada);
+                   }
+                   else{
+                       OlympicGame olimpiada = olimpiadasFemeninas.find(nombreOlimpiada);
+                       //hay que agregarle uno a la cantidad de atletas femeninos
+                   }
+               }
+           }
+       }
     }
     //Cargamos el heap
     public void generarHeapAtletasFemeninos(){

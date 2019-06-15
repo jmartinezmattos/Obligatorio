@@ -55,7 +55,7 @@ public class Team {
                                 atletaEnRango++;
                                 atletaContado = true;
                         }
-                        if(!athlete.getMedallas().get(b).getMedal().equals("NA")){//si la medalla no es igual a NA se suma una medalla
+                        if(!athlete.getParticipaciones().get(b).getMedal().equals("NA")){//si la medalla no es igual a NA se suma una medalla
                             medallas++;
                         }
                     }

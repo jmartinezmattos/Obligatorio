@@ -92,7 +92,7 @@ public class Athlete  {
 
     }
 
-    public ArrayList<AthleteOlympicParticipation> getMedallas() {
+    public ArrayList<AthleteOlympicParticipation> getParticipaciones() {
         return medallas;
     }
 
