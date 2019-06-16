@@ -57,6 +57,7 @@ public class Menu {
                 System.out.println("1: Oro");
                 System.out.println("2: Plata");
                 System.out.println("3: Bronze");
+                System.out.println("4: Todas");
                 num = sc2.nextInt();
                 System.out.println("La cantidad de medallas obtenidas de la region seleccionada es: ");
                 repo.imprimirAtletasConMasMedallas(num);
@@ -66,8 +67,9 @@ public class Menu {
                 System.out.println("1: Oro");
                 System.out.println("2: Plata");
                 System.out.println("3: Bronze");
+                System.out.println("4: Todas");
                 num = sc2.nextInt();
-                if(num<1 || num>3) {
+                if(num<1 || num>4) {
                     System.out.println("Opcion no valida");
                 }
                 else{

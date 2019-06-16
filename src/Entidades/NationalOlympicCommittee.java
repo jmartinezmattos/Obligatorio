@@ -12,6 +12,7 @@ public class NationalOlympicCommittee {
     private int cantMedallasOro;
     private int cantMedallasPlata;
     private int cantMedallasBronce;
+    private int cantMedallasTotales=cantMedallasBronce+cantMedallasOro+cantMedallasPlata;
 
 
     public NationalOlympicCommittee(String NOC, String region, String notes) {
@@ -25,6 +26,8 @@ public class NationalOlympicCommittee {
         this.cantMedallasOro = cantMedallasOro + athlete.getMedallasOro();
         this.cantMedallasPlata = cantMedallasPlata + athlete.getMedallasPlata();
         this.cantMedallasBronce = cantMedallasBronce + athlete.getMedallasBronze();
+        this.cantMedallasTotales=cantMedallasTotales+ athlete.getMedallasTotales();
+
     }
 
     public String getName() {
@@ -57,5 +60,9 @@ public class NationalOlympicCommittee {
 
     public void setCantMedallasBronce(int cantMedallasBronce) {
         this.cantMedallasBronce = cantMedallasBronce;
+    }
+
+    public int getCantMedallasTotales() {
+        return cantMedallasTotales;
     }
 }

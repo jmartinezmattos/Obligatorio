@@ -18,6 +18,7 @@ public class Athlete  {
     private int medallasOro = 0;
     private int medallasPlata = 0;
     private int medallasBronce = 0;
+    private int medallasTotales=medallasBronce+medallasPlata+medallasOro;
     private String team;
     private int minYear = 0;//anio maximo y minimo
     private int maxYear = 0;
@@ -82,6 +83,11 @@ public class Athlete  {
 
     }
 
+    public void agregarMedallaTotales(){
+        this.medallasTotales++;
+
+    }
+
     public void agregarMedallaPlata(){
         this.medallasPlata++;
 
@@ -110,5 +116,9 @@ public class Athlete  {
 
     public int getMaxYear() {
         return maxYear;
+    }
+
+    public int getMedallasTotales() {
+        return medallasTotales;
     }
 }

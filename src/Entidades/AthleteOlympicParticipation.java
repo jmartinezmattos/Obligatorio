@@ -29,6 +29,7 @@ public class AthleteOlympicParticipation {
 
         if(medal.equals("NA")){
             this.medal = MedalType.NA;
+            athlete.agregarMedallaTotales();
         }
         if(medal.equals("Gold")){
             this.medal = MedalType.GOLD;

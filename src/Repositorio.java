@@ -1,13 +1,7 @@
 import Entidades.*;
-import Enums.MedalType;
 import Enums.SexType;
 import TADS.Hash.HashImpl;
 import TADS.Heap.HeapMax;
-import TADS.Heap.Nodo;
-import TADS.LinkedList.src.*;
-import TADS.QuickSort.QuickSort;
-import com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator;
-import javafx.scene.control.TabPane;
 
 
 import java.util.ArrayList;
@@ -21,10 +15,12 @@ public class Repositorio {
     private HeapMax<Integer, Athlete> MedallasOro = new HeapMax<>(14000);
     private HeapMax<Integer, Athlete> MedallasBronce = new HeapMax<>(14000);
     private HeapMax<Integer, Athlete> MedallasPlata = new HeapMax<>(14000);
+    private HeapMax<Integer,Athlete> MedallasTotales=new HeapMax<>(14000);
 
     private HeapMax<Integer,NationalOlympicCommittee> MedallasOroNOC = new HeapMax<>(500);
     private HeapMax<Integer,NationalOlympicCommittee> MedallasPlataNOC = new HeapMax<>(500);
     private HeapMax<Integer,NationalOlympicCommittee> MedallasBronceNOC = new HeapMax<>(500);
+    private HeapMax<Integer,NationalOlympicCommittee> MedallasTotalesNOC=new HeapMax<>(500);
 
     private HashImpl<String,Team> equipos = new HashImpl<>(500);
     private ArrayList<String> arrayListEquipos = new ArrayList<>(250);
@@ -38,15 +34,17 @@ public class Repositorio {
     private HeapMax<Integer,Event> competicionesMasculino = new HeapMax<>(5000);
 
     private HashImpl<String, OlympicGame> olimpiadasFemeninas = new HashImpl<>(5000);
-    private ArrayList<String> arrayListOlimpiadasFemeninas = new ArrayList<>(5000);
+    private ArrayList<OlympicGame> arrayListOlimpiadasFemeninas = new ArrayList<OlympicGame>(5000);
 
     private boolean medallasOroExiste = false;
     private boolean medallasPlataExiste = false;
     private boolean medallasBronceExiste = false;
+    private boolean medallasTotalesExiste = false;
 
     private boolean medallasOroRegionesExiste = false;
     private boolean medallasPlataRegionesExiste = false;
     private boolean medallasBronceRegionesExiste = false;
+    private boolean medallasTotalesRegionesExiste = false;
 
     private boolean hashRegionesExiste = false;
 
@@ -73,7 +71,7 @@ public class Repositorio {
                 System.out.println("#" + (i + 1));
                 System.out.println("Nombre: " + aux.getName());
                 System.out.println("Sexo: " + aux.getSex());
-                System.out.println("Cantidad De Medallas: " + aux.getMedallasOro());
+                System.out.println("Cantidad De  Medallas: " + aux.getMedallasOro());
                 System.out.println("Año Maximo: " +aux.getMaxYear());
                 System.out.println("Año Minimo: " +aux.getMinYear());
                 System.out.println("");
@@ -124,12 +122,43 @@ public class Repositorio {
                 MedallasOro.agregar(obtenidos[i].getMedallasBronze(), obtenidos[i]);//vuelve a agregar los atletas al heap para uso posterior
             }
         }
+        if (num == 4) {
+            Athlete[] obtenidos = new Athlete[10];
+            if (!medallasTotalesExiste) {
+                generarHeapTotales();
+            }
+            for (int i = 0; i < 10; i++) {
+                Athlete aux = MedallasTotales.obtenerYEliminar();
+                obtenidos[i] = aux;
+                System.out.println("#" + (i + 1));
+                System.out.println("Nombre: " + aux.getName());
+                System.out.println("Sexo: " + aux.getSex());
+                System.out.println("Cantidad De Medallas: " + aux.getMedallasTotales());
+                System.out.println("Año Maximo: " +aux.getMaxYear());
+                System.out.println("Año Minimo: " +aux.getMinYear());
+                System.out.println("");
+            }
+            for (int i = 0; i < 10; i++) {
+                MedallasTotales.agregar(obtenidos[i].getMedallasTotales(), obtenidos[i]);//vuelve a agregar los atletas al heap para uso posterior
+            }
+        }
 
-        if (num < 1 || num > 3) {
+        if (num < 1 || num > 4) {
             System.out.println("Opcion no valida");
         }
 
     }
+
+    private void generarHeapTotales() {
+
+        for (int i = 0; i < lector.Atletas.size(); i++) {
+            if (lector.Atletas.get(i).getMedallasTotales() > 0) {
+                MedallasTotales.agregar(lector.Atletas.get(i).getMedallasTotales(), lector.Atletas.get(i));
+            }
+        }
+        medallasTotalesExiste= true;
+    }
+
 
     public void imprimirRegionesConMasMedallas(int opcion) {
         generarHeapMedallasRegiones(opcion);
@@ -173,7 +202,20 @@ public class Repositorio {
                System.out.println("");
             }
             for(int i = 0;i<10;i++){
-                MedallasOroNOC.agregar(temp[i].getCantMedallasBronce(),temp[i]);
+                MedallasBronceNOC.agregar(temp[i].getCantMedallasBronce(),temp[i]);
+            }
+        }
+        if(opcion == 4) {
+            System.out.println("Paises con mas medallas en General: ");
+            System.out.println("");
+            for (int i = 0; i < 10; i++) {
+                temp[i] = MedallasTotalesNOC.obtenerYEliminar();
+                System.out.println("Nombre de la region: " + temp[i].getName());
+                System.out.println("Cantidad de medallas: " + temp[i].getCantMedallasTotales());
+                System.out.println("");
+            }
+            for (int i = 0; i < 10; i++) {
+                MedallasTotalesNOC.agregar(temp[i].getCantMedallasTotales(), temp[i]);
             }
         }
 
@@ -258,6 +300,7 @@ public class Repositorio {
         generarHeapPlata();
         generarHeapOro();
         generarHeapBronce();
+        generarHeapTotales();
         generarHashRegiones();//falta heaps regiones
     }
 
@@ -312,6 +355,16 @@ public class Repositorio {
                     this.MedallasBronceNOC.agregar(committee.getCantMedallasOro(), committee);
                 }
                 medallasBronceRegionesExiste = true;
+            }
+        }
+        if(opcion == 4) {
+            if (!medallasTotalesRegionesExiste) {
+                for (int i = 0; i < lector.arrayComittees.size(); i++) {
+                    String NOC = lector.arrayComittees.get(i);
+                    NationalOlympicCommittee committee = lector.nationalOlympicCommittees.find(NOC);
+                    this.MedallasTotalesNOC.agregar(committee.getCantMedallasTotales(), committee);
+                }
+                medallasTotalesRegionesExiste = true;
             }
         }
     }
@@ -424,20 +477,18 @@ public class Repositorio {
 
         for(int i=0;i<lector.Atletas.size();i++){//recorre todos los atletas
             Athlete atleta = lector.Atletas.get(i);
-            if(atleta.equals(SexType.FEMALE)){//se fija si es femenino
+            if(atleta.getSex().equals(SexType.FEMALE)){//se fija si es femenino
                for(int j=0;j<atleta.getParticipaciones().size();j++){//recorre todas las participaciones
                    AthleteOlympicParticipation participation = atleta.getParticipaciones().get(j);
-                   String nombreOlimpiada = participation.getOlympicGame();
-                   if(!olimpiadasFemeninas.contains(nombreOlimpiada)){//si la olimpiada no esta en el hash
-
-                       OlympicGame olimpiada = new OlympicGame()//genera juego olimpico con los datos necesarios
+                   OlympicGame olimpiada = participation.getoGames();
+                   if(!olimpiadasFemeninas.contains(olimpiada.getName())){//si la olimpiada no esta en el hash
                        //hay que sumarle uno al contador de atletas femeninos de la olimpiada
-                       arrayListOlimpiadasFemeninas.add(nombreOlimpiada);//arraylis utilizado para luego recorrer el hash
-                       olimpiadasFemeninas.put(nombreOlimpiada,olimpiada);
+                       arrayListOlimpiadasFemeninas.add(olimpiada);//arraylis utilizado para luego recorrer el hash
+                      // olimpiadasFemeninas.put(nombreOlimpiada,olimpiada);
                    }
                    else{
-                       OlympicGame olimpiada = olimpiadasFemeninas.find(nombreOlimpiada);
-                       //hay que agregarle uno a la cantidad de atletas femeninos
+                      // OlympicGame olimpiada = olimpiadasFemeninas.find(olimpiada);
+                       //hay que agregarle uno a la cantidad  de atletas femeninos
                    }
                }
            }
@@ -446,7 +497,8 @@ public class Repositorio {
     //Cargamos el heap
     public void generarHeapAtletasFemeninos(){
         for(int i=0;i<lector.Participaciones.size();i++) {
-            HeapAtletasFemeninos.agregar(lector.Participaciones.get(i).getoGames().getCantAtletasFemeninos(),lector.Participaciones.get(i).getoGames());
+               HeapAtletasFemeninos.agregar(lector.Participaciones.get(i).getoGames().getCantAtletasFemeninos(), lector.Participaciones.get(i).getoGames());
+
             }
         }
 
