@@ -14,7 +14,7 @@ public class Menu {
         //printHeader();
        // carga = letra.nextLine();
        // if(carga.equals("y")){
-       //     repo.generarEstructuras();
+           // repo.generarEstructuras();
        // }
 
         do{
@@ -77,7 +77,7 @@ public class Menu {
                 }
                 break;
             case 3:
-                repo.imprimirMayorParticipacionFemenina();
+                    repo.imprimirMayorParticipacionFemenina();
                 break;
             case 4:
                 System.out.println("Seleccione el sexo: ");

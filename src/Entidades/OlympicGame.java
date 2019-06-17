@@ -1,6 +1,7 @@
 package Entidades;
 
 import Enums.SeasonType;
+import Enums.SexType;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,20 +10,25 @@ public class OlympicGame {
     private String name;
     private int year;
     private SeasonType season;
-    private ArrayList participacionesMasculinos;
-    private ArrayList participantesFemeninos;
+    // private ArrayList participacionesMasculinos;
+    private ArrayList participantes;
     private City city;
     private LinkedList<Event> event;
-    private int CantAtletasFemeninos=participantesFemeninos.size();
+    private int CantAtletasFemeninos=0;
 
-    public OlympicGame(String name, int year, SeasonType season, ArrayList participacionesMasculinos, ArrayList participantesFemeninos, City city, LinkedList<Event> event) {
+    public OlympicGame(String name, int year, SeasonType season, ArrayList participantes, City city, LinkedList<Event> event) {
         this.name = name;
         this.year = year;
         this.season = season;
-        this.participacionesMasculinos = participacionesMasculinos;
-        this.participantesFemeninos = participantesFemeninos;
+        // this.participacionesMasculinos = participacionesMasculinos;
+        this.participantes = participantes;
         this.city = city;
         this.event = event;
+    }
+
+    public OlympicGame(String name, int year) {
+        this.name = name;
+        this.year = year;
     }
 
     public String getName() {
@@ -49,20 +55,12 @@ public class OlympicGame {
         this.season = season;
     }
 
-    public ArrayList getParticipacionesMasculinos() {
-        return participacionesMasculinos;
+    public ArrayList getParticipantes() {
+        return participantes;
     }
 
-    public void setParticipacionesMasculinos(ArrayList participacionesMasculinos) {
-        this.participacionesMasculinos = participacionesMasculinos;
-    }
-
-    public ArrayList getParticipantesFemeninos() {
-        return participantesFemeninos;
-    }
-
-    public void setParticipantesFemeninos(ArrayList participantesFemeninos) {
-        this.participantesFemeninos = participantesFemeninos;
+    public void setParticipantes(ArrayList participantes) {
+        this.participantes = participantes;
     }
 
 
@@ -91,4 +89,23 @@ public class OlympicGame {
     }
 
 
-}
+
+      /*
+
+
+                for(int j=0;j<atleta.getParticipaciones().size();j++){//recorre todas las participaciones
+                    AthleteOlympicParticipation participation = atleta.getParticipaciones().get(j);
+                    OlympicGame olimpiada = participation.getoGames();
+                    if(!olimpiadasFemeninas.contains(olimpiada.getName())){//si la olimpiada no esta en el hash
+                        //hay que sumarle uno al contador de atletas femeninos de la olimpiada
+                        arrayListOlimpiadasFemeninas.add(olimpiada);//arraylis utilizado para luego recorrer el hash
+                        // olimpiadasFemeninas.put(nombreOlimpiada,olimpiada);
+                    }
+                    else{
+                        // OlympicGame olimpiada = olimpiadasFemeninas.find(olimpiada);
+                        //hay que agregarle uno a la cantidad  de atletas femeninos
+                    }
+*/
+    }
+
+
