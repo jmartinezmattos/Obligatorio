@@ -35,45 +35,8 @@ public class OlympicGame {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getYear() {
         return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public SeasonType getSeason() {
-        return season;
-    }
-
-    public void setSeason(SeasonType season) {
-        this.season = season;
-    }
-
-    public ArrayList getParticipantes() {
-        return participantes;
-    }
-
-    public void setParticipantes(ArrayList participantes) {
-        this.participantes = participantes;
-    }
-
-
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
-    public LinkedList<Event> getEvent() {
-        return event;
     }
 
     public int getCantAtletasFemeninos() {
@@ -84,9 +47,7 @@ public class OlympicGame {
         CantAtletasFemeninos = cantAtletasFemeninos;
     }
 
-    public void setEvent(LinkedList<Event> event) {
-        this.event = event;
-    }
+
 
 
 

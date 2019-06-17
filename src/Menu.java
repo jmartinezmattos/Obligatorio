@@ -2,11 +2,13 @@ import java.util.Scanner;
 
 public class Menu {
 
-    private static Repositorio repo = new Repositorio();
+    private static Repositorio repo = null;
 
     public static void main(String args[]){
 
         String continuar = "n";
+
+        esperaCarga();
 
         Scanner entero = new Scanner(System.in);
         Scanner letra = new Scanner(System.in);
@@ -25,6 +27,14 @@ public class Menu {
             continuar = letra.nextLine();
         }
         while(continuar.equals("y"));
+    }
+
+    private static void esperaCarga(){
+        System.out.println("Presione cualquier tecla y enter para continuar");
+        Scanner sc = new Scanner(System.in);
+        String cualquierTecla = "cualquierTecla";
+        cualquierTecla = sc.nextLine();
+        repo = new Repositorio();
     }
 
     private static void printHeader(){
