@@ -218,12 +218,15 @@ public class Repositorio {
             generarHeapOlimpiadasFemeninas();
         }
        OlympicGame[] resultantes = new OlympicGame[10];
+        System.out.println("");
+        System.out.println("\033[34mTop 10 ediciones de juegos olimpicos con mayor participacion de atletas femeninos"); //"\033[0;1m" para negrita
+        System.out.println("");
         for (int i = 0; i < 10; i++) {
             OlympicGame og=HeapAtletasFemeninos.obtenerYEliminar();
             if(olimpiadasFemeninas.contains(og.getName())){
                 resultantes[i]=olimpiadasFemeninas.find(og.getName());
-                System.out.println("#" +(i+1));
-                System.out.println("Nombre de la competicion: "+ resultantes[i].getName());
+                System.out.println("#" +"\u001B[30m"+(i+1));
+                System.out.println("Nombre de la edición: "+ resultantes[i].getName());
                 System.out.println("Año: "+ resultantes[i].getYear());
                 System.out.println("Cantidad: "+  resultantes[i].getCantAtletasFemeninos());
                 System.out.println("");
