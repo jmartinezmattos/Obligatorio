@@ -45,8 +45,6 @@ public class Repositorio {
     private boolean equiposGenerados = false;
     private boolean hashAtletasFemeninos = false;
     private boolean hashCompeticionesGenerado = false;
-    private boolean heapCompeticionesFemGenerado =false;
-    private boolean heapCompeticionesMascGenerado =false;
 
     public Repositorio() {
         lector.leerArchivos();
@@ -234,7 +232,7 @@ public class Repositorio {
     public void imprimirCiertoSexo(int opcion) {
         if(opcion == 1){
             //femenino
-            if(!heapCompeticionesFemGenerado){
+            if(competicionesFemenino.getSize()==0){
                 generarHeapCompeticionesFemenino();
             }
             Event[] eventos = new Event[10];
@@ -254,7 +252,7 @@ public class Repositorio {
         }
         if(opcion == 2){
             //masculino
-            if(!heapCompeticionesMascGenerado){
+            if(competicionesMasculino.getSize()==0){
                 generarHeapCompeticionesMasculino();
             }
             Event[] eventos = new Event[10];
@@ -447,8 +445,6 @@ public class Repositorio {
             int keyCompeticionHeap = competicion.getAtletasFemeninos();
             competicionesFemenino.agregar(keyCompeticionHeap,competicion);
         }
-        heapCompeticionesFemGenerado = true;
-
     }
 
     private void generarHeapCompeticionesMasculino(){
@@ -461,8 +457,6 @@ public class Repositorio {
             int keyCompeticionHeap = competicion.getAtletasMasculinos();
             competicionesMasculino.agregar(keyCompeticionHeap,competicion);
         }
-        heapCompeticionesMascGenerado = true;
-
     }
 
 
