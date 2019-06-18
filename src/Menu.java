@@ -58,7 +58,7 @@ public class Menu {
 
         Scanner sc = new Scanner(System.in);
         Scanner sc2 = new Scanner(System.in);
-        int num;
+        byte num;
         String lectura;
 
         switch (opcion){
@@ -68,7 +68,7 @@ public class Menu {
                 System.out.println("2: Plata");
                 System.out.println("3: Bronze");
                 System.out.println("4: Todas");
-                num = sc2.nextInt();
+                num = sc2.nextByte();
                 System.out.println("La cantidad de medallas obtenidas de la region seleccionada es: ");
                 repo.imprimirAtletasConMasMedallas(num);
                 break;
@@ -78,7 +78,7 @@ public class Menu {
                 System.out.println("2: Plata");
                 System.out.println("3: Bronze");
                 System.out.println("4: Todas");
-                num = sc2.nextInt();
+                num = sc2.nextByte();
                 if(num<1 || num>4) {
                     System.out.println("Opcion no valida");
                 }

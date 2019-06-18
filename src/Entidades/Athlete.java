@@ -15,13 +15,13 @@ public class Athlete  {
     private float weight;
     private String NOC;
     protected ArrayList<AthleteOlympicParticipation> medallas = new ArrayList<>(10);
-    private int medallasOro = 0;
-    private int medallasPlata = 0;
-    private int medallasBronce = 0;
+    private byte medallasOro = 0;
+    private byte medallasPlata = 0;
+    private byte medallasBronce = 0;
     private int medallasTotales=medallasBronce+medallasPlata+medallasOro;
     private String team;
-    private int minYear = 0;//anio maximo y minimo
-    private int maxYear = 0;
+    private short minYear = 0;//anio maximo y minimo
+    private short maxYear = 0;
     //private Team equipo;
 
 

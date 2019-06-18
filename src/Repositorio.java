@@ -59,14 +59,14 @@ public class Repositorio {
         lector.leerArchivos();
     }
 
-    public void imprimirAtletasConMasMedallas(int num) {
+    public void imprimirAtletasConMasMedallas(byte num) {
 
         if (num == 1) {
             Athlete[] obtenidos = new Athlete[10];
             if (!medallasOroExiste) {
                 generarHeapOro();
             }
-            for (int i = 0; i < 10; i++) {
+            for (byte i = 0; i < 10; i++) {
                 Athlete aux = MedallasOro.obtenerYEliminar();
                 obtenidos[i] = aux;
                 System.out.println("#" + (i + 1));
@@ -77,7 +77,7 @@ public class Repositorio {
                 System.out.println("Año Minimo: " +aux.getMinYear());
                 System.out.println("");
             }
-            for (int i = 0; i < 10; i++) {
+            for (byte i = 0; i < 10; i++) {
                 MedallasOro.agregar(obtenidos[i].getMedallasOro(), obtenidos[i]);//vuelve a agregar los atletas al heap para uso posterior
             }
         }
@@ -152,7 +152,7 @@ public class Repositorio {
 
     private void generarHeapTotales() {
 
-        for (int i = 0; i < lector.Atletas.size(); i++) {
+        for (byte i = 0; i < lector.Atletas.size(); i++) {
             if (lector.Atletas.get(i).getMedallasTotales() > 0) {
                 MedallasTotales.agregar(lector.Atletas.get(i).getMedallasTotales(), lector.Atletas.get(i));
             }
@@ -161,20 +161,20 @@ public class Repositorio {
     }
 
 
-    public void imprimirRegionesConMasMedallas(int opcion) {
+    public void imprimirRegionesConMasMedallas(byte opcion) {
         generarHeapMedallasRegiones(opcion);
         NationalOlympicCommittee[] temp = new NationalOlympicCommittee[10];
 
         if(opcion == 1){
             System.out.println("Paises con mas medallas de Oro: ");
             System.out.println("");
-            for(int i=0;i<10;i++) {
+            for(byte i=0;i<10;i++) {
                temp[i] = MedallasOroNOC.obtenerYEliminar();
                System.out.println("Nombre de la region: " +temp[i].getName());
                System.out.println("Cantidad de medallas: " +temp[i].getCantMedallasOro());
                System.out.println("");
             }
-            for(int i = 0;i<10;i++){
+            for(byte i = 0;i<10;i++){
                 MedallasOroNOC.agregar(temp[i].getCantMedallasOro(),temp[i]);
             }
         }
@@ -182,13 +182,13 @@ public class Repositorio {
         if(opcion == 2){
             System.out.println("Paises con mas medallas de Plata: ");
             System.out.println("");
-            for(int i=0;i<10;i++) {
+            for(byte i=0;i<10;i++) {
                temp[i] = MedallasPlataNOC.obtenerYEliminar();
                System.out.println("Nombre de la region: " +temp[i].getName());
                System.out.println("Cantidad de medallas: " +temp[i].getCantMedllasPlata());
                System.out.println("");
             }
-            for(int i = 0;i<10;i++){
+            for(byte i = 0;i<10;i++){
                 MedallasPlataNOC.agregar(temp[i].getCantMedllasPlata(),temp[i]);
             }
         }
@@ -196,26 +196,26 @@ public class Repositorio {
         if(opcion == 3){
             System.out.println("Paises con mas medallas de Bronce: ");
             System.out.println("");
-            for(int i=0;i<10;i++) {
+            for(byte i=0;i<10;i++) {
                temp[i] = MedallasBronceNOC.obtenerYEliminar();
                System.out.println("Nombre de la region: " +temp[i].getName());
                System.out.println("Cantidad de medallas: " +temp[i].getCantMedallasBronce());
                System.out.println("");
             }
-            for(int i = 0;i<10;i++){
+            for(byte i = 0;i<10;i++){
                 MedallasBronceNOC.agregar(temp[i].getCantMedallasBronce(),temp[i]);
             }
         }
         if(opcion == 4) {
             System.out.println("Paises con mas medallas en General: ");
             System.out.println("");
-            for (int i = 0; i < 10; i++) {
+            for (byte i = 0; i < 10; i++) {
                 temp[i] = MedallasTotalesNOC.obtenerYEliminar();
                 System.out.println("Nombre de la region: " + temp[i].getName());
                 System.out.println("Cantidad de medallas: " + temp[i].getCantMedallasTotales());
                 System.out.println("");
             }
-            for (int i = 0; i < 10; i++) {
+            for (byte i = 0; i < 10; i++) {
                 MedallasTotalesNOC.agregar(temp[i].getCantMedallasTotales(), temp[i]);
             }
         }
@@ -226,7 +226,7 @@ public class Repositorio {
     public void imprimirMayorParticipacionFemenina() {
         AgregarAtletasFemeninos();
        OlympicGame[] resultantes = new OlympicGame[10];
-        for (int i = 0; i < 10; i++) {
+        for (byte i = 0; i < 10; i++) {
             OlympicGame og=HeapAtletasFemeninos.obtenerYEliminar();
             if(olimpiadasFemeninas.contains(og.getName())){
                 resultantes[i]=olimpiadasFemeninas.find(og.getName());
@@ -246,7 +246,7 @@ public class Repositorio {
                 generarHeapCompeticionesFemenino();
             }
             Event[] eventos = new Event[10];
-            for(int i=0;i<5;i++){
+            for(byte i=0;i<5;i++){
                 Event evento = competicionesFemenino.obtenerYEliminar();
                 eventos[i] = evento;
                 System.out.println("#" +(i+1));
@@ -256,7 +256,7 @@ public class Repositorio {
                 System.out.println("Cantidad: " +evento.getAtletasFemeninos());
                 System.out.println("");
             }
-            for(int i=0;i<5;i++){
+            for(byte i=0;i<5;i++){
                 competicionesFemenino.agregar(eventos[i].getAtletasFemeninos(),eventos[i]);
             }
         }
@@ -266,7 +266,7 @@ public class Repositorio {
                 generarHeapCompeticionesMasculino();
             }
             Event[] eventos = new Event[10];
-            for(int i=0;i<5;i++){
+            for(byte i=0;i<5;i++){
                 Event evento = competicionesMasculino.obtenerYEliminar();
                 eventos[i] = evento;
                 System.out.println("#" +(i+1));
@@ -284,7 +284,7 @@ public class Repositorio {
 
     public void imprimirEquiposEfectivosRango(int inicio, int fin) {
         generarHeapEquiposRangoEfectivo(inicio,fin);
-        for(int i=0;i<10;i++){
+        for(byte i=0;i<10;i++){
             Team equipo = HeapEquiposRangoEfectivo.obtenerYEliminar();
             int[] datos = equipo.efectivivadRangoDetalle(inicio, fin);
             System.out.println("#" + (i + 1));
@@ -314,7 +314,7 @@ public class Repositorio {
     private void generarHashRegiones() {
 
         if(!hashRegionesExiste){
-            for (int i = 0; i < lector.Atletas.size(); i++) {
+            for (byte i = 0; i < lector.Atletas.size(); i++) {
                 Athlete atleta = lector.Atletas.get(i);
                 String NOC = atleta.getNOC();
                 if (NOC.equals("SGP")) {
