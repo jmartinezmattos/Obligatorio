@@ -304,7 +304,7 @@ public class Repositorio {
     private void generarHashRegiones() {
 
         if(!hashRegionesExiste){
-            for (byte i = 0; i < lector.Atletas.size(); i++) {
+            for (int i = 0; i < lector.Atletas.size(); i++) {
                 Athlete atleta = lector.Atletas.get(i);
                 String NOC = atleta.getNOC();
                 if (NOC.equals("SGP")) {
