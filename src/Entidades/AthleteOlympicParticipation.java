@@ -1,6 +1,7 @@
 package Entidades;
 
 import Enums.MedalType;
+import Enums.SeasonType;
 
 import static java.lang.Integer.parseInt;
 import static java.lang.Integer.valueOf;
@@ -16,14 +17,24 @@ public class AthleteOlympicParticipation {
     private OlympicGame oGames;
     private NationalOlympicCommittee nationalCommitee;
     private String sport;
+    private SeasonType season;
+    private String city;
 
 
 
-    public AthleteOlympicParticipation(String medal, Athlete athlete,String age,String year, String sport,String olympicGame, String event) {
+    public AthleteOlympicParticipation(String medal, Athlete athlete,String age,String year, String sport,String olympicGame, String event, String season, String city) {
 
         this.year = Short.parseShort(year);
         this.olympicGame = olympicGame;
         this.event = event;
+        this.city = city;
+
+        if(season.equals("Summer")) {
+            this.season = SeasonType.SUMMER;
+        }
+        if(season.equals("Winter")){
+            this.season = SeasonType.WINTER;
+        }
 
         this.sport = sport;
 
@@ -91,5 +102,13 @@ public class AthleteOlympicParticipation {
 
     public void setoGames(OlympicGame oGames) {
         this.oGames = oGames;
+    }
+
+    public SeasonType getSeason() {
+        return season;
+    }
+
+    public String getCity() {
+        return city;
     }
 }

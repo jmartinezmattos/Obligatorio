@@ -12,8 +12,9 @@ public class OlympicGame {
     private SeasonType season;
     // private ArrayList participacionesMasculinos;
     private ArrayList participantes;
-    private City city;
-    private LinkedList<Event> event;
+    private String city;
+    //private LinkedList<Event> event;
+    private String event;
     private int CantAtletasFemeninos=0;
 
     public OlympicGame(String name, int year, SeasonType season, ArrayList participantes, City city, LinkedList<Event> event) {
@@ -22,8 +23,16 @@ public class OlympicGame {
         this.season = season;
         // this.participacionesMasculinos = participacionesMasculinos;
         this.participantes = participantes;
-        this.city = city;
-        this.event = event;
+        //this.city = city;
+        //this.event = event;
+    }
+
+    public OlympicGame(AthleteOlympicParticipation participacion){
+        this.name = participacion.getOlympicGame();
+        this.year = participacion.getYear();
+        this.season = participacion.getSeason();
+        this.city = participacion.getCity();
+        this.event = participacion.getEvent();
     }
 
     public OlympicGame(String name, int year) {

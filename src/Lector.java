@@ -95,7 +95,7 @@ public class Lector {
     }
 
     public AthleteOlympicParticipation crearParticipacion(String[] dato, Athlete athlete){
-        AthleteOlympicParticipation participacion = new AthleteOlympicParticipation(dato[14],athlete,dato[3],dato[9],dato[12],dato[8],dato[13]);
+        AthleteOlympicParticipation participacion = new AthleteOlympicParticipation(dato[14],athlete,dato[3],dato[9],dato[12],dato[8],dato[13],dato[10],dato[11]);
         return participacion;
     }
 
