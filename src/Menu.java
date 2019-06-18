@@ -1,3 +1,6 @@
+import FormatoTexto.Colores;
+import FormatoTexto.Formato;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -46,8 +49,8 @@ public class Menu {
     }
 
     private static void printHeader2(){
-        System.out.println("Seleccione la operacion que desea realizar");
-        System.out.println("1: Top 10 atletas con mayor cantidad de medallas");
+        System.out.println(Formato.negrita +"Seleccione la operacion que desea realizar");//cuando puse formato negrita me tiro warning
+        System.out.println(Colores.reset +"1: Top 10 atletas con mayor cantidad de medallas");
         System.out.println("2: Top 10 regiones con mayor cantidad de medallas");
         System.out.println("3: Top 10 ediciones de juegos olimpicos con mayor participacion de atletas femeninos");
         System.out.println("4: 5 competiciones donde se presentan la mayor cantidad de atletas de cierto sexo");
