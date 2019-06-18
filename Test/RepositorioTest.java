@@ -13,7 +13,6 @@ class RepositorioTest {
     @Test
     public void generarEstructuras() {
         Repositorio repo = new Repositorio();
-        repo.generarEstructuras();
         System.out.println(repo.MedallasONOC("URU"));
     }
 

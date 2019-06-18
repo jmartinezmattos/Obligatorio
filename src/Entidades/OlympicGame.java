@@ -35,11 +35,6 @@ public class OlympicGame {
         this.event = participacion.getEvent();
     }
 
-    public OlympicGame(String name, int year) {
-        this.name = name;
-        this.year = year;
-    }
-
     public String getName() {
         return name;
     }
@@ -55,24 +50,6 @@ public class OlympicGame {
     public void addFemAthlete(){
         CantAtletasFemeninos++;
     }
-
-
-      /*
-
-
-                for(int j=0;j<atleta.getParticipaciones().size();j++){//recorre todas las participaciones
-                    AthleteOlympicParticipation participation = atleta.getParticipaciones().get(j);
-                    OlympicGame olimpiada = participation.getoGames();
-                    if(!olimpiadasFemeninas.contains(olimpiada.getName())){//si la olimpiada no esta en el hash
-                        //hay que sumarle uno al contador de atletas femeninos de la olimpiada
-                        arrayListOlimpiadasFemeninas.add(olimpiada);//arraylis utilizado para luego recorrer el hash
-                        // olimpiadasFemeninas.put(nombreOlimpiada,olimpiada);
-                    }
-                    else{
-                        // OlympicGame olimpiada = olimpiadasFemeninas.find(olimpiada);
-                        //hay que agregarle uno a la cantidad  de atletas femeninos
-                    }
-*/
     }
 
 

@@ -2,9 +2,7 @@ import Entidades.Athlete;
 import Entidades.AthleteOlympicParticipation;
 import Entidades.NationalOlympicCommittee;
 import Entidades.OlympicGame;
-import Enums.SexType;
 import TADS.Hash.HashImpl;
-import TADS.Heap.HeapMax;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

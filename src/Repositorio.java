@@ -6,11 +6,8 @@ import TADS.Heap.HeapMax;
 
 import java.util.ArrayList;
 
-
 public class Repositorio {
-
     //clase encargada de contener y manejar datos
-
     private Lector lector = new Lector();
     private HeapMax<Integer, Athlete> MedallasOro = new HeapMax<>(14000);
     private HeapMax<Integer, Athlete> MedallasBronce = new HeapMax<>(14000);
@@ -292,16 +289,6 @@ public class Repositorio {
         }
     }
 
-    public void generarEstructuras() {
-        //genera arboles ordenados para cada consulta
-        generarHeapPlata();
-        generarHeapOro();
-        generarHeapBronce();
-        generarHeapTotales();
-        generarHashRegiones();//falta heaps regiones
-
-    }
-
     public int MedallasONOC(String noc){
         return lector.nationalOlympicCommittees.find(noc).getCantMedallasOro();
     }
@@ -464,7 +451,6 @@ public class Repositorio {
         }
     }
 
-
     public void generarHashAtletasOlimpiadasFemeninas() {
 
         //inicializa el atributo atletas femeninos
@@ -511,55 +497,4 @@ public class Repositorio {
         }
 
     }
-
-    public void generarHashAtletasFemeninos(){
-
-        for(int i=0;i<lector.Participaciones.size();i++){
-            AthleteOlympicParticipation participacion = lector.Participaciones.get(i);
-            OlympicGame olimpiada = new OlympicGame(participacion.getOlympicGame(),participacion.getYear());
-            if(!olimpiadasFemeninas.contains(participacion.getOlympicGame())){
-                participacion.setoGames(olimpiada);
-                arrayListOlimpiadasFemeninas.add(olimpiada.getName());
-                olimpiadasFemeninas.put(olimpiada.getName(),olimpiada);
-            }
-            else{
-                OlympicGame ol = olimpiadasFemeninas.find(participacion.getoGames().getName());
-                olimpiadasFemeninas.put(ol.getName(),participacion.getoGames());
-            }
-            hashAtletasFemeninos = true;
-        }
-    }
-
-    private void generarHashOlimpiadasFemeninas(){
-
-        for(int i=0;i<lector.Atletas.size();i++){//recorre todos los atletas
-            Athlete atleta = lector.Atletas.get(i);
-            if(atleta.equals(SexType.FEMALE)){//se fija si es femenino
-                for(int j=0;j<atleta.getParticipaciones().size();j++){//recorre todas las participaciones
-                    AthleteOlympicParticipation participation = atleta.getParticipaciones().get(j);
-                    String nombreOlimpiada = participation.getOlympicGame();
-                    if(!olimpiadasFemeninas.contains(nombreOlimpiada)){//si la olimpiada no esta en el hash
-
-                        OlympicGame olimpiada = new OlympicGame(atleta.getParticipaciones().get(j));//genera juego olimpico con los datos necesarios
-                        //hay que sumarle uno al contador de atletas femeninos de la olimpiada
-                        arrayListOlimpiadasFemeninas.add(nombreOlimpiada);//arraylis utilizado para luego recorrer el hash
-                        olimpiadasFemeninas.put(nombreOlimpiada,olimpiada);
-                    }
-                    else{
-                        OlympicGame olimpiada = olimpiadasFemeninas.find(nombreOlimpiada);
-                        //hay que agregarle uno a la cantidad de atletas femeninos
-                    }
-                }
-            }
-        }
-    }
-    //Cargamos el heap
-    public void generarHeapAtletasFemeninos(){
-        for(int i=0;i<lector.Participaciones.size();i++) {
-            HeapAtletasFemeninos.agregar(lector.Participaciones.get(i).getoGames().getCantAtletasFemeninos(),lector.Participaciones.get(i).getoGames());
-        }
-    }
-
 }
-
-

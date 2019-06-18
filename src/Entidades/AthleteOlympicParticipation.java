@@ -64,10 +64,6 @@ public class AthleteOlympicParticipation {
         }
     }
 
-    public int getAge() {
-        return age;
-    }
-
     public MedalType getMedal() {
         return medal;
     }
@@ -94,14 +90,6 @@ public class AthleteOlympicParticipation {
 
     public Athlete getAthlete() {
         return athlete;
-    }
-
-    public OlympicGame getoGames() {
-        return oGames;
-    }
-
-    public void setoGames(OlympicGame oGames) {
-        this.oGames = oGames;
     }
 
     public SeasonType getSeason() {

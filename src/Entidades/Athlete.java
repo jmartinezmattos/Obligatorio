@@ -102,10 +102,6 @@ public class Athlete  {
         return medallas;
     }
 
-    public void setMedallas(ArrayList<AthleteOlympicParticipation> medallas) {
-        this.medallas = medallas;
-    }
-
     public ArrayList<AthleteOlympicParticipation> getParticipaciones() {
         return medallas;
     }
