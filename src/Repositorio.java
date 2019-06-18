@@ -36,24 +36,17 @@ public class Repositorio {
     private HashImpl<String, OlympicGame> olimpiadasFemeninas = new HashImpl<>(5000);
     private ArrayList<String> arrayListOlimpiadasFemeninas = new ArrayList<String>(5000);
 
-    private boolean medallasOroExiste = false;
-    private boolean medallasPlataExiste = false;
-    private boolean medallasBronceExiste = false;
-    private boolean medallasTotalesExiste = false;
-
     private boolean medallasOroRegionesExiste = false;
     private boolean medallasPlataRegionesExiste = false;
     private boolean medallasBronceRegionesExiste = false;
     private boolean medallasTotalesRegionesExiste = false;
 
     private boolean hashRegionesExiste = false;
-
     private boolean equiposGenerados = false;
     private boolean hashAtletasFemeninos = false;
     private boolean hashCompeticionesGenerado = false;
     private boolean heapCompeticionesFemGenerado =false;
     private boolean heapCompeticionesMascGenerado =false;
-    private boolean heapAtletasFemeninasGenerado=false;
 
     public Repositorio() {
         lector.leerArchivos();
@@ -63,7 +56,7 @@ public class Repositorio {
 
         if (num == 1) {
             Athlete[] obtenidos = new Athlete[10];
-            if (!medallasOroExiste) {
+            if (MedallasOro.getSize()==0) {
                 generarHeapOro();
             }
             for (byte i = 0; i < 10; i++) {
@@ -84,7 +77,7 @@ public class Repositorio {
 
         if (num == 2) {
             Athlete[] obtenidos = new Athlete[10];
-            if (!medallasPlataExiste) {
+            if (MedallasPlata.getSize()==0) {
                 generarHeapPlata();
             }
             for (int i = 0; i < 10; i++) {
@@ -105,7 +98,7 @@ public class Repositorio {
 
         if (num == 3) {
             Athlete[] obtenidos = new Athlete[10];
-            if (!medallasBronceExiste) {
+            if (MedallasBronce.getSize()==0) {
                 generarHeapBronce();
             }
             for (int i = 0; i < 10; i++) {
@@ -125,7 +118,7 @@ public class Repositorio {
         }
         if (num == 4) {
             Athlete[] obtenidos = new Athlete[10];
-            if (!medallasTotalesExiste) {
+            if (MedallasTotales.getSize()==0) {
                 generarHeapTotales();
             }
             for (int i = 0; i < 10; i++) {
@@ -152,12 +145,11 @@ public class Repositorio {
 
     private void generarHeapTotales() {
 
-        for (byte i = 0; i < lector.Atletas.size(); i++) {
+        for (int i = 0; i < lector.Atletas.size(); i++) {
             if (lector.Atletas.get(i).getMedallasTotales() > 0) {
                 MedallasTotales.agregar(lector.Atletas.get(i).getMedallasTotales(), lector.Atletas.get(i));
             }
         }
-        medallasTotalesExiste= true;
     }
 
 
@@ -378,7 +370,6 @@ public class Repositorio {
                 MedallasOro.agregar(lector.Atletas.get(i).getMedallasOro(), lector.Atletas.get(i));
             }
         }
-        medallasOroExiste = true;
     }
 
     public void generarHeapPlata() {
@@ -387,7 +378,6 @@ public class Repositorio {
                 MedallasPlata.agregar(lector.Atletas.get(i).getMedallasPlata(), lector.Atletas.get(i));
             }
         }
-        medallasPlataExiste = true;
     }
 
     private void generarHeapBronce() {
@@ -396,7 +386,6 @@ public class Repositorio {
                 MedallasBronce.agregar(lector.Atletas.get(i).getMedallasBronze(), lector.Atletas.get(i));
             }
         }
-        medallasBronceExiste = true;
     }
 
     private void generarEquipos(){
@@ -529,7 +518,6 @@ public class Repositorio {
                 int keyCompeticionHeap = olimpiada.getCantAtletasFemeninos();
                 HeapAtletasFemeninos.agregar(keyCompeticionHeap,olimpiada);
             }
-            heapAtletasFemeninasGenerado = true;
 
         }
 
