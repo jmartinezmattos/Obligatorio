@@ -41,6 +41,7 @@ public class Lector {
             while ((line = br.readLine()) != null) {
                 String[] datos = line.replaceAll(", ","#").replaceAll(",-","@").replaceAll("\"","").split(csvSplitBy);//separa por lineas y elimina las comillas extra
                 datos[13] = datos[13].replaceAll("#",", ").replaceAll("@",",-");//vuelve a agregarle la coma al evento
+                datos[6]=datos[6].replaceAll("-\\d","");
 
                 if (!ultimoID.equals(datos[0])) {
                     //teniendo en cuenta que los datos se descargar en forma ordenada respecto al ID
