@@ -52,12 +52,9 @@ public class OlympicGame {
         return CantAtletasFemeninos;
     }
 
-    public void setCantAtletasFemeninos(int cantAtletasFemeninos) {
-        CantAtletasFemeninos = cantAtletasFemeninos;
+    public void addFemAthlete(){
+        CantAtletasFemeninos++;
     }
-
-
-
 
 
       /*

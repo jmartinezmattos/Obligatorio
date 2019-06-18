@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/Repositorio.java" line="216" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cc71e00d-16ae-4472-b5b3-700348c13b3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/OlympicGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/OlympicGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositorio.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+            <state relative-caret-position="-126">
+              <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -32,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
+            <state relative-caret-position="1003">
               <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -44,25 +48,50 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            <state relative-caret-position="612">
+              <caret line="510" column="5" lean-forward="true" selection-start-line="510" selection-start-column="5" selection-end-line="510" selection-end-column="5" />
               <folding>
                 <element signature="e#2286#2287#0" expanded="true" />
                 <element signature="e#2323#2324#0" expanded="true" />
-                <element signature="e#13033#13034#0" expanded="true" />
-                <element signature="e#13119#13120#0" expanded="true" />
+                <element signature="e#2330#6418#0" />
+                <element signature="e#6424#6722#0" />
+                <element signature="e#6729#9338#0" />
+                <element signature="e#10100#11936#0" />
+                <element signature="e#11942#12725#0" />
+                <element signature="e#12731#12992#0" />
+                <element signature="e#12987#12988#0" expanded="true" />
+                <element signature="e#13073#13074#0" expanded="true" />
+                <element signature="e#13126#13706#0" />
+                <element signature="e#13712#15801#0" />
+                <element signature="e#15807#16107#0" />
+                <element signature="e#16113#16401#0" />
+                <element signature="e#16407#16700#0" />
+                <element signature="e#16706#17676#0" />
+                <element signature="e#17682#18378#0" />
+                <element signature="e#18384#19233#0" />
+                <element signature="e#19239#19787#0" />
+                <element signature="e#19793#20345#0" />
+                <element signature="e#22429#23280#0" />
+                <element signature="e#22838#24212#0" />
+                <element signature="e#24694#24987#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/Entidades/Athlete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="185">
+              <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#Athlete#0;class#Athlete#0" />
+                <element signature="method#addParticipacion#0;class#Athlete#0" />
+                <element signature="method#agregarMedallaOro#0;class#Athlete#0" />
+                <element signature="method#agregarMedallaTotales#0;class#Athlete#0" />
+                <element signature="method#agregarMedallaPlata#0;class#Athlete#0" />
+                <element signature="method#agregarMedallaBronce#0;class#Athlete#0" />
               </folding>
             </state>
           </provider>
@@ -80,17 +109,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entidades/OlympicGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Enums/SeasonType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="442">
+              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+              <folding>
+                <element signature="e#1495#1496#0" expanded="true" />
+                <element signature="e#1530#1531#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,6 +165,9 @@
       <find>Unified Team</find>
       <find>Lie</find>
       <find>Liechtenstein</find>
+      <find>heapCompeticionesMascGenerado</find>
+      <find>heap</find>
+      <find>HeapAtletasFemeninos</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -183,13 +210,19 @@
         <option value="$PROJECT_DIR$/src/Entidades/Event.java" />
         <option value="$PROJECT_DIR$/src/Entidades/Team.java" />
         <option value="$PROJECT_DIR$/src/Entidades/Athlete.java" />
-        <option value="$PROJECT_DIR$/src/Menu.java" />
         <option value="$PROJECT_DIR$/src/Lector.java" />
         <option value="$PROJECT_DIR$/src/Entidades/AthleteOlympicParticipation.java" />
+        <option value="$PROJECT_DIR$/src/Menu.java" />
         <option value="$PROJECT_DIR$/src/Entidades/OlympicGame.java" />
         <option value="$PROJECT_DIR$/src/Repositorio.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
@@ -593,7 +626,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560820481170</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Eliminados booleans innecesarios">
+      <created>1560876181189</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1560876181189</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Arreglos">
+      <created>1560876570154</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1560876570154</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -644,7 +691,7 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21088019" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21088019" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -653,8 +700,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.26909518" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3975364" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.268757" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3975364" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3281075" />
@@ -670,11 +717,11 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32980332" />
-      <window_info anchor="right" id="Maven Projects" order="10" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32980332" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.3294621" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19804402" />
@@ -778,7 +825,9 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="No se si este commit mejora, usa 150mb de memoria" />
     <MESSAGE value="Falta inicializar objetos City, Event, etc y relacionarlos con las otras clases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Falta inicializar objetos City, Event, etc y relacionarlos con las otras clases" />
+    <MESSAGE value="Eliminados booleans innecesarios" />
+    <MESSAGE value="Arreglos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -788,6 +837,18 @@
           <line>51</line>
           <properties />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Repositorio.java</url>
+          <line>277</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1043,16 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entidades/Athlete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TADS/Heap/Nodo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1099,44 +1150,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/athlete_events.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state>
           <caret column="82" selection-start-column="82" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entidades/OlympicGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1157,15 +1174,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TADS/Hash/HashImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entidades/OlympicGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+          <folding>
+            <element signature="e#1495#1496#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entidades/Athlete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Athlete#0;class#Athlete#0" />
+            <element signature="method#addParticipacion#0;class#Athlete#0" />
+            <element signature="method#agregarMedallaOro#0;class#Athlete#0" />
+            <element signature="method#agregarMedallaTotales#0;class#Athlete#0" />
+            <element signature="method#agregarMedallaPlata#0;class#Athlete#0" />
+            <element signature="method#agregarMedallaBronce#0;class#Athlete#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repositorio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="612">
+          <caret line="510" column="5" lean-forward="true" selection-start-line="510" selection-start-column="5" selection-end-line="510" selection-end-column="5" />
           <folding>
             <element signature="e#2286#2287#0" expanded="true" />
             <element signature="e#2323#2324#0" expanded="true" />
-            <element signature="e#13033#13034#0" expanded="true" />
-            <element signature="e#13119#13120#0" expanded="true" />
+            <element signature="e#2330#6418#0" />
+            <element signature="e#6424#6722#0" />
+            <element signature="e#6729#9338#0" />
+            <element signature="e#10100#11936#0" />
+            <element signature="e#11942#12725#0" />
+            <element signature="e#12731#12992#0" />
+            <element signature="e#12987#12988#0" expanded="true" />
+            <element signature="e#13073#13074#0" expanded="true" />
+            <element signature="e#13126#13706#0" />
+            <element signature="e#13712#15801#0" />
+            <element signature="e#15807#16107#0" />
+            <element signature="e#16113#16401#0" />
+            <element signature="e#16407#16700#0" />
+            <element signature="e#16706#17676#0" />
+            <element signature="e#17682#18378#0" />
+            <element signature="e#18384#19233#0" />
+            <element signature="e#19239#19787#0" />
+            <element signature="e#19793#20345#0" />
+            <element signature="e#22429#23280#0" />
+            <element signature="e#22838#24212#0" />
+            <element signature="e#24694#24987#0" />
           </folding>
         </state>
       </provider>
