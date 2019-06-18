@@ -9,8 +9,8 @@ public class AthleteOlympicParticipation {
 
     private MedalType medal = MedalType.NA;
     private Athlete athlete;
-    private int age;
-    private  int year;
+    private byte age;
+    private short year;
     private String event;
     private String olympicGame;
     private OlympicGame oGames;
@@ -21,7 +21,7 @@ public class AthleteOlympicParticipation {
 
     public AthleteOlympicParticipation(String medal, Athlete athlete,String age,String year, String sport,String olympicGame, String event) {
 
-        this.year = valueOf(year);
+        this.year = Short.parseShort(year);
         this.olympicGame = olympicGame;
         this.event = event;
 
@@ -46,13 +46,10 @@ public class AthleteOlympicParticipation {
 
         this.athlete = athlete;
         if(!age.equals("NA")) {
-            this.age = valueOf(age);
+            this.age = Byte.valueOf(age);
         }
         else{
             this.age = 0;
-        }
-        if(!age.equals("NA")){
-            this.age = parseInt(age);
         }
     }
 
@@ -68,7 +65,7 @@ public class AthleteOlympicParticipation {
         return olympicGame;
     }
 
-    public int getYear() {
+    public short getYear() {
         return year;
     }
 
