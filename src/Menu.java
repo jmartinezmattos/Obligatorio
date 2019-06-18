@@ -1,6 +1,7 @@
 import FormatoTexto.Colores;
 import FormatoTexto.Formato;
 
+import java.awt.font.TextAttribute;
 import java.util.Scanner;
 
 public class Menu {
@@ -37,6 +38,9 @@ public class Menu {
         Scanner sc = new Scanner(System.in);
         String cualquierTecla = "cualquierTecla";
         cualquierTecla = sc.nextLine();
+        if(cualquierTecla.equals("easter")){
+            System.out.println("egg");
+        }
         repo = new Repositorio();
     }
 
