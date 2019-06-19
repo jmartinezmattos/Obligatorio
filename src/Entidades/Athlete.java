@@ -124,6 +124,6 @@ public class Athlete  {
     }
 
     public int getMedallasTotales() {
-        return medallasTotales;
+        return medallasBronce+medallasPlata+medallasOro;
     }
 }
