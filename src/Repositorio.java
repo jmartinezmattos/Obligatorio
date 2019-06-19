@@ -429,7 +429,7 @@ public class Repositorio {
         for(int i=0;i<arrayListEquipos.size();i++){//recorre todos los equipos en el Hash utilizando el arraylist para obtener las keys
             String name = arrayListEquipos.get(i);//obtiene el nombre del equipo (la key para el hash) del arraylist
             Team teamTemp = equipos.find(name);//obtiene el equipo del hash
-            HeapEquiposRangoEfectivo.agregar(teamTemp.efectividadRango(inicio,fin),teamTemp);//agrega el el equipo al heap utilizando su efectividad como key
+            HeapEquiposRangoEfectivo.agregar(teamTemp.efectividadRango(inicio,fin),teamTemp);//agrega  el equipo al heap utilizando su efectividad como key
         }
     }
 
