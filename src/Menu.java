@@ -27,14 +27,14 @@ public class Menu {
             printHeader2();
             int opcion = entero.nextInt();
             evaluarOperacion(opcion);
-            System.out.println("Desea realizar otra operacion? y/n");
+            System.out.println(Formato.negrita+Colores.cyan+"Desea realizar otra operacion? y/n");
             continuar = letra.nextLine();
         }
         while(continuar.equals("y"));
     }
 
     private static void esperaCarga(){
-        System.out.println("Presione cualquier tecla y enter para continuar");
+        System.out.println(Colores.cyan+Formato.negrita+"Presione una tecla y enter para continuar");
         Scanner sc = new Scanner(System.in);
         String cualquierTecla = "cualquierTecla";
         cualquierTecla = sc.nextLine();
@@ -45,15 +45,15 @@ public class Menu {
     }
 
     private static void printHeader(){
-        System.out.println("Bienvendido al gestor oficial de estadisticas de las olimpiadas");
+        System.out.println(Formato.negrita+Colores.cyan+"Bienvendido al gestor oficial de estadisticas de las olimpiadas");
         System.out.println("");
-        System.out.println("¿Desea precargar estructuras? y/n");
+        System.out.println(Colores.reset+Formato.negrita+"¿Desea precargar estructuras? y/n");
         System.out.println("");
 
     }
 
     private static void printHeader2(){
-        System.out.println(Formato.negrita +"Seleccione la operacion que desea realizar");//cuando puse formato negrita me tiro warning
+        System.out.println(Formato.negrita +Colores.purple+"Seleccione la operacion que desea realizar");//cuando puse formato negrita me tiro warning
         System.out.println(Colores.reset +"1: Top 10 atletas con mayor cantidad de medallas");
         System.out.println("2: Top 10 regiones con mayor cantidad de medallas");
         System.out.println("3: Top 10 ediciones de juegos olimpicos con mayor participacion de atletas femeninos");
@@ -70,21 +70,21 @@ public class Menu {
 
         switch (opcion){
             case 1:
-                System.out.println("Ingrese una opcion: ");
-                System.out.println("1: Oro");
-                System.out.println("2: Plata");
-                System.out.println("3: Bronze");
-                System.out.println("4: Todas");
+                System.out.println(Formato.negrita+"Ingrese una opcion: ");
+                System.out.println(Colores.yellow+"1: Oro");
+                System.out.println(Colores.white+"2: Plata");
+                System.out.println(Colores.red+"3: Bronze");
+                System.out.println(Colores.blue+"4: Todas");
                 num = sc2.nextByte();
-                System.out.println("La cantidad de medallas obtenidas de la region seleccionada es: ");
+                System.out.println(Formato.negrita+"La cantidad de medallas obtenidas de la region seleccionada es: ");
                 repo.imprimirAtletasConMasMedallas(num);
                 break;
             case 2:
-                System.out.println("Ingrese una opcion: ");
-                System.out.println("1: Oro");
-                System.out.println("2: Plata");
-                System.out.println("3: Bronze");
-                System.out.println("4: Todas");
+                System.out.println(Formato.negrita+"Ingrese una opcion: ");
+                System.out.println(Colores.yellow+"1: Oro");
+                System.out.println(Colores.white+"2: Plata");
+                System.out.println(Colores.red+"3: Bronze");
+                System.out.println(Colores.blue+"4: Todas");
                 num = sc2.nextByte();
                 if(num<1 || num>4) {
                     System.out.println("Opcion no valida");
@@ -97,14 +97,14 @@ public class Menu {
                     repo.imprimirMayorParticipacionFemenina();
                 break;
             case 4:
-                System.out.println("Seleccione el sexo: ");
-                System.out.println("1: Femenino");
-                System.out.println("2: Masculino");
+                System.out.println(Formato.negrita+"Seleccione el sexo: ");
+                System.out.println(Colores.purple+"1: Femenino");
+                System.out.println(Colores.blue+"2: Masculino");
                 opcion = sc2.nextInt();
                 repo.imprimirCiertoSexo(opcion);
                 break;
             case 5:
-                System.out.println("Ingrese el rango de anios separado por un guion ej: 1990-2005");
+                System.out.println(Formato.negrita+"Ingrese el rango de anios separado por un guion ej: 1990-2005");
                 lectura = sc.nextLine();
                 String[] datos = lectura.split("-");
                 repo.imprimirEquiposEfectivosRango(Integer.valueOf(datos[0]),Integer.valueOf(datos[1]));

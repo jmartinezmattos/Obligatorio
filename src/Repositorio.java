@@ -8,6 +8,7 @@ import TADS.Heap.HeapMax;
 
 
 import java.awt.*;
+import java.text.Normalizer;
 import java.util.ArrayList;
 
 public class Repositorio {
@@ -62,12 +63,12 @@ public class Repositorio {
             for (byte i = 0; i < 10; i++) {
                 Athlete aux = MedallasOro.obtenerYEliminar();
                 obtenidos[i] = aux;
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-                System.out.println("Nombre: " + aux.getName());
-                System.out.println("Sexo: " + aux.getSex());
-                System.out.println("Cantidad De  Medallas: " + aux.getMedallasOro());
-                System.out.println("Año Maximo: " +aux.getMaxYear());
-                System.out.println("Año Minimo: " +aux.getMinYear());
+                System.out.println(Formato.negrita+Colores.blue +"#" +Colores.reset +Formato.reset+(i+1));
+                System.out.println(Colores.blue+Formato.negrita+"Nombre: "+Colores.reset +Formato.reset+ aux.getName());
+                System.out.println(Colores.blue+Formato.negrita+"Sexo: " +Colores.reset +Formato.reset+ aux.getSex());
+                System.out.println(Colores.blue+Formato.negrita+"Cantidad De  Medallas: "  +Colores.reset +Formato.reset+aux.getMedallasOro());
+                System.out.println(Colores.blue+Formato.negrita+"Año Maximo: " +Colores.reset +Formato.reset+aux.getMaxYear());
+                System.out.println(Colores.blue+Formato.negrita+"Año Minimo: " +Colores.reset +Formato.reset+aux.getMinYear());
                 System.out.println("");
             }
             for (byte i = 0; i < 10; i++) {
@@ -83,12 +84,12 @@ public class Repositorio {
             for (int i = 0; i < 10; i++) {
                 Athlete aux = MedallasPlata.obtenerYEliminar();
                 obtenidos[i] = aux;
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-                System.out.println("Nombre: " + aux.getName());
-                System.out.println("Sexo: " + aux.getSex());
-                System.out.println("Cantidad De Medallas: " + aux.getMedallasPlata());
-                System.out.println("Año Maximo: " +aux.getMaxYear());
-                System.out.println("Año Minimo: " +aux.getMinYear());
+                System.out.println(Colores.blue+Formato.negrita +"#" +Colores.reset +Formato.reset+(i+1));
+                System.out.println(Colores.blue+Formato.negrita+"Nombre: " +Colores.reset +Formato.reset+ aux.getName());
+                System.out.println(Colores.blue +Formato.negrita+"Sexo: " +Colores.reset +Formato.reset+ aux.getSex());
+                System.out.println(Colores.blue +Formato.negrita+"Cantidad De Medallas: " +Colores.reset +Formato.reset+ aux.getMedallasPlata());
+                System.out.println(Colores.blue +Formato.negrita+"Año Maximo: " +Colores.reset +Formato.reset+aux.getMaxYear());
+                System.out.println(Colores.blue +Formato.negrita+"Año Minimo: " +Colores.reset +Formato.reset+aux.getMinYear());
                 System.out.println("");
             }
             for (int i = 0; i < 10; i++) {
@@ -104,12 +105,12 @@ public class Repositorio {
             for (int i = 0; i < 10; i++) {
                 Athlete aux = MedallasBronce.obtenerYEliminar();
                 obtenidos[i] = aux;
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-                System.out.println("Nombre: " + aux.getName());
-                System.out.println("Sexo: " + aux.getSex());
-                System.out.println("Cantidad De Medallas: " + aux.getMedallasBronze());
-                System.out.println("Año Maximo: " +aux.getMaxYear());
-                System.out.println("Año Minimo: " +aux.getMinYear());
+                System.out.println(Colores.blue+Formato.negrita +"#" +Colores.reset+Formato.reset +(i+1));
+                System.out.println(Colores.blue +Formato.negrita+"Nombre: "+Colores.reset +Formato.reset + aux.getName());
+                System.out.println(Colores.blue +Formato.negrita+"Sexo: " +Colores.reset +Formato.reset+ aux.getSex());
+                System.out.println(Colores.blue +Formato.negrita+"Cantidad De Medallas: " +Colores.reset +Formato.reset+ aux.getMedallasBronze());
+                System.out.println(Colores.blue +Formato.negrita+"Año Maximo: " +Colores.reset +Formato.reset+aux.getMaxYear());
+                System.out.println(Colores.blue +Formato.negrita+"Año Minimo: " +Colores.reset +Formato.reset+aux.getMinYear());
                 System.out.println("");
             }
             for (int i = 0; i < 10; i++) {
@@ -124,12 +125,12 @@ public class Repositorio {
             for (int i = 0; i < 10; i++) {
                 Athlete aux = MedallasTotales.obtenerYEliminar();
                 obtenidos[i] = aux;
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-                System.out.println("Nombre: " + aux.getName());
-                System.out.println("Sexo: " + aux.getSex());
-                System.out.println("Cantidad De Medallas: " + aux.getMedallasTotales());
-                System.out.println("Año Maximo: " +aux.getMaxYear());
-                System.out.println("Año Minimo: " +aux.getMinYear());
+                System.out.println(Colores.blue+Formato.negrita +"#" +Colores.reset+Formato.reset +(i+1));
+                System.out.println(Colores.blue +Formato.negrita+"Nombre: " +Colores.reset +Formato.reset+ aux.getName());
+                System.out.println(Colores.blue +Formato.negrita+"Sexo: "+Colores.reset +Formato.reset + aux.getSex());
+                System.out.println(Colores.blue +Formato.negrita+"Cantidad De Medallas: " +Colores.reset +Formato.reset+ aux.getMedallasTotales());
+                System.out.println(Colores.blue +Formato.negrita+"Año Maximo: " +Colores.reset +Formato.reset+aux.getMaxYear());
+                System.out.println(Colores.blue +Formato.negrita+"Año Minimo: " +Colores.reset +Formato.reset+aux.getMinYear());
                 System.out.println("");
             }
             for (int i = 0; i < 10; i++) {
@@ -138,7 +139,7 @@ public class Repositorio {
         }
 
         if (num < 1 || num > 4) {
-            System.out.println("Opcion no valida");
+            System.out.println(Colores.purple+Formato.negrita+"Opcion no valida");
         }
 
     }
@@ -157,13 +158,13 @@ public class Repositorio {
         NationalOlympicCommittee[] temp = new NationalOlympicCommittee[10];
 
         if(opcion == 1){
-            System.out.println("Paises con mas medallas de Oro: ");
+            System.out.println(Colores.yellow +Formato.negrita+"Paises con mas medallas de Oro: ");
             System.out.println("");
             for(byte i=0;i<10;i++) {
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
+                System.out.println(Colores.blue+Formato.negrita +"#" +Colores.reset +Formato.reset+(i+1));
                temp[i] = MedallasOroNOC.obtenerYEliminar();
-               System.out.println("Nombre de la region: " +temp[i].getName());
-               System.out.println("Cantidad de medallas: " +temp[i].getCantMedallasOro());
+               System.out.println(Colores.blue +Formato.negrita+"Nombre de la region: " +Colores.reset +Formato.reset+temp[i].getName());
+               System.out.println(Colores.blue +Formato.negrita+"Cantidad de medallas: " +Colores.reset +Formato.reset+temp[i].getCantMedallasOro());
                System.out.println("");
             }
             for(byte i = 0;i<10;i++){
@@ -172,13 +173,13 @@ public class Repositorio {
         }
 
         if(opcion == 2){
-            System.out.println("Paises con mas medallas de Plata: ");
+            System.out.println(Colores.white +Formato.negrita+"Paises con mas medallas de Plata: ");
             System.out.println("");
             for(byte i=0;i<10;i++) {
                temp[i] = MedallasPlataNOC.obtenerYEliminar();
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-               System.out.println("Nombre de la region: " +temp[i].getName());
-               System.out.println("Cantidad de medallas: " +temp[i].getCantMedllasPlata());
+                System.out.println(Colores.blue+Formato.negrita +"#" +Colores.reset +Formato.reset+(i+1));
+               System.out.println(Colores.blue +Formato.negrita+"Nombre de la region: " +Colores.reset +Formato.reset+temp[i].getName());
+               System.out.println(Colores.blue +Formato.negrita+"Cantidad de medallas: " +Colores.reset +Formato.reset+temp[i].getCantMedllasPlata());
                System.out.println("");
             }
             for(byte i = 0;i<10;i++){
@@ -187,13 +188,13 @@ public class Repositorio {
         }
 
         if(opcion == 3){
-            System.out.println("Paises con mas medallas de Bronce: ");
+            System.out.println(Colores.red +Formato.negrita+"Paises con mas medallas de Bronce: ");
             System.out.println("");
             for(byte i=0;i<10;i++) {
                temp[i] = MedallasBronceNOC.obtenerYEliminar();
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-               System.out.println("Nombre de la region: " +temp[i].getName());
-               System.out.println("Cantidad de medallas: " +temp[i].getCantMedallasBronce());
+                System.out.println(Colores.blue +Formato.negrita+"#" +Colores.reset+ Formato.reset +(i+1));
+               System.out.println(Colores.blue +Formato.negrita+"Nombre de la region: "+Colores.reset +Formato.reset +temp[i].getName());
+               System.out.println(Colores.blue +Formato.negrita+"Cantidad de medallas: "+Colores.reset +Formato.reset +temp[i].getCantMedallasBronce());
                System.out.println("");
             }
             for(byte i = 0;i<10;i++){
@@ -201,13 +202,13 @@ public class Repositorio {
             }
         }
         if(opcion == 4) {
-            System.out.println("Paises con mas medallas en General: ");
+            System.out.println(Formato.negrita+Colores.purple+"Paises con mas medallas en General: ");
             System.out.println("");
             for (byte i = 0; i < 10; i++) {
                 temp[i] = MedallasTotalesNOC.obtenerYEliminar();
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-                System.out.println("Nombre de la region: " + temp[i].getName());
-                System.out.println("Cantidad de medallas: " + temp[i].getCantMedallasTotales());
+                System.out.println(Colores.blue+Formato.negrita +"#" +Formato.reset+Colores.reset +(i+1));
+                System.out.println(Formato.negrita+Colores.blue+"Nombre de la region: " +Colores.reset+ temp[i].getName());
+                System.out.println(Formato.negrita+Colores.blue+"Cantidad de medallas: " + Colores.reset+temp[i].getCantMedallasTotales());
                 System.out.println("");
             }
             for (byte i = 0; i < 10; i++) {
@@ -231,9 +232,9 @@ public class Repositorio {
             resultantes[i]=olimpiadasFemeninas.find(og.getName());
 
             System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-            System.out.println(Formato.negrita +"Nombre de la edición: " +Formato.reset +resultantes[i].getName());
-            System.out.println(Formato.negrita +"Año: "+Formato.reset +resultantes[i].getYear());
-            System.out.println(Formato.negrita +"Cantidad de participantes femeninos: " +Formato.reset + resultantes[i].getCantAtletasFemeninos());
+            System.out.println(Formato.negrita+Colores.blue +"Nombre de la edición: " +Formato.reset+Colores.reset +resultantes[i].getName());
+            System.out.println(Formato.negrita+Colores.blue+"Año: "+Formato.reset +Colores.reset+resultantes[i].getYear());
+            System.out.println(Formato.negrita+Colores.blue +"Cantidad de participantes femeninos: "+Colores.reset +Formato.reset + resultantes[i].getCantAtletasFemeninos());
             System.out.println("");
 
         }
@@ -249,11 +250,11 @@ public class Repositorio {
             for(byte i=0;i<5;i++){
                 Event evento = competicionesFemenino.obtenerYEliminar();
                 eventos[i] = evento;
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-                System.out.println("Nombre de la competicion: " +evento.getName());
-                System.out.println("Deporte: " +evento.getSport());
-                System.out.println("Sexo: Femenino");
-                System.out.println("Cantidad: " +evento.getAtletasFemeninos());
+                System.out.println(Colores.blue+Formato.negrita +"#" +Colores.reset + Formato.reset+(i+1));
+                System.out.println(Colores.blue +Formato.negrita+"Nombre de la competicion: " +Colores.reset +Formato.reset+evento.getName());
+                System.out.println(Colores.blue +Formato.negrita+"Deporte: "+Colores.reset +Formato.reset +evento.getSport());
+                System.out.println(Colores.blue +Formato.negrita+"Sexo:" +Colores.reset +Formato.reset+"Femenino");
+                System.out.println(Colores.blue +Formato.negrita+"Cantidad: "+Colores.reset +Formato.reset +evento.getAtletasFemeninos());
                 System.out.println("");
             }
             for(byte i=0;i<5;i++){
@@ -269,11 +270,11 @@ public class Repositorio {
             for(byte i=0;i<5;i++){
                 Event evento = competicionesMasculino.obtenerYEliminar();
                 eventos[i] = evento;
-                System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-                System.out.println("Nombre de la competicion: " +evento.getName());
-                System.out.println("Deporte: " +evento.getSport());
-                System.out.println("Sexo: Masculino");
-                System.out.println("Cantidad: " +evento.getAtletasMasculinos());
+                System.out.println(Colores.blue+Formato.negrita +"#" +Colores.reset +(i+1));
+                System.out.println(Colores.blue +Formato.negrita+"Nombre de la competicion: "+Colores.reset +Formato.reset +evento.getName());
+                System.out.println(Colores.blue +Formato.negrita+"Deporte: "+Colores.reset +Formato.reset +evento.getSport());
+                System.out.println(Colores.blue +Formato.negrita+"Sexo:" +Colores.reset +Formato.reset+"Masculino");
+                System.out.println(Colores.blue +Formato.negrita+"Cantidad: " +Colores.reset +Formato.reset+evento.getAtletasMasculinos());
                 System.out.println("");
             }
             for(int i=0;i<5;i++){
@@ -285,17 +286,17 @@ public class Repositorio {
     public void imprimirEquiposEfectivosRango(int inicio, int fin) {
         generarHeapEquiposRangoEfectivo(inicio,fin);
             System.out.println("");
-            System.out.println(Formato.negrita +"Los equipos mas efectivos entre " +inicio +" y " +fin +" son:" +Formato.reset);
+            System.out.println(Formato.negrita+Colores.purple +"Los equipos mas efectivos entre " +Colores.reset +Formato.reset+inicio +Colores.blue +Formato.negrita+" y " +Colores.reset +Formato.reset+fin +Colores.blue +Formato.negrita+" son:");
             System.out.println("");
         for(byte i=0;i<10;i++){
             Team equipo = HeapEquiposRangoEfectivo.obtenerYEliminar();
             int[] datos = equipo.efectivivadRangoDetalle(inicio, fin);
-            System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
-            System.out.println("Equipo: "+equipo.getName());
-            System.out.println("Cantidad de competidores: " +datos[0]);
-            System.out.println("Cantidad de Medallas: " +datos[1]);
-            System.out.println("Cantidad de atletas totales: " +equipo.getCantidadAtletas());
-            System.out.println("Ratio medalla/competidor " +equipo.efectividadRango(inicio,fin));
+            System.out.println(Colores.blue+Formato.negrita +"#" +Colores.reset+Colores.reset +(i+1));
+            System.out.println(Colores.blue +Formato.negrita+"Equipo: "+Colores.reset +Formato.reset+equipo.getName());
+            System.out.println(Colores.blue +Formato.negrita+"Cantidad de competidores: "+Colores.reset +Formato.reset +datos[0]);
+            System.out.println(Colores.blue +Formato.negrita+"Cantidad de Medallas: "+Colores.reset +Formato.reset +datos[1]);
+            System.out.println(Colores.blue +Formato.negrita+"Cantidad de atletas totales: "+Colores.reset +Formato.reset +equipo.getCantidadAtletas());
+            System.out.println(Colores.blue +Formato.negrita+"Ratio medalla/competidor " +Colores.reset +Formato.reset+equipo.efectividadRango(inicio,fin));
             System.out.println("");
         }
     }
