@@ -236,8 +236,11 @@ public class Repositorio {
         System.out.println(Formato.negrita +Colores.purple +"Top 10 ediciones de juegos olimpicos con mayor participacion de atletas femeninos" +Formato.reset); //"\033[0;1m" para negrita
         System.out.println("");
         for (int i = 0; i < 10; i++) {
+            /*
             OlympicGame og=HeapAtletasFemeninos.obtenerYEliminar();
             resultantes[i]=olimpiadasFemeninas.find(og.getName());
+             */
+            resultantes[i]=HeapAtletasFemeninos.obtenerYEliminar();
 
             System.out.println(Colores.blue +"#" +Colores.reset +(i+1));
             System.out.println(Formato.negrita+Colores.blue +"Nombre de la edición: " +Formato.reset+Colores.reset +resultantes[i].getName());
