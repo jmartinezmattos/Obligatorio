@@ -477,7 +477,6 @@ public class Repositorio {
     public void generarHashAtletasOlimpiadasFemeninas() {
 
         //inicializa el atributo atletas femeninos
-        boolean atletaContado = false;
 
         for (int i = 0; i < lector.Atletas.size(); i++) {//recorre todos los atletas
             Athlete athlete = lector.Atletas.get(i);
