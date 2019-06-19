@@ -60,6 +60,8 @@ public class Repositorio {
             if (MedallasOro.getSize()==0) {
                 generarHeapOro();
             }
+            System.out.println(Colores.yellow +Formato.negrita+"Atletas con mas medallas de Oro: ");
+            System.out.println("");
             for (byte i = 0; i < 10; i++) {
                 Athlete aux = MedallasOro.obtenerYEliminar();
                 obtenidos[i] = aux;
@@ -81,6 +83,8 @@ public class Repositorio {
             if (MedallasPlata.getSize()==0) {
                 generarHeapPlata();
             }
+            System.out.println(Colores.white +Formato.negrita+"Atletas con mas medallas de Plata: ");
+            System.out.println("");
             for (int i = 0; i < 10; i++) {
                 Athlete aux = MedallasPlata.obtenerYEliminar();
                 obtenidos[i] = aux;
@@ -102,6 +106,8 @@ public class Repositorio {
             if (MedallasBronce.getSize()==0) {
                 generarHeapBronce();
             }
+            System.out.println(Colores.red +Formato.negrita+"Atletas con mas medallas de Bronce: ");
+            System.out.println("");
             for (int i = 0; i < 10; i++) {
                 Athlete aux = MedallasBronce.obtenerYEliminar();
                 obtenidos[i] = aux;
@@ -122,6 +128,8 @@ public class Repositorio {
             if (MedallasTotales.getSize()==0) {
                 generarHeapTotales();
             }
+            System.out.println(Formato.negrita+Colores.purple+"Atletas con mas medallas en General: ");
+            System.out.println("");
             for (int i = 0; i < 10; i++) {
                 Athlete aux = MedallasTotales.obtenerYEliminar();
                 obtenidos[i] = aux;

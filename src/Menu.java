@@ -16,12 +16,6 @@ public class Menu {
 
         Scanner entero = new Scanner(System.in);
         Scanner letra = new Scanner(System.in);
-        String carga;
-        //printHeader();
-       // carga = letra.nextLine();
-       // if(carga.equals("y")){
-           // repo.generarEstructuras();
-       // }
 
         do{
             printHeader2();
@@ -29,6 +23,10 @@ public class Menu {
             evaluarOperacion(opcion);
             System.out.println(Formato.negrita+Colores.cyan+"Desea realizar otra operacion? y/n");
             continuar = letra.nextLine();
+            if(continuar.equals("easter")){
+                System.out.println("egg");
+                continuar = letra.nextLine();
+            }
         }
         while(continuar.equals("y"));
     }
@@ -44,21 +42,13 @@ public class Menu {
         repo = new Repositorio();
     }
 
-    private static void printHeader(){
-        System.out.println(Formato.negrita+Colores.cyan+"Bienvendido al gestor oficial de estadisticas de las olimpiadas");
-        System.out.println("");
-        System.out.println(Colores.reset+Formato.negrita+"¿Desea precargar estructuras? y/n");
-        System.out.println("");
-
-    }
-
     private static void printHeader2(){
         System.out.println(Formato.negrita +Colores.purple+"Seleccione la operacion que desea realizar");//cuando puse formato negrita me tiro warning
         System.out.println(Colores.reset +"1: Top 10 atletas con mayor cantidad de medallas");
         System.out.println("2: Top 10 regiones con mayor cantidad de medallas");
         System.out.println("3: Top 10 ediciones de juegos olimpicos con mayor participacion de atletas femeninos");
         System.out.println("4: 5 competiciones donde se presentan la mayor cantidad de atletas de cierto sexo");
-        System.out.println("5: 10 equipos mas efectivos entre un rango de anios");
+        System.out.println("5: 10 equipos mas efectivos entre un rango de años");
     }
 
     private static void evaluarOperacion(int opcion){
@@ -76,7 +66,6 @@ public class Menu {
                 System.out.println(Colores.red+"3: Bronze");
                 System.out.println(Colores.blue+"4: Todas");
                 num = sc2.nextByte();
-                System.out.println(Formato.negrita+"La cantidad de medallas obtenidas de la region seleccionada es: ");
                 repo.imprimirAtletasConMasMedallas(num);
                 break;
             case 2:
