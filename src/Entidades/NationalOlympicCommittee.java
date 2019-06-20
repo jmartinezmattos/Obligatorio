@@ -8,7 +8,7 @@ public class NationalOlympicCommittee {
     private String name;
     private String NOC;
     private String notes = null;
-    private LinkedList<Athlete> athletes = new LinkedList<>();
+    private ArrayList<Athlete> athletes = new ArrayList<>();
     private int cantMedallasOro;
     private int cantMedallasPlata = 0;
     private int cantMedallasBronce = 0;

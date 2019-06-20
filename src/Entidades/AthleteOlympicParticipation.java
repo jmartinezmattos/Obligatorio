@@ -14,7 +14,6 @@ public class AthleteOlympicParticipation {
     private short year;
     private String event;
     private String olympicGame;
-    private OlympicGame oGames;
     private NationalOlympicCommittee nationalCommitee;
     private String sport;
     private SeasonType season;

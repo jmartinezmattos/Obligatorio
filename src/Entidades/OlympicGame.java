@@ -10,10 +10,8 @@ public class OlympicGame {
     private String name;
     private int year;
     private SeasonType season;
-    // private ArrayList participacionesMasculinos;
     private ArrayList participantes;
     private String city;
-    //private LinkedList<Event> event;
     private String event;
     private int CantAtletasFemeninos=0;
 
