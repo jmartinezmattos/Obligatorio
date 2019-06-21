@@ -53,9 +53,9 @@ public class Repositorio {
         lector.leerArchivos();
     }
 
-    public void imprimirAtletasConMasMedallas(byte num) {
+    public void imprimirAtletasConMasMedallas(String num) {
 
-        if (num == 1) {
+        if (num.equals("1")) {
             Athlete[] obtenidos = new Athlete[10];
             if (MedallasOro.getSize()==0) {
                 generarHeapOro();
@@ -78,7 +78,7 @@ public class Repositorio {
             }
         }
 
-        if (num == 2) {
+        if (num.equals("2")) {
             Athlete[] obtenidos = new Athlete[10];
             if (MedallasPlata.getSize()==0) {
                 generarHeapPlata();
@@ -101,7 +101,7 @@ public class Repositorio {
             }
         }
 
-        if (num == 3) {
+        if (num.equals("3")) {
             Athlete[] obtenidos = new Athlete[10];
             if (MedallasBronce.getSize()==0) {
                 generarHeapBronce();
@@ -123,7 +123,7 @@ public class Repositorio {
                 MedallasOro.agregar(obtenidos[i].getMedallasBronze(), obtenidos[i]);//vuelve a agregar los atletas al heap para uso posterior
             }
         }
-        if (num == 4) {
+        if (num.equals("4")) {
             Athlete[] obtenidos = new Athlete[10];
             if (MedallasTotales.getSize()==0) {
                 generarHeapTotales();
@@ -146,10 +146,6 @@ public class Repositorio {
             }
         }
 
-        if (num < 1 || num > 4) {
-            System.out.println(Colores.purple+Formato.negrita+"Opcion no valida");
-        }
-
     }
 
     private void generarHeapTotales() {
@@ -161,11 +157,11 @@ public class Repositorio {
         }
     }
 
-    public void imprimirRegionesConMasMedallas(byte opcion) {
+    public void imprimirRegionesConMasMedallas(String opcion) {
         generarHeapMedallasRegiones(opcion);
         NationalOlympicCommittee[] temp = new NationalOlympicCommittee[10];
 
-        if(opcion == 1){
+        if(opcion.equals("1")){
             System.out.println(Colores.yellow +Formato.negrita+"Paises con mas medallas de Oro: ");
             System.out.println("");
             for(byte i=0;i<10;i++) {
@@ -180,7 +176,7 @@ public class Repositorio {
             }
         }
 
-        if(opcion == 2){
+        if(opcion.equals("2")){
             System.out.println(Colores.white +Formato.negrita+"Paises con mas medallas de Plata: ");
             System.out.println("");
             for(byte i=0;i<10;i++) {
@@ -195,7 +191,7 @@ public class Repositorio {
             }
         }
 
-        if(opcion == 3){
+        if(opcion.equals("3")){
             System.out.println(Colores.red +Formato.negrita+"Paises con mas medallas de Bronce: ");
             System.out.println("");
             for(byte i=0;i<10;i++) {
@@ -209,7 +205,7 @@ public class Repositorio {
                 MedallasBronceNOC.agregar(temp[i].getCantMedallasBronce(),temp[i]);
             }
         }
-        if(opcion == 4) {
+        if(opcion.equals("4")) {
             System.out.println(Formato.negrita+Colores.purple+"Paises con mas medallas en General: ");
             System.out.println("");
             for (byte i = 0; i < 10; i++) {
@@ -251,8 +247,8 @@ public class Repositorio {
         }
     }
 
-    public void imprimirCiertoSexo(int opcion) {
-        if(opcion == 1){
+    public void imprimirCiertoSexo(String opcion) {
+        if(opcion.equals("1")){
             //femenino
             if(competicionesFemenino.getSize()==0){
                 generarHeapCompeticionesFemenino();
@@ -272,7 +268,7 @@ public class Repositorio {
                 competicionesFemenino.agregar(eventos[i].getAtletasFemeninos(),eventos[i]);
             }
         }
-        if(opcion == 2){
+        if(opcion.equals("2")){
             //masculino
             if(competicionesMasculino.getSize()==0){
                 generarHeapCompeticionesMasculino();
@@ -332,9 +328,9 @@ public class Repositorio {
         }
     }
 
-    private void generarHeapMedallasRegiones(int opcion){
+    private void generarHeapMedallasRegiones(String opcion){
         generarHashRegiones();
-        if(opcion == 1){
+        if(opcion.equals("1")){
             if(!medallasOroRegionesExiste){
                 for (int i = 0; i < lector.arrayComittees.size(); i++) {
                     String NOC = lector.arrayComittees.get(i);
@@ -345,7 +341,7 @@ public class Repositorio {
             }
         }
 
-        if(opcion == 2){
+        if(opcion.equals("2")){
             if(!medallasPlataRegionesExiste){
                 for (int i = 0; i < lector.arrayComittees.size(); i++) {
                     String NOC = lector.arrayComittees.get(i);
@@ -355,7 +351,7 @@ public class Repositorio {
                 medallasPlataRegionesExiste = true;
             }
         }
-        if(opcion == 3) {
+        if(opcion.equals("3")) {
             if (!medallasBronceRegionesExiste) {
                 for (int i = 0; i < lector.arrayComittees.size(); i++) {
                     String NOC = lector.arrayComittees.get(i);
@@ -365,7 +361,7 @@ public class Repositorio {
                 medallasBronceRegionesExiste = true;
             }
         }
-        if(opcion == 4) {
+        if(opcion.equals("4")) {
             if (!medallasTotalesRegionesExiste) {
                 for (int i = 0; i < lector.arrayComittees.size(); i++) {
                     String NOC = lector.arrayComittees.get(i);
